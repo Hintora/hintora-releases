@@ -1,13 +1,13 @@
 {
   "channel": "dev",
   "version": "0.3.0",
-  "build": "1004",
-  "tag": "macos-dev-0.3.0-1004",
-  "message": "Automatic setup after installation, including macOS-protected launches.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1004/Hintora-Installer.zip",
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1004/Hintora-1004.zip",
-  "source_commit": "78c99944762915138e68efac5face702328a6edd",
-  "published_at": "2026-09-10T18:31:59Z",
+  "build": "1005",
+  "tag": "macos-dev-0.3.0-1005",
+  "message": "Refresh permission access automatically after changes in System Settings.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1005/Hintora-Installer.zip",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1005/Hintora-1005.zip",
+  "source_commit": "683a24c71f7fd50b564fccaabb4d2a01c3296909",
+  "published_at": "2026-09-10T18:59:48Z",
   "signing_mode": "adhoc",
   "notarized": false
 }
