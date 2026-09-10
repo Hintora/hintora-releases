@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Hintora</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Thu, 10 Sep 2026 23:05:49 +0000</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.1.0-2/Hintora-2.zip" length="3855894" type="application/octet-stream" sparkle:edSignature="eVN4syq8co6qn3F7PouzZkJQvnS9bL7IX0MXshbS6AYcmDWc+Ba0ZHjWbXRS7AqK3Rceiokg4NxDQeSPgrTqCg=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: 3vK0eOpBIzNQ3zYOK47+wrfR5K+Iy9EQdAKRNnkDRY9x3Hk9pI+5boxeViQ42DJurI2LtHH4QfatPjWAi7IaAQ==
+length: 1053
+-->
