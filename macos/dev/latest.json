@@ -1,13 +1,13 @@
 {
   "channel": "dev",
   "version": "0.3.0",
-  "build": "1009",
-  "tag": "macos-dev-0.3.0-1009",
-  "message": "Menu bar icon starts next to the system icons so it stays visible.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1009/Hintora-Installer.zip",
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1009/Hintora-1009.zip",
-  "source_commit": "984ba56b9c71e9f090480f66798110be3ccc9f20",
-  "published_at": "2026-09-10T20:09:38Z",
+  "build": "1010",
+  "tag": "macos-dev-0.3.0-1010",
+  "message": "Permissions stay granted after updates; new Update button.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1010/Hintora-Installer.zip",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1010/Hintora-1010.zip",
+  "source_commit": "447ad10fb408f683768e940865fbabcf5e59963a",
+  "published_at": "2026-09-10T20:28:15Z",
   "signing_mode": "adhoc",
   "notarized": false
 }
