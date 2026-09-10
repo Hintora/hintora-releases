@@ -1,13 +1,13 @@
 {
   "channel": "dev",
   "version": "0.3.0",
-  "build": "1003",
-  "tag": "macos-dev-0.3.0-1003",
-  "message": "First release delivered through the Hintora update pipeline.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1003/Hintora-Installer.zip",
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1003/Hintora-1003.zip",
-  "source_commit": "3603bb527238b304fd9058d4771aaf924ab68f8d",
-  "published_at": "2026-09-10T17:48:37Z",
+  "build": "1004",
+  "tag": "macos-dev-0.3.0-1004",
+  "message": "Automatic setup after installation, including macOS-protected launches.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1004/Hintora-Installer.zip",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1004/Hintora-1004.zip",
+  "source_commit": "78c99944762915138e68efac5face702328a6edd",
+  "published_at": "2026-09-10T18:31:59Z",
   "signing_mode": "adhoc",
   "notarized": false
 }
