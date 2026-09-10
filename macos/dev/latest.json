@@ -1,13 +1,13 @@
 {
   "channel": "dev",
   "version": "0.3.0",
-  "build": "1011",
-  "tag": "macos-dev-0.3.0-1011",
+  "build": "1012",
+  "tag": "macos-dev-0.3.0-1012",
   "message": "Welcome to Hintora.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1011/Hintora-Installer.zip",
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1011/Hintora-1011.zip",
-  "source_commit": "288725a0c7dfd5bb6749dfd02f6784d3c8ffbbce",
-  "published_at": "2026-09-10T20:43:16Z",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1012/Hintora-Installer.zip",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1012/Hintora-1012.zip",
+  "source_commit": "a9a48d962a43cfe59bc760676084c63550fc8fed",
+  "published_at": "2026-09-10T21:03:24Z",
   "signing_mode": "adhoc",
   "notarized": false
 }
