@@ -1,13 +1,13 @@
 {
   "channel": "dev",
   "version": "0.3.0",
-  "build": "1006",
-  "tag": "macos-dev-0.3.0-1006",
-  "message": "Installed app runs from Applications, stale Settings entries reset, notch Continue setup.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1006/Hintora-Installer.zip",
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1006/Hintora-1006.zip",
-  "source_commit": "c0317262cb391045fed11530b28df1f9e6dd6704",
-  "published_at": "2026-09-10T19:20:25Z",
+  "build": "1007",
+  "tag": "macos-dev-0.3.0-1007",
+  "message": "Microphone is asked on first setup; Check for Updates in the menu.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1007/Hintora-Installer.zip",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/macos-dev-0.3.0-1007/Hintora-1007.zip",
+  "source_commit": "85d0a8e6be271db68dd715d5b86e71835077a588",
+  "published_at": "2026-09-10T19:38:04Z",
   "signing_mode": "adhoc",
   "notarized": false
 }
