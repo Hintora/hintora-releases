@@ -1,125 +1,910 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="system">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hintora 0.3.0 (57) · Development</title>
 <meta name="description" content="Welcome to Hintora.">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Hintora 0.3.0 (57) · Development">
+<meta property="og:description" content="Welcome to Hintora.">
 <link rel="icon" type="image/png" href="../../assets/hintora-icon.png">
+<link rel="apple-touch-icon" href="../../assets/hintora-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #ffffff; --fg: #0b1020; --muted: #5b6474; --subtle: #8a93a3; --line: #e8ebf1;
-  --card: #ffffff; --panel: #f6f7fb; --brand: #2d52eb; --brand-hi: #5076ff; --logo: #224dea;
-  --ok: #16a34a; --amber: #d97706; --warn-bg: #fff8eb; --warn-fg: #7a4a00; --warn-line: #f3dcae;
-  --radius: 18px; --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 12px 32px rgba(16, 24, 40, .06);
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+<style>:root {
+  color-scheme: light;
+
+  /* palette */
+  --hn-palette-white: #ffffff;
+  --hn-palette-black: #000000;
+  --hn-palette-brand-blue: #224dea;
+  --hn-palette-brand-cream: #efe8e0;
+  --hn-palette-brand-ink: #121316;
+  --hn-palette-brand-paper: #f7f7f3;
+  --hn-palette-neutral-0: #ffffff;
+  --hn-palette-neutral-25: #fbfbf9;
+  --hn-palette-neutral-50: #f7f7f3;
+  --hn-palette-neutral-100: #efefeb;
+  --hn-palette-neutral-150: #e7e7e1;
+  --hn-palette-neutral-200: #ddddda;
+  --hn-palette-neutral-300: #c3c3c1;
+  --hn-palette-neutral-400: #9e9e9d;
+  --hn-palette-neutral-500: #7a7b7b;
+  --hn-palette-neutral-600: #5f5f60;
+  --hn-palette-neutral-700: #454547;
+  --hn-palette-neutral-800: #303133;
+  --hn-palette-neutral-900: #212224;
+  --hn-palette-neutral-950: #121316;
+  --hn-palette-night-50: #eceef3;
+  --hn-palette-night-100: #e3e5eb;
+  --hn-palette-night-200: #d2d5de;
+  --hn-palette-night-300: #b4b9c6;
+  --hn-palette-night-400: #939aab;
+  --hn-palette-night-500: #6b7183;
+  --hn-palette-night-600: #454b5c;
+  --hn-palette-night-700: #2e3342;
+  --hn-palette-night-750: #232734;
+  --hn-palette-night-800: #1b1e2a;
+  --hn-palette-night-850: #141620;
+  --hn-palette-night-900: #10121a;
+  --hn-palette-night-950: #0b0c0f;
+  --hn-palette-blue-50: #eff4ff;
+  --hn-palette-blue-100: #dce9ff;
+  --hn-palette-blue-200: #bfd2ff;
+  --hn-palette-blue-300: #9ab7fc;
+  --hn-palette-blue-400: #7b93ff;
+  --hn-palette-blue-500: #5075ff;
+  --hn-palette-blue-600: #2d52eb;
+  --hn-palette-blue-700: #2143cf;
+  --hn-palette-blue-800: #223dad;
+  --hn-palette-blue-900: #1d3290;
+  --hn-palette-blue-950: #172770;
+  --hn-palette-azure-300: #85b4ff;
+  --hn-palette-azure-500: #3380ff;
+  --hn-palette-azure-700: #1a5fd6;
+  --hn-palette-lavender-50: #f5f2ff;
+  --hn-palette-lavender-100: #e9e4ff;
+  --hn-palette-lavender-200: #d9d0ff;
+  --hn-palette-lavender-300: #c4b5fd;
+  --hn-palette-lavender-400: #a28bfa;
+  --hn-palette-lavender-500: #7c5cf0;
+  --hn-palette-lavender-600: #6541d6;
+  --hn-palette-lavender-700: #5233b3;
+  --hn-palette-lavender-800: #45299b;
+  --hn-palette-lavender-900: #3b2a8f;
+  --hn-palette-mint-50: #f1faf5;
+  --hn-palette-mint-100: #def2e7;
+  --hn-palette-mint-200: #c1e7d2;
+  --hn-palette-mint-300: #8fd6b0;
+  --hn-palette-mint-400: #5cbf8e;
+  --hn-palette-mint-500: #34a574;
+  --hn-palette-mint-600: #1f875c;
+  --hn-palette-mint-700: #146c4b;
+  --hn-palette-mint-800: #065f46;
+  --hn-palette-mint-900: #064e3b;
+  --hn-palette-peach-50: #fff6ef;
+  --hn-palette-peach-100: #ffe5d3;
+  --hn-palette-peach-200: #ffd0b0;
+  --hn-palette-peach-300: #ffb98a;
+  --hn-palette-peach-400: #fb9559;
+  --hn-palette-peach-500: #f07a2e;
+  --hn-palette-peach-600: #d9601a;
+  --hn-palette-peach-700: #b34a14;
+  --hn-palette-peach-800: #8a3b12;
+  --hn-palette-peach-900: #6e3010;
+  --hn-palette-green-50: #edf8f2;
+  --hn-palette-green-100: #d5f0e1;
+  --hn-palette-green-200: #b3e3c9;
+  --hn-palette-green-300: #7fd1a8;
+  --hn-palette-green-400: #46c88a;
+  --hn-palette-green-500: #22a86b;
+  --hn-palette-green-600: #0f8f58;
+  --hn-palette-green-700: #0a7d4a;
+  --hn-palette-green-800: #07603a;
+  --hn-palette-green-900: #064e30;
+  --hn-palette-amber-50: #fffbeb;
+  --hn-palette-amber-100: #fef3c7;
+  --hn-palette-amber-200: #fde68a;
+  --hn-palette-amber-300: #fcd34d;
+  --hn-palette-amber-400: #e0a544;
+  --hn-palette-amber-500: #f59e0b;
+  --hn-palette-amber-600: #d97706;
+  --hn-palette-amber-700: #a15c00;
+  --hn-palette-amber-800: #7c4a03;
+  --hn-palette-amber-900: #5c3605;
+  --hn-palette-rose-50: #fff1f2;
+  --hn-palette-rose-100: #ffe4e6;
+  --hn-palette-rose-200: #fecdd3;
+  --hn-palette-rose-300: #fda4af;
+  --hn-palette-rose-400: #ff7a8a;
+  --hn-palette-rose-500: #f43f5e;
+  --hn-palette-rose-600: #e11d48;
+  --hn-palette-rose-700: #be123c;
+  --hn-palette-rose-800: #9f1239;
+  --hn-palette-rose-900: #881337;
+  --hn-palette-alpha-ink-3: rgb(18 19 22 / 0.03);
+  --hn-palette-alpha-ink-4: rgb(18 19 22 / 0.04);
+  --hn-palette-alpha-ink-5: rgb(18 19 22 / 0.05);
+  --hn-palette-alpha-ink-6: rgb(18 19 22 / 0.06);
+  --hn-palette-alpha-ink-8: rgb(18 19 22 / 0.08);
+  --hn-palette-alpha-ink-10: rgb(18 19 22 / 0.1);
+  --hn-palette-alpha-ink-20: rgb(18 19 22 / 0.2);
+  --hn-palette-alpha-ink-32: rgb(18 19 22 / 0.32);
+  --hn-palette-alpha-ink-45: rgb(18 19 22 / 0.45);
+  --hn-palette-alpha-ink-50: rgb(18 19 22 / 0.5);
+  --hn-palette-alpha-ink-64: rgb(18 19 22 / 0.64);
+  --hn-palette-alpha-ink-70: rgb(18 19 22 / 0.7);
+  --hn-palette-alpha-ink-80: rgb(18 19 22 / 0.8);
+  --hn-palette-alpha-frost-30: rgb(236 238 243 / 0.3);
+  --hn-palette-alpha-frost-46: rgb(236 238 243 / 0.46);
+  --hn-palette-alpha-frost-64: rgb(236 238 243 / 0.64);
+  --hn-palette-alpha-white-6: rgb(255 255 255 / 0.06);
+  --hn-palette-alpha-white-10: rgb(255 255 255 / 0.1);
+  --hn-palette-alpha-white-18: rgb(255 255 255 / 0.18);
+  --hn-palette-alpha-black-40: rgb(0 0 0 / 0.4);
+  --hn-palette-alpha-black-60: rgb(0 0 0 / 0.6);
+  --hn-palette-alpha-black-70: rgb(0 0 0 / 0.7);
+  --hn-palette-alpha-black-80: rgb(0 0 0 / 0.8);
+  --hn-palette-alpha-black-90: rgb(0 0 0 / 0.9);
+  --hn-palette-alpha-blue-60: rgb(45 82 235 / 0.6);
+  --hn-palette-alpha-blue-85: rgb(45 82 235 / 0.85);
+
+  /* space */
+  --hn-space-0: 0px;
+  --hn-space-2: 2px;
+  --hn-space-4: 4px;
+  --hn-space-6: 6px;
+  --hn-space-8: 8px;
+  --hn-space-10: 10px;
+  --hn-space-12: 12px;
+  --hn-space-14: 14px;
+  --hn-space-16: 16px;
+  --hn-space-20: 20px;
+  --hn-space-24: 24px;
+  --hn-space-28: 28px;
+  --hn-space-32: 32px;
+  --hn-space-36: 36px;
+  --hn-space-40: 40px;
+  --hn-space-44: 44px;
+  --hn-space-48: 48px;
+  --hn-space-56: 56px;
+  --hn-space-64: 64px;
+  --hn-space-80: 80px;
+  --hn-space-96: 96px;
+  --hn-space-112: 112px;
+  --hn-space-128: 128px;
+
+  /* radius */
+  --hn-radius-0: 0px;
+  --hn-radius-4: 4px;
+  --hn-radius-6: 6px;
+  --hn-radius-8: 8px;
+  --hn-radius-12: 12px;
+  --hn-radius-16: 16px;
+  --hn-radius-20: 20px;
+  --hn-radius-24: 24px;
+  --hn-radius-28: 28px;
+  --hn-radius-36: 36px;
+  --hn-radius-full: 9999px;
+
+  /* border-width */
+  --hn-border-width-hairline: 1px;
+  --hn-border-width-strong: 2px;
+
+  /* breakpoint */
+  --hn-breakpoint-xs: 390px;
+  --hn-breakpoint-sm: 640px;
+  --hn-breakpoint-md: 768px;
+  --hn-breakpoint-lg: 1024px;
+  --hn-breakpoint-xl: 1280px;
+  --hn-breakpoint-2xl: 1536px;
+
+  /* z-index */
+  --hn-z-index-base: 0;
+  --hn-z-index-raised: 10;
+  --hn-z-index-dropdown: 40;
+  --hn-z-index-sticky: 50;
+  --hn-z-index-overlay: 80;
+  --hn-z-index-modal: 100;
+  --hn-z-index-toast: 120;
+  --hn-z-index-max: 9999;
+
+  /* opacity */
+  --hn-opacity-disabled: 0.5;
+
+  /* duration */
+  --hn-duration-fast: 120ms;
+  --hn-duration-quick: 150ms;
+  --hn-duration-base: 200ms;
+  --hn-duration-moderate: 300ms;
+  --hn-duration-slow: 500ms;
+  --hn-duration-slower: 700ms;
+
+  /* easing */
+  --hn-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --hn-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --hn-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --hn-easing-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+  --hn-easing-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --hn-easing-write: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* spring */
+  --hn-spring-snappy-duration: 190ms;
+  --hn-spring-snappy-easing: linear(0, 0.067, 0.208, 0.368, 0.518, 0.645, 0.746, 0.823, 0.88, 0.921, 0.949, 0.969, 0.981, 0.989, 0.995, 0.998, 1);
+  --hn-spring-settle-duration: 180ms;
+  --hn-spring-settle-easing: linear(0, 0.093, 0.273, 0.457, 0.614, 0.735, 0.824, 0.885, 0.927, 0.954, 0.972, 0.983, 0.99, 0.994, 0.997, 0.998, 1);
+  --hn-spring-playful-duration: 650ms;
+  --hn-spring-playful-easing: linear(0, 0.028, 0.101, 0.202, 0.32, 0.444, 0.566, 0.679, 0.78, 0.867, 0.938, 0.994, 1.037, 1.066, 1.084, 1.093, 1.095, 1.091, 1.083, 1.073, 1.062, 1.05, 1.039, 1.028, 1.019, 1.011, 1.005, 0.999, 0.996, 0.993, 0.992, 0.991, 0.991, 0.992, 0.992, 0.993, 0.994, 0.996, 0.997, 0.998, 0.998, 1);
+
+  /* font */
+  --hn-font-family-sans: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --hn-font-weight-regular: 400;
+  --hn-font-weight-medium: 500;
+  --hn-font-weight-semibold: 600;
+  --hn-font-weight-bold: 700;
+  --hn-font-size-11: 11px;
+  --hn-font-size-12: 12px;
+  --hn-font-size-13: 13px;
+  --hn-font-size-14: 14px;
+  --hn-font-size-15: 15px;
+  --hn-font-size-16: 16px;
+  --hn-font-size-18: 18px;
+  --hn-font-size-20: 20px;
+  --hn-font-size-24: 24px;
+  --hn-font-size-28: 28px;
+  --hn-font-size-34: 34px;
+  --hn-font-size-44: 44px;
+  --hn-font-size-64: 64px;
+  --hn-font-size-88: 88px;
+  --hn-font-letter-spacing-tightest: -0.05em;
+  --hn-font-letter-spacing-tighter: -0.045em;
+  --hn-font-letter-spacing-tight: -0.035em;
+  --hn-font-letter-spacing-snug: -0.02em;
+  --hn-font-letter-spacing-subtle: -0.015em;
+  --hn-font-letter-spacing-normal: 0em;
+  --hn-font-letter-spacing-wide: 0.08em;
+  --hn-font-letter-spacing-wider: 0.14em;
+  --hn-font-letter-spacing-widest: 0.18em;
+  --hn-font-line-height-none: 1;
+  --hn-font-line-height-display: 0.98;
+  --hn-font-line-height-heading: 1.04;
+  --hn-font-line-height-tight: 1.1;
+  --hn-font-line-height-snug: 1.2;
+  --hn-font-line-height-title: 1.35;
+  --hn-font-line-height-normal: 1.5;
+  --hn-font-line-height-relaxed: 1.6;
+
+  /* transition */
+  --hn-transition-hover: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-press: 120ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-fade: 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-panel: 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --hn-transition-layout: 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --hn-transition-reveal: 700ms cubic-bezier(0.22, 1, 0.36, 1) 0ms;
+
+  /* motion */
+  --hn-motion-hover-lift: -2px;
+  --hn-motion-press-scale: 0.99;
+
+  /* radius */
+  --hn-radius-control-compact: 8px;
+  --hn-radius-control: 12px;
+  --hn-radius-popover: 16px;
+  --hn-radius-card: 24px;
+  --hn-radius-feature: 28px;
+  --hn-radius-frame: 36px;
+  --hn-radius-pill: 9999px;
+
+  /* size */
+  --hn-size-control-sm: 36px;
+  --hn-size-control-md: 44px;
+  --hn-size-control-lg: 48px;
+  --hn-size-icon-sm: 16px;
+  --hn-size-icon-md: 20px;
+  --hn-size-icon-lg: 24px;
+  --hn-size-avatar-sm: 28px;
+  --hn-size-avatar-md: 40px;
+  --hn-size-avatar-lg: 56px;
+  --hn-size-header: 80px;
+  --hn-size-header-compact: 56px;
+
+  /* layout */
+  --hn-layout-page: 1320px;
+  --hn-layout-content: 1120px;
+  --hn-layout-reading: 760px;
+  --hn-layout-measure: 680px;
+  --hn-layout-narrow: 560px;
+  --hn-layout-gutter-sm: 20px;
+  --hn-layout-gutter-md: 32px;
+  --hn-layout-gutter-lg: 48px;
+  --hn-layout-section-sm: 80px;
+  --hn-layout-section-lg: 112px;
+
+  /* focus */
+  --hn-focus-width: 2px;
+  --hn-focus-offset: 2px;
+
+  /* typography */
+  --hn-typography-display-xl-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-display-xl-font-size: clamp(2.5rem, 1.1854rem + 5.3933vw, 5.5rem);
+  --hn-typography-display-xl-font-weight: 600;
+  --hn-typography-display-xl-letter-spacing: -0.05em;
+  --hn-typography-display-xl-line-height: 0.98;
+  --hn-typography-display-xl-text-transform: none;
+  --hn-typography-display-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-display-lg-font-size: clamp(2.375rem, 1.6629rem + 2.9213vw, 4rem);
+  --hn-typography-display-lg-font-weight: 600;
+  --hn-typography-display-lg-letter-spacing: -0.045em;
+  --hn-typography-display-lg-line-height: 1.04;
+  --hn-typography-display-lg-text-transform: none;
+  --hn-typography-heading-1-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-1-font-size: clamp(2.125rem, 1.8511rem + 1.1236vw, 2.75rem);
+  --hn-typography-heading-1-font-weight: 600;
+  --hn-typography-heading-1-letter-spacing: -0.045em;
+  --hn-typography-heading-1-line-height: 1.04;
+  --hn-typography-heading-1-text-transform: none;
+  --hn-typography-heading-2-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-2-font-size: clamp(1.75rem, 1.5857rem + 0.6742vw, 2.125rem);
+  --hn-typography-heading-2-font-weight: 600;
+  --hn-typography-heading-2-letter-spacing: -0.035em;
+  --hn-typography-heading-2-line-height: 1.1;
+  --hn-typography-heading-2-text-transform: none;
+  --hn-typography-heading-3-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-3-font-size: 24px;
+  --hn-typography-heading-3-font-weight: 600;
+  --hn-typography-heading-3-letter-spacing: -0.035em;
+  --hn-typography-heading-3-line-height: 1.2;
+  --hn-typography-heading-3-text-transform: none;
+  --hn-typography-heading-4-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-4-font-size: 18px;
+  --hn-typography-heading-4-font-weight: 600;
+  --hn-typography-heading-4-letter-spacing: -0.02em;
+  --hn-typography-heading-4-line-height: 1.35;
+  --hn-typography-heading-4-text-transform: none;
+  --hn-typography-body-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-lg-font-size: clamp(1rem, 0.8904rem + 0.4494vw, 1.25rem);
+  --hn-typography-body-lg-font-weight: 400;
+  --hn-typography-body-lg-letter-spacing: -0.015em;
+  --hn-typography-body-lg-line-height: 1.6;
+  --hn-typography-body-lg-text-transform: none;
+  --hn-typography-body-md-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-md-font-size: 16px;
+  --hn-typography-body-md-font-weight: 400;
+  --hn-typography-body-md-letter-spacing: 0em;
+  --hn-typography-body-md-line-height: 1.6;
+  --hn-typography-body-md-text-transform: none;
+  --hn-typography-body-sm-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-sm-font-size: 14px;
+  --hn-typography-body-sm-font-weight: 400;
+  --hn-typography-body-sm-letter-spacing: 0em;
+  --hn-typography-body-sm-line-height: 1.6;
+  --hn-typography-body-sm-text-transform: none;
+  --hn-typography-caption-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-caption-font-size: 13px;
+  --hn-typography-caption-font-weight: 400;
+  --hn-typography-caption-letter-spacing: 0em;
+  --hn-typography-caption-line-height: 1.5;
+  --hn-typography-caption-text-transform: none;
+  --hn-typography-label-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-lg-font-size: 15px;
+  --hn-typography-label-lg-font-weight: 600;
+  --hn-typography-label-lg-letter-spacing: 0em;
+  --hn-typography-label-lg-line-height: 1;
+  --hn-typography-label-lg-text-transform: none;
+  --hn-typography-label-md-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-md-font-size: 14px;
+  --hn-typography-label-md-font-weight: 600;
+  --hn-typography-label-md-letter-spacing: 0em;
+  --hn-typography-label-md-line-height: 1;
+  --hn-typography-label-md-text-transform: none;
+  --hn-typography-label-sm-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-sm-font-size: 13px;
+  --hn-typography-label-sm-font-weight: 600;
+  --hn-typography-label-sm-letter-spacing: 0em;
+  --hn-typography-label-sm-line-height: 1;
+  --hn-typography-label-sm-text-transform: none;
+  --hn-typography-eyebrow-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-eyebrow-font-size: 12px;
+  --hn-typography-eyebrow-font-weight: 700;
+  --hn-typography-eyebrow-letter-spacing: 0.18em;
+  --hn-typography-eyebrow-line-height: 1.2;
+  --hn-typography-eyebrow-text-transform: uppercase;
+  --hn-typography-overline-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-overline-font-size: 11px;
+  --hn-typography-overline-font-weight: 700;
+  --hn-typography-overline-letter-spacing: 0.14em;
+  --hn-typography-overline-line-height: 1.2;
+  --hn-typography-overline-text-transform: uppercase;
+  --hn-typography-code-font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --hn-typography-code-font-size: 13px;
+  --hn-typography-code-font-weight: 400;
+  --hn-typography-code-letter-spacing: 0em;
+  --hn-typography-code-line-height: 1.5;
+  --hn-typography-code-text-transform: none;
+
+  /* color */
+  --hn-color-canvas: #f7f7f3;
+  --hn-color-surface: #ffffff;
+  --hn-color-surface-raised: #ffffff;
+  --hn-color-surface-sunken: rgb(18 19 22 / 0.03);
+  --hn-color-surface-inverse: #121316;
+  --hn-color-scrim: rgb(18 19 22 / 0.5);
+  --hn-color-fg: #121316;
+  --hn-color-fg-muted: rgb(18 19 22 / 0.64);
+  --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
+  --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
+  --hn-color-fg-inverse: #ffffff;
+  --hn-color-fg-brand: #2d52eb;
+  --hn-color-fg-on-accent: #ffffff;
+  --hn-color-line: rgb(18 19 22 / 0.1);
+  --hn-color-line-subtle: #e7e7e1;
+  --hn-color-line-strong: rgb(18 19 22 / 0.2);
+  --hn-color-accent: #2d52eb;
+  --hn-color-accent-hover: #2143cf;
+  --hn-color-accent-pressed: #223dad;
+  --hn-color-accent-subtle: #dce9ff;
+  --hn-color-accent-line: #bfd2ff;
+  --hn-color-state-hover: rgb(18 19 22 / 0.05);
+  --hn-color-state-pressed: rgb(18 19 22 / 0.08);
+  --hn-color-focus: #2d52eb;
+  --hn-color-selection: #dce9ff;
+  --hn-color-guide: #3380ff;
+  --hn-color-guide-halo: rgb(51 128 255 / 0.22);
+  --hn-color-success: #0a7d4a;
+  --hn-color-success-subtle: #edf8f2;
+  --hn-color-success-line: #b3e3c9;
+  --hn-color-success-solid: #0a7d4a;
+  --hn-color-success-on-solid: #ffffff;
+  --hn-color-warning: #a15c00;
+  --hn-color-warning-subtle: #fffbeb;
+  --hn-color-warning-line: #fde68a;
+  --hn-color-warning-solid: #f59e0b;
+  --hn-color-warning-on-solid: #121316;
+  --hn-color-danger: #be123c;
+  --hn-color-danger-subtle: #fff1f2;
+  --hn-color-danger-line: #fecdd3;
+  --hn-color-danger-solid: #be123c;
+  --hn-color-danger-on-solid: #ffffff;
+  --hn-color-info: #2d52eb;
+  --hn-color-info-subtle: #eff4ff;
+  --hn-color-info-line: #bfd2ff;
+  --hn-color-info-solid: #2d52eb;
+  --hn-color-info-on-solid: #ffffff;
+  --hn-color-tint-sky: #dce9ff;
+  --hn-color-tint-sky-fg: #2143cf;
+  --hn-color-tint-lavender: #e9e4ff;
+  --hn-color-tint-lavender-fg: #3b2a8f;
+  --hn-color-tint-mint: #def2e7;
+  --hn-color-tint-mint-fg: #065f46;
+  --hn-color-tint-peach: #ffe5d3;
+  --hn-color-tint-peach-fg: #8a3b12;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #2d52eb;
 }
+
+/* Dark: the `dark` class that next-themes sets, or data-theme="dark" on any element. */
+
+.dark,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* color */
+  --hn-color-canvas: #0b0c0f;
+  --hn-color-surface: #141620;
+  --hn-color-surface-raised: #1b1e2a;
+  --hn-color-surface-sunken: #10121a;
+  --hn-color-surface-inverse: #f7f7f3;
+  --hn-color-scrim: rgb(0 0 0 / 0.6);
+  --hn-color-fg: #eceef3;
+  --hn-color-fg-muted: rgb(236 238 243 / 0.64);
+  --hn-color-fg-subtle: rgb(236 238 243 / 0.46);
+  --hn-color-fg-disabled: rgb(236 238 243 / 0.3);
+  --hn-color-fg-inverse: #121316;
+  --hn-color-fg-brand: #7b93ff;
+  --hn-color-line: rgb(255 255 255 / 0.1);
+  --hn-color-line-subtle: #232734;
+  --hn-color-line-strong: rgb(255 255 255 / 0.18);
+  --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
+  --hn-color-accent-line: rgb(123 147 255 / 0.35);
+  --hn-color-state-hover: rgb(255 255 255 / 0.06);
+  --hn-color-state-pressed: rgb(255 255 255 / 0.1);
+  --hn-color-focus: #7b93ff;
+  --hn-color-selection: rgb(123 147 255 / 0.3);
+  --hn-color-guide-halo: rgb(51 128 255 / 0.3);
+  --hn-color-success: #46c88a;
+  --hn-color-success-subtle: rgb(70 200 138 / 0.12);
+  --hn-color-success-line: rgb(70 200 138 / 0.3);
+  --hn-color-warning: #e0a544;
+  --hn-color-warning-subtle: rgb(224 165 68 / 0.12);
+  --hn-color-warning-line: rgb(224 165 68 / 0.3);
+  --hn-color-danger: #ff7a8a;
+  --hn-color-danger-subtle: rgb(255 122 138 / 0.12);
+  --hn-color-danger-line: rgb(255 122 138 / 0.3);
+  --hn-color-info: #7b93ff;
+  --hn-color-info-subtle: rgb(123 147 255 / 0.12);
+  --hn-color-info-line: rgb(123 147 255 / 0.3);
+  --hn-color-tint-sky: rgb(123 147 255 / 0.14);
+  --hn-color-tint-sky-fg: #9ab7fc;
+  --hn-color-tint-lavender: rgb(162 139 250 / 0.14);
+  --hn-color-tint-lavender-fg: #c4b5fd;
+  --hn-color-tint-mint: rgb(92 191 142 / 0.14);
+  --hn-color-tint-mint-fg: #8fd6b0;
+  --hn-color-tint-peach: rgb(251 149 89 / 0.14);
+  --hn-color-tint-peach-fg: #ffb98a;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #0b0c0f, 0px 0px 0px 4px #7b93ff;
+}
+
+/* A light island inside a dark page. */
+
+.light,
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* color */
+  --hn-color-canvas: #f7f7f3;
+  --hn-color-surface: #ffffff;
+  --hn-color-surface-raised: #ffffff;
+  --hn-color-surface-sunken: rgb(18 19 22 / 0.03);
+  --hn-color-surface-inverse: #121316;
+  --hn-color-scrim: rgb(18 19 22 / 0.5);
+  --hn-color-fg: #121316;
+  --hn-color-fg-muted: rgb(18 19 22 / 0.64);
+  --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
+  --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
+  --hn-color-fg-inverse: #ffffff;
+  --hn-color-fg-brand: #2d52eb;
+  --hn-color-line: rgb(18 19 22 / 0.1);
+  --hn-color-line-subtle: #e7e7e1;
+  --hn-color-line-strong: rgb(18 19 22 / 0.2);
+  --hn-color-accent-subtle: #dce9ff;
+  --hn-color-accent-line: #bfd2ff;
+  --hn-color-state-hover: rgb(18 19 22 / 0.05);
+  --hn-color-state-pressed: rgb(18 19 22 / 0.08);
+  --hn-color-focus: #2d52eb;
+  --hn-color-selection: #dce9ff;
+  --hn-color-guide-halo: rgb(51 128 255 / 0.22);
+  --hn-color-success: #0a7d4a;
+  --hn-color-success-subtle: #edf8f2;
+  --hn-color-success-line: #b3e3c9;
+  --hn-color-warning: #a15c00;
+  --hn-color-warning-subtle: #fffbeb;
+  --hn-color-warning-line: #fde68a;
+  --hn-color-danger: #be123c;
+  --hn-color-danger-subtle: #fff1f2;
+  --hn-color-danger-line: #fecdd3;
+  --hn-color-info: #2d52eb;
+  --hn-color-info-subtle: #eff4ff;
+  --hn-color-info-line: #bfd2ff;
+  --hn-color-tint-sky: #dce9ff;
+  --hn-color-tint-sky-fg: #2143cf;
+  --hn-color-tint-lavender: #e9e4ff;
+  --hn-color-tint-lavender-fg: #3b2a8f;
+  --hn-color-tint-mint: #def2e7;
+  --hn-color-tint-mint-fg: #065f46;
+  --hn-color-tint-peach: #ffe5d3;
+  --hn-color-tint-peach-fg: #8a3b12;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #2d52eb;
+}
+
+/* data-theme="system" follows the operating system. */
+
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #07070b; --fg: #f3f5f9; --muted: #a4acba; --subtle: #6f7787; --line: #1c1e27;
-    --card: #0d0e14; --panel: #11121a; --logo: #8ea6ff; --warn-bg: #1f1707; --warn-fg: #f4c776;
-    --warn-line: #3a2b0f; --shadow: none;
+  [data-theme='system'] {
+    color-scheme: dark;
+
+    /* color */
+    --hn-color-canvas: #0b0c0f;
+    --hn-color-surface: #141620;
+    --hn-color-surface-raised: #1b1e2a;
+    --hn-color-surface-sunken: #10121a;
+    --hn-color-surface-inverse: #f7f7f3;
+    --hn-color-scrim: rgb(0 0 0 / 0.6);
+    --hn-color-fg: #eceef3;
+    --hn-color-fg-muted: rgb(236 238 243 / 0.64);
+    --hn-color-fg-subtle: rgb(236 238 243 / 0.46);
+    --hn-color-fg-disabled: rgb(236 238 243 / 0.3);
+    --hn-color-fg-inverse: #121316;
+    --hn-color-fg-brand: #7b93ff;
+    --hn-color-line: rgb(255 255 255 / 0.1);
+    --hn-color-line-subtle: #232734;
+    --hn-color-line-strong: rgb(255 255 255 / 0.18);
+    --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
+    --hn-color-accent-line: rgb(123 147 255 / 0.35);
+    --hn-color-state-hover: rgb(255 255 255 / 0.06);
+    --hn-color-state-pressed: rgb(255 255 255 / 0.1);
+    --hn-color-focus: #7b93ff;
+    --hn-color-selection: rgb(123 147 255 / 0.3);
+    --hn-color-guide-halo: rgb(51 128 255 / 0.3);
+    --hn-color-success: #46c88a;
+    --hn-color-success-subtle: rgb(70 200 138 / 0.12);
+    --hn-color-success-line: rgb(70 200 138 / 0.3);
+    --hn-color-warning: #e0a544;
+    --hn-color-warning-subtle: rgb(224 165 68 / 0.12);
+    --hn-color-warning-line: rgb(224 165 68 / 0.3);
+    --hn-color-danger: #ff7a8a;
+    --hn-color-danger-subtle: rgb(255 122 138 / 0.12);
+    --hn-color-danger-line: rgb(255 122 138 / 0.3);
+    --hn-color-info: #7b93ff;
+    --hn-color-info-subtle: rgb(123 147 255 / 0.12);
+    --hn-color-info-line: rgb(123 147 255 / 0.3);
+    --hn-color-tint-sky: rgb(123 147 255 / 0.14);
+    --hn-color-tint-sky-fg: #9ab7fc;
+    --hn-color-tint-lavender: rgb(162 139 250 / 0.14);
+    --hn-color-tint-lavender-fg: #c4b5fd;
+    --hn-color-tint-mint: rgb(92 191 142 / 0.14);
+    --hn-color-tint-mint-fg: #8fd6b0;
+    --hn-color-tint-peach: rgb(251 149 89 / 0.14);
+    --hn-color-tint-peach-fg: #ffb98a;
+
+    /* shadow */
+    --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
+    --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
+    --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+    --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
+    --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
+    --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
+    --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
+    --hn-shadow-focus-ring: 0px 0px 0px 2px #0b0c0f, 0px 0px 0px 4px #7b93ff;
   }
 }
+
+:root {
+  --shell: 1120px;
+  --serif: ui-serif, "New York", "Newsreader", "Iowan Old Style", Georgia, serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
 * { box-sizing: border-box; }
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 body {
-  margin: 0; background: var(--bg); color: var(--fg);
-  font: 16px/1.6 "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0; background: var(--hn-color-canvas); color: var(--hn-color-fg);
+  font-family: var(--hn-font-family-sans); font-size: 16px; line-height: 1.55;
 }
-a { color: inherit; }
-.wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
-.top { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
-.logo { display: inline-flex; align-items: center; color: var(--logo); text-decoration: none; }
-.logo svg { height: 24px; width: auto; display: block; }
-.nav { display: flex; gap: 22px; font-size: 14px; }
-.nav a { color: var(--muted); text-decoration: none; }
-.nav a:hover { color: var(--fg); }
-.hero { text-align: center; padding: 60px 0 12px; }
-.hero.left { text-align: left; padding-top: 36px; }
-.app-icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 18px 40px rgba(45, 82, 235, .28); }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 6px 12px;
-  border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--brand);
-  background: color-mix(in srgb, var(--brand) 10%, transparent);
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--hn-color-selection); }
+:focus-visible { outline: 2px solid var(--hn-color-focus); outline-offset: 3px; border-radius: 10px; }
+.i { flex: none; display: block; }
+.num { font-variant-numeric: tabular-nums; }
+.shell { max-width: var(--shell); margin: 0 auto; padding: 0 24px; }
+
+/* Top bar */
+.bar {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--hn-color-canvas) 78%, transparent);
+  backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px);
+  border-bottom: 1px solid color-mix(in srgb, var(--hn-color-line) 70%, transparent);
 }
-h1 { margin: 16px 0 12px; font-size: clamp(38px, 6vw, 62px); line-height: 1.04; letter-spacing: -.035em; }
-h2 { margin: 0 0 16px; font-size: 22px; letter-spacing: -.02em; }
-.lede { margin: 0 auto; max-width: 640px; color: var(--muted); font-size: 18px; }
-.hero.left .lede { margin: 0; }
-.cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-.hero.left .cta { justify-content: flex-start; }
+.bar .shell { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { display: inline-flex; color: var(--hn-color-fg); }
+.logo svg { height: 22px; width: auto; display: block; }
+.nav { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; }
+.nav a { padding: 8px 12px; border-radius: 10px; color: var(--hn-color-fg-muted); transition: background .15s, color .15s; }
+.nav a:hover { color: var(--hn-color-fg); background: var(--hn-color-state-hover); }
+
+/* Buttons */
 .btn {
-  display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 12px;
-  font-size: 15px; font-weight: 600; text-decoration: none; transition: transform .12s ease, filter .12s ease;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px; height: 48px; padding: 0 20px;
+  border-radius: 14px; font-size: 15px; font-weight: 600; letter-spacing: -.005em; white-space: nowrap;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s, opacity .18s;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary {
-  color: #fff; background: linear-gradient(180deg, var(--brand-hi), var(--brand));
-  box-shadow: 0 10px 26px color-mix(in srgb, var(--brand) 35%, transparent);
+.btn:active { transform: translateY(0) scale(.985); }
+.btn.sm { height: 38px; padding: 0 14px; border-radius: 11px; font-size: 14px; }
+.btn-ink { background: var(--hn-color-surface-inverse); color: var(--hn-color-fg-inverse); box-shadow: var(--hn-shadow-inverse-glow); }
+.btn-ink:hover { opacity: .92; }
+.btn-cream { background: var(--hn-palette-brand-cream); color: var(--hn-palette-brand-ink); box-shadow: 0 12px 30px -14px rgb(0 0 0 / .6); }
+.btn-glass {
+  color: #fff; background: rgb(255 255 255 / .12); border: 1px solid rgb(255 255 255 / .22);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
-.btn-ghost { color: var(--fg); background: var(--card); border: 1px solid var(--line); }
-.btn.small { padding: 9px 14px; font-size: 14px; border-radius: 10px; }
-.icon { width: 18px; height: 18px; flex: none; }
-.meta { margin-top: 14px; color: var(--subtle); font-size: 13px; }
-.num { font-variant-numeric: tabular-nums; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; margin: 44px 0 8px; }
-.card {
-  display: flex; flex-direction: column; gap: 10px; padding: 22px; background: var(--card);
-  border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+.btn-glass:hover { background: rgb(255 255 255 / .18); }
+.btn-quiet { color: var(--hn-color-fg); background: var(--hn-color-surface); border: 1px solid var(--hn-color-line); box-shadow: var(--hn-shadow-hairline); }
+.btn-quiet:hover { background: var(--hn-color-surface-raised); border-color: var(--hn-color-line-strong); }
+
+/* Hero: the Home banner's wash of blue, lavender and azure on ink */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate; margin-top: 28px; border-radius: var(--hn-radius-frame);
+  color: #fff; background: var(--hn-palette-brand-ink); box-shadow: var(--hn-shadow-floating);
 }
-.card.recommended { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
-.card h3 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; }
-.card .version { font-size: 30px; font-weight: 700; letter-spacing: -.025em; }
-.card p { margin: 0; color: var(--muted); font-size: 14px; }
-.card .when { color: var(--subtle); font-size: 13px; }
-.card .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--subtle); }
-.dot.prod { background: var(--ok); } .dot.stage { background: var(--amber); } .dot.dev { background: var(--brand); }
-.pill {
-  margin-left: auto; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600;
-  color: var(--muted); background: var(--panel); border: 1px solid var(--line);
+.hero::before, .hero::after, .hero .glow {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(70px); opacity: .9;
 }
+.hero::before { width: 70%; height: 130%; left: -18%; top: -30%; background: var(--wash-a, var(--hn-palette-blue-600)); }
+.hero::after { width: 60%; height: 120%; right: -14%; top: -40%; background: var(--wash-b, var(--hn-palette-lavender-400)); opacity: .75; }
+.hero .glow { width: 55%; height: 90%; left: 30%; bottom: -55%; background: var(--wash-c, var(--hn-palette-azure-300)); opacity: .55; }
+.hero .grain {
+  position: absolute; inset: 0; z-index: -1; opacity: .12; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero .inner { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; padding: 72px 64px 64px; }
+.hero.compact .inner { grid-template-columns: 1fr auto; padding: 52px 56px 48px; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: rgb(255 255 255 / .78);
+}
+.eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px rgb(255 255 255 / .12); }
+.display {
+  margin: 18px 0 0; font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 6.2vw, 76px);
+  line-height: .98; letter-spacing: -.028em;
+}
+.hero.compact .display { font-size: clamp(38px, 5vw, 60px); }
+.lede { margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: rgb(255 255 255 / .82); }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.chip {
+  display: inline-flex; align-items: center; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12.5px;
+  font-weight: 500; color: rgb(255 255 255 / .86); background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .14);
+}
+.device { position: relative; justify-self: center; display: grid; place-items: center; gap: 18px; }
+.device .appicon {
+  width: 168px; height: 168px; border-radius: 38px; display: block;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / .8), 0 0 0 1px rgb(255 255 255 / .12), 0 0 90px -10px rgb(123 147 255 / .6);
+  transform: rotate(-6deg);
+}
+.notch {
+  display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 16px 0 12px; border-radius: 999px;
+  background: #000; color: rgb(255 255 255 / .92); font-size: 13px; font-weight: 500;
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / .9), inset 0 0 0 1px rgb(255 255 255 / .08);
+}
+.notch .wave { display: inline-flex; align-items: center; gap: 2px; height: 14px; }
+.notch .wave i { width: 3px; border-radius: 2px; background: var(--hn-palette-blue-400); animation: wave 1.2s var(--ease) infinite; }
+.notch .wave i:nth-child(1) { height: 6px; } .notch .wave i:nth-child(2) { height: 13px; animation-delay: .15s; }
+.notch .wave i:nth-child(3) { height: 9px; animation-delay: .3s; } .notch .wave i:nth-child(4) { height: 5px; animation-delay: .45s; }
+@keyframes wave { 50% { transform: scaleY(.45); } }
+kbd {
+  display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 6px;
+  font: 600 12px/1 var(--hn-font-family-sans); color: inherit; background: rgb(255 255 255 / .14);
+  border: 1px solid rgb(255 255 255 / .16);
+}
+.crumb { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: rgb(255 255 255 / .7); }
+.crumb a:hover { color: #fff; }
+
+/* Notices */
 .notice {
-  margin: 28px 0 0; padding: 14px 16px; border-radius: 14px; font-size: 14px; text-align: left;
-  color: var(--warn-fg); background: var(--warn-bg); border: 1px solid var(--warn-line);
+  display: flex; gap: 14px; align-items: flex-start; margin-top: 16px; padding: 18px 20px; border-radius: var(--hn-radius-popover);
+  background: var(--hn-color-warning-subtle); border: 1px solid var(--hn-color-warning-line); color: var(--hn-color-fg);
+  font-size: 14.5px; line-height: 1.55;
 }
-section { margin-top: 56px; }
-.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-.steps { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
-.steps li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; counter-increment: step; }
-.steps li::before {
-  content: counter(step); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  font-size: 13px; font-weight: 700; background: var(--panel); border: 1px solid var(--line);
+.notice .i { color: var(--hn-color-warning); margin-top: 2px; }
+.notice strong { font-weight: 600; }
+
+/* Sections */
+section { margin-top: 88px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--hn-color-fg-subtle); }
+h2 { margin: 8px 0 0; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.05; letter-spacing: -.02em; }
+.head p { margin: 0; max-width: 380px; color: var(--hn-color-fg-muted); font-size: 15px; }
+
+.card {
+  position: relative; background: var(--hn-color-surface); border: 1px solid var(--hn-color-line);
+  border-radius: var(--hn-radius-card); box-shadow: var(--hn-shadow-hairline);
 }
-.facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; color: var(--muted); font-size: 15px; }
-.facts strong { color: var(--fg); font-weight: 600; }
-kbd, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86em; padding: 1px 6px;
-  border-radius: 6px; background: var(--panel); border: 1px solid var(--line);
+.channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.channel { display: flex; flex-direction: column; padding: 26px; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s; }
+.channel:hover { transform: translateY(-2px); box-shadow: var(--hn-shadow-raised); border-color: var(--hn-color-line-strong); }
+.channel.recommended { box-shadow: 0 0 0 1px var(--hn-color-accent-line), var(--hn-shadow-raised); border-color: transparent; }
+.channel .top { display: flex; align-items: center; gap: 12px; }
+.tile { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; }
+.tint-mint { background: var(--hn-color-tint-mint); color: var(--hn-color-tint-mint-fg); }
+.tint-peach { background: var(--hn-color-tint-peach); color: var(--hn-color-tint-peach-fg); }
+.tint-sky { background: var(--hn-color-tint-sky); color: var(--hn-color-tint-sky-fg); }
+.tint-lavender { background: var(--hn-color-tint-lavender); color: var(--hn-color-tint-lavender-fg); }
+.channel h3 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+.badge {
+  margin-left: auto; display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; color: var(--hn-color-fg-brand); background: var(--hn-color-accent-subtle);
 }
-.table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
-tr:last-child td { border-bottom: 0; }
-th { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--subtle); }
-td.notes { color: var(--muted); }
-.empty { color: var(--muted); }
-footer {
-  margin-top: 72px; padding: 28px 0 56px; border-top: 1px solid var(--line); color: var(--subtle); font-size: 13px;
-  display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between;
+.badge.neutral { color: var(--hn-color-fg-muted); background: var(--hn-color-state-hover); }
+.version { margin-top: 26px; font-family: var(--serif); font-size: 44px; line-height: 1; letter-spacing: -.02em; }
+.version small { font-family: var(--hn-font-family-sans); font-size: 15px; letter-spacing: 0; color: var(--hn-color-fg-subtle); margin-left: 6px; }
+.channel p { margin: 12px 0 0; color: var(--hn-color-fg-muted); font-size: 14.5px; }
+.channel .when { margin-top: 6px; font-size: 13px; color: var(--hn-color-fg-subtle); }
+.channel .actions { display: flex; gap: 8px; margin-top: auto; padding-top: 24px; }
+.channel .actions .btn { flex: 1; }
+.empty .version { color: var(--hn-color-fg-disabled); }
+
+.bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feature { padding: 28px; }
+.feature h3 { margin: 22px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -.015em; }
+.feature p { margin: 0; color: var(--hn-color-fg-muted); font-size: 14.5px; }
+.feature code, .step code, .build code {
+  font-family: var(--hn-font-family-mono); font-size: 12.5px; padding: 1px 6px; border-radius: 6px;
+  background: var(--hn-color-surface-sunken); border: 1px solid var(--hn-color-line);
 }
-footer a { color: var(--muted); text-decoration: none; }
-footer a:hover { color: var(--fg); }
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
+.step { padding: 24px; counter-increment: step; }
+.step .n {
+  display: flex; align-items: center; justify-content: space-between; color: var(--hn-color-fg-subtle);
+  font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+}
+.step .n::before { content: "Step " counter(step); }
+.step h3 { margin: 26px 0 6px; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+.step p { margin: 0; color: var(--hn-color-fg-muted); font-size: 14px; }
+.step kbd { color: var(--hn-color-fg); background: var(--hn-color-surface-sunken); border-color: var(--hn-color-line); }
+
+.builds { overflow: hidden; }
+.build {
+  display: grid; grid-template-columns: 170px 150px 1fr auto; gap: 20px; align-items: center; padding: 18px 24px;
+  border-top: 1px solid var(--hn-color-line);
+}
+.build:first-child { border-top: 0; }
+.build:hover { background: var(--hn-color-state-hover); }
+.build .v { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.build .d, .build .notes { color: var(--hn-color-fg-muted); font-size: 14px; }
+.build .notes { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.build .notes code { margin-left: 8px; color: var(--hn-color-fg-subtle); }
+
+footer { margin: 96px 0 0; border-top: 1px solid var(--hn-color-line); }
+footer .shell { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; padding: 28px 24px 48px; font-size: 13px; color: var(--hn-color-fg-subtle); }
+footer nav { display: flex; gap: 18px; }
+footer a:hover { color: var(--hn-color-fg); }
+
+.reveal { animation: rise .7s var(--ease) both; }
+.reveal.d1 { animation-delay: .06s; } .reveal.d2 { animation-delay: .12s; } .reveal.d3 { animation-delay: .18s; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .notch .wave i { animation: none; }
+  .btn:hover, .channel:hover { transform: none; }
+}
+
+@media (max-width: 960px) {
+  .hero .inner, .hero.compact .inner { grid-template-columns: 1fr; padding: 48px 32px 44px; }
+  .device { display: none; }
+  .channels, .bento { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .head { flex-direction: column; align-items: flex-start; }
+  .build { grid-template-columns: 1fr auto; gap: 6px 16px; }
+  .build .d { grid-column: 1; grid-row: 2; }
+  .build .notes { grid-column: 1 / -1; grid-row: 3; white-space: normal; }
+  .build .get { grid-column: 2; grid-row: 1 / span 2; }
+}
+@media (max-width: 560px) {
+  .shell { padding: 0 16px; }
+  .hero { margin-top: 16px; border-radius: 28px; }
+  .hero .inner, .hero.compact .inner { padding: 36px 22px 30px; }
+  .nav a.hide-sm { display: none; }
+  .steps { grid-template-columns: 1fr; }
+  .cta .btn { flex: 1 1 100%; }
+  section { margin-top: 64px; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="top">
-  <a class="logo" href="../../index.html"><svg role="img" aria-label="Hintora" width="447" height="100" viewBox="0 0 447 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<header class="bar">
+  <div class="shell">
+    <a class="logo" href="../../index.html" aria-label="Hintora downloads"><svg role="img" aria-label="Hintora" width="447" height="100" viewBox="0 0 447 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M131.75 52.6104L136.941 44.8223C140.57 39.3794 146.679 36.1104 153.221 36.1104C161.805 36.1104 168.273 43.9169 166.678 52.3516L164.015 66.4268C163.358 69.8978 166.02 73.1104 169.553 73.1104C172.274 73.1101 174.606 71.1658 175.096 68.4893L180.75 37.6104H193.25L187.37 69.7764C185.843 78.1321 178.676 84.2787 170.185 84.5146L167.709 84.584C157.821 84.8586 150.085 76.1348 151.539 66.3506L153.376 53.9902C153.836 50.8933 151.437 48.1104 148.306 48.1104C146.423 48.1105 144.692 49.1427 143.797 50.7988L126.951 81.9639C125.903 83.9024 123.877 85.1103 121.673 85.1104H113.25L125.75 16.6104H138.75L131.75 52.6104Z" fill="currentColor"/>
 <path d="M438.75 68.1104C443.168 68.1104 446.75 71.9159 446.75 76.6104C446.75 81.3048 443.168 85.1104 438.75 85.1104C434.332 85.1104 430.75 81.3048 430.75 76.6104C430.75 71.9159 434.332 68.1104 438.75 68.1104Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M296.57 43.4385C306.958 33.0509 322.72 31.9719 331.776 41.0283C340.833 50.0848 339.754 65.8468 329.366 76.2344C318.979 86.6215 303.216 87.7009 294.16 78.6445C285.104 69.5882 286.183 53.826 296.57 43.4385ZM322.176 50.6299C317.743 46.1968 310.027 46.7249 304.942 51.8096C299.858 56.8943 299.33 64.6101 303.763 69.043C308.196 73.4759 315.911 72.9473 320.996 67.8633C326.081 62.7786 326.609 55.063 322.176 50.6299Z" fill="currentColor"/>
@@ -130,59 +915,69 @@ footer a:hover { color: var(--fg); }
 <path d="M188.25 15.1104C192.944 15.1104 196.75 18.6921 196.75 23.1104C196.75 27.5286 192.944 31.1104 188.25 31.1104C183.556 31.1104 179.75 27.5286 179.75 23.1104C179.75 18.6921 183.556 15.1104 188.25 15.1104Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M86.6596 45.5539C89.9845 46.8895 90.0112 51.5869 86.7017 52.9602L65.2428 61.8648L73.0395 70.8339C74.347 72.338 74.1876 74.6173 72.6835 75.9249C71.1793 77.2324 68.9 77.073 67.5924 75.5689L59.9976 66.8321L47.6022 86.2613C45.6634 89.3002 41.0099 88.4256 40.3068 84.8902L29.221 29.1485C28.6013 26.0324 31.6869 23.4723 34.6351 24.6565L86.6596 45.5539ZM42.0645 47.0039C41.4282 47.557 41.3608 48.5213 41.9139 49.1577L47.3773 55.4426C47.9305 56.0788 48.8948 56.1463 49.5311 55.5932C50.1673 55.04 50.2347 54.0757 49.6817 53.4394L44.2183 47.1545C43.6652 46.5182 42.7009 46.4508 42.0645 47.0039ZM49.8156 40.2659C49.1793 40.8191 49.1119 41.7834 49.665 42.4197L55.1284 48.7046C55.6816 49.3408 56.6459 49.4084 57.2822 48.8552C57.9184 48.3021 57.9858 47.3377 57.4328 46.7014L51.9695 40.4165C51.4163 39.7802 50.452 39.7129 49.8156 40.2659Z" fill="currentColor"/>
 </svg></a>
-  <nav class="nav">
-    <a href="../../index.html#channels">Channels</a>
-    <a href="https://hintora.ai">hintora.ai</a>
-  </nav>
-</header>
-
-<main>
-  <div class="hero left">
-    <span class="eyebrow"><span class="dot dev"></span>Development channel</span>
-    <h1 class="num">Hintora 0.3.0 (57)</h1>
-    <p class="lede">Welcome to Hintora.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-57/Hintora-Installer.zip"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0 3.6-3.6M10 12.5 6.4 8.9M4 16h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download installer</a>
-      <a class="btn btn-ghost" href="../../index.html#channels">All channels <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-    <p class="meta num">Published 17 Sep 2026, 12:52 UTC · 11.0 MB · macOS 14.0 or later · Every change merged to main, published minutes after it lands.</p>
-    <p class="notice"><strong>Test build.</strong> Apple hasn&rsquo;t notarized Hintora yet, so macOS asks before the first launch: right-click <strong>Hintora Installer</strong>, choose <strong>Open</strong>, then <strong>Open</strong> again. If it&rsquo;s still blocked, allow it in System Settings &rarr; Privacy &amp; Security.</p>
+    <nav class="nav">
+      <a class="hide-sm" href="../../index.html#channels">Channels</a>
+      <a class="hide-sm" href="../../index.html#updates">Updates</a>
+      <a href="https://hintora.ai">hintora.ai</a>
+    </nav>
   </div>
-  <section class="two">
+</header>
+<main class="shell">
+
+<div class="hero compact" style="--wash-a: var(--hn-palette-blue-600); --wash-b: var(--hn-palette-lavender-400); --wash-c: var(--hn-palette-azure-300);">
+  <span class="glow"></span><span class="grain"></span>
+  <div class="inner">
     <div>
-      <h2>Install</h2>
-      <ol class="steps">
-        <li><div>Download and open <code>Hintora-Installer.zip</code>.</div></li>
-        <li><div>Open <strong>Hintora Installer</strong> and click <strong>Install</strong>. Hintora moves into your Applications folder and opens.</div></li>
-        <li><div>Follow the notch to allow <strong>Microphone</strong> and <strong>Screen Recording</strong>.</div></li>
-        <li><div>Hold <kbd>Control</kbd> + <kbd>Option</kbd>, ask your question, and let go.</div></li>
-      </ol>
+      <div class="crumb reveal"><a href="../../index.html">Downloads</a><span aria-hidden="true">/</span><span>Development</span></div>
+      <h1 class="display reveal d1 num">Hintora 0.3.0</h1>
+      <p class="lede reveal d1">Every change merged to main, published minutes after it lands. Welcome to Hintora.</p>
+      <div class="cta reveal d2">
+        <a class="btn btn-cream" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-57/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.37 12.55c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.88.69c1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.3-.88-2.32-3.55zM14.2 6.07c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.69.98.08 1.99-.5 2.6-1.23z"/></svg>Download build 57</a>
+        <a class="btn btn-glass" href="../../index.html#channels">All channels <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+      </div>
+      <div class="chips reveal d3 num">
+        <span class="chip">Published 17 Sep 2026, 12:52 UTC</span>
+        <span class="chip">11.0 MB</span>
+        <span class="chip">macOS 14.0 or later</span>
+      </div>
     </div>
-    <div>
-      <h2>Updates</h2>
-      <ul class="facts">
-        <li><strong>This channel updates itself.</strong> A copy installed from here follows the development channel.</li>
-        <li><strong>Update in the notch.</strong> When a build is ready, the notch shows Update; Hintora restarts on it.</li>
-        <li><strong>Switch channels</strong> by running another channel&rsquo;s installer.</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <h2>Builds</h2>
-    <div class="table"><table>
-      <thead><tr><th>Version</th><th>Published</th><th>Notes</th><th>Download</th></tr></thead>
-      <tbody><tr><td class="num"><strong>0.3.0 (57)</strong></td><td class="num">17 Sep 2026, 12:52 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-57/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (56)</strong></td><td class="num">17 Sep 2026, 12:19 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-56/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (54)</strong></td><td class="num">17 Sep 2026, 11:10 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-54/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (53)</strong></td><td class="num">17 Sep 2026, 10:53 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-53/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (52)</strong></td><td class="num">17 Sep 2026, 10:38 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-52/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (50)</strong></td><td class="num">17 Sep 2026, 10:28 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-50/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (48)</strong></td><td class="num">17 Sep 2026, 10:05 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-48/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (46)</strong></td><td class="num">17 Sep 2026, 09:56 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-46/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (45)</strong></td><td class="num">17 Sep 2026, 09:45 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-45/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (42)</strong></td><td class="num">17 Sep 2026, 09:28 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-42/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.3.0 (39)</strong></td><td class="num">17 Sep 2026, 08:27 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-39/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (36)</strong></td><td class="num">17 Sep 2026, 08:09 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-36/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (35)</strong></td><td class="num">17 Sep 2026, 08:01 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-35/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (32)</strong></td><td class="num">17 Sep 2026, 07:52 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-32/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (29)</strong></td><td class="num">17 Sep 2026, 07:43 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-29/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (26)</strong></td><td class="num">17 Sep 2026, 07:31 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-26/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (23)</strong></td><td class="num">17 Sep 2026, 07:11 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-23/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (20)</strong></td><td class="num">16 Sep 2026, 22:23 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-20/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (18)</strong></td><td class="num">16 Sep 2026, 10:52 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-18/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (17)</strong></td><td class="num">16 Sep 2026, 09:06 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-17/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (15)</strong></td><td class="num">16 Sep 2026, 08:05 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-15/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (13)</strong></td><td class="num">14 Sep 2026, 13:06 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-13/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (11)</strong></td><td class="num">14 Sep 2026, 07:49 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-11/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (10)</strong></td><td class="num">13 Sep 2026, 22:18 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-10/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (9)</strong></td><td class="num">11 Sep 2026, 15:14 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-9/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (6)</strong></td><td class="num">10 Sep 2026, 23:27 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-6/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (3)</strong></td><td class="num">10 Sep 2026, 23:06 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-3/Hintora-Installer.zip">Installer</a></td></tr><tr><td class="num"><strong>0.1.0 (1)</strong></td><td class="num">10 Sep 2026, 22:41 UTC</td><td class="notes">Welcome to Hintora.</td><td><a href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-1/Hintora-Installer.zip">Installer</a></td></tr></tbody>
-    </table></div>
-  </section>
+    <div class="device" aria-hidden="true"><img class="appicon" src="../../assets/hintora-icon.png" alt="" width="168" height="168"><span class="notch"><span class="wave"><i></i><i></i><i></i><i></i></span>Hold <kbd>⌃</kbd><kbd>⌥</kbd> and ask</span></div>
+  </div>
+</div>
+<div class="notice reveal d2" role="note"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 3 20h18L12 4z"/><path d="M12 10v4m0 3h.01"/></svg><div><strong>This is a test build.</strong> Apple hasn&rsquo;t notarized Hintora yet, so macOS asks before the first launch: right-click <strong>Hintora Installer</strong>, choose <strong>Open</strong>, then <strong>Open</strong> again. If it&rsquo;s still blocked, allow it in System Settings &rarr; Privacy &amp; Security.</div></div>
+<section>
+  <div class="head">
+    <div><div class="kicker">Install</div><h2>Ready in a minute</h2></div>
+    <p>A copy installed from this page follows the development channel and updates itself.</p>
+  </div>
+  <div class="steps">
+    <article class="card step reveal"><div class="n"><span class="tile tint-sky"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M11 3v2m0 2v2m0 2v2"/></svg></span></div>
+      <h3>Download</h3><p>Open <code>Hintora-Installer.zip</code> from your Downloads.</p></article>
+    <article class="card step reveal d1"><div class="n"><span class="tile tint-lavender"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v7m0 0 3-3m-3 3-3-3"/></svg></span></div>
+      <h3>Install</h3><p>Open <strong>Hintora Installer</strong> and click Install. Hintora moves into Applications and opens.</p></article>
+    <article class="card step reveal d2"><div class="n"><span class="tile tint-mint"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div>
+      <h3>Allow</h3><p>Follow the notch to allow Microphone and Screen Recording.</p></article>
+    <article class="card step reveal d3"><div class="n"><span class="tile tint-peach"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="8" height="8" rx="2"/><rect x="13" y="7" width="8" height="8" rx="2"/></svg></span></div>
+      <h3>Ask</h3><p>Hold <kbd>⌃</kbd> <kbd>⌥</kbd>, ask about anything on your screen, and let go.</p></article>
+  </div>
+</section>
+<section>
+  <div class="head">
+    <div><div class="kicker">Builds</div><h2>Every development build</h2></div>
+    <p>Build numbers only go up, across every channel, so a higher number is always newer.</p>
+  </div>
+  <div class="card builds"><div class="build"><div class="v num">0.3.0 (57)<span class="badge">Latest</span></div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>aead8a7</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-57/Hintora-Installer.zip" aria-label="Download 0.3.0 (57)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">11.0 MB</span></a></div><div class="build"><div class="v num">0.3.0 (56)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>ec696e0</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-56/Hintora-Installer.zip" aria-label="Download 0.3.0 (56)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.8 MB</span></a></div><div class="build"><div class="v num">0.3.0 (54)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>cf5e9da</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-54/Hintora-Installer.zip" aria-label="Download 0.3.0 (54)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.7 MB</span></a></div><div class="build"><div class="v num">0.3.0 (53)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>0ee7317</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-53/Hintora-Installer.zip" aria-label="Download 0.3.0 (53)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.6 MB</span></a></div><div class="build"><div class="v num">0.3.0 (52)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>5bb7ec5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-52/Hintora-Installer.zip" aria-label="Download 0.3.0 (52)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">11.2 MB</span></a></div><div class="build"><div class="v num">0.3.0 (50)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>8cb831d</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-50/Hintora-Installer.zip" aria-label="Download 0.3.0 (50)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">11.0 MB</span></a></div><div class="build"><div class="v num">0.3.0 (48)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>9a1bf3e</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-48/Hintora-Installer.zip" aria-label="Download 0.3.0 (48)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.9 MB</span></a></div><div class="build"><div class="v num">0.3.0 (46)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>7cb6be0</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-46/Hintora-Installer.zip" aria-label="Download 0.3.0 (46)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.8 MB</span></a></div><div class="build"><div class="v num">0.3.0 (45)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>4890227</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-45/Hintora-Installer.zip" aria-label="Download 0.3.0 (45)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.8 MB</span></a></div><div class="build"><div class="v num">0.3.0 (42)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>ad00856</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-42/Hintora-Installer.zip" aria-label="Download 0.3.0 (42)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.3.0 (39)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>94f7baf</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-39/Hintora-Installer.zip" aria-label="Download 0.3.0 (39)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (36)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>2accdf9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-36/Hintora-Installer.zip" aria-label="Download 0.1.0 (36)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (35)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>caa9123</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-35/Hintora-Installer.zip" aria-label="Download 0.1.0 (35)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (32)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>f84607b</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-32/Hintora-Installer.zip" aria-label="Download 0.1.0 (32)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (29)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>a759105</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-29/Hintora-Installer.zip" aria-label="Download 0.1.0 (29)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (26)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>1ef606a</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-26/Hintora-Installer.zip" aria-label="Download 0.1.0 (26)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.5 MB</span></a></div><div class="build"><div class="v num">0.1.0 (23)</div><div class="d num">17 Sep 2026</div><div class="notes">Welcome to Hintora.<code>37827cd</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-23/Hintora-Installer.zip" aria-label="Download 0.1.0 (23)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.4 MB</span></a></div><div class="build"><div class="v num">0.1.0 (20)</div><div class="d num">16 Sep 2026</div><div class="notes">Welcome to Hintora.<code>93ac3cf</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-20/Hintora-Installer.zip" aria-label="Download 0.1.0 (20)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">10.2 MB</span></a></div><div class="build"><div class="v num">0.1.0 (18)</div><div class="d num">16 Sep 2026</div><div class="notes">Welcome to Hintora.<code>b20af60</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-18/Hintora-Installer.zip" aria-label="Download 0.1.0 (18)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.8 MB</span></a></div><div class="build"><div class="v num">0.1.0 (17)</div><div class="d num">16 Sep 2026</div><div class="notes">Welcome to Hintora.<code>96cb1ed</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-17/Hintora-Installer.zip" aria-label="Download 0.1.0 (17)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.3 MB</span></a></div><div class="build"><div class="v num">0.1.0 (15)</div><div class="d num">16 Sep 2026</div><div class="notes">Welcome to Hintora.<code>9e442e1</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-15/Hintora-Installer.zip" aria-label="Download 0.1.0 (15)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.1 MB</span></a></div><div class="build"><div class="v num">0.1.0 (13)</div><div class="d num">14 Sep 2026</div><div class="notes">Welcome to Hintora.<code>64245b6</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-13/Hintora-Installer.zip" aria-label="Download 0.1.0 (13)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.1 MB</span></a></div><div class="build"><div class="v num">0.1.0 (11)</div><div class="d num">14 Sep 2026</div><div class="notes">Welcome to Hintora.<code>05d69ef</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-11/Hintora-Installer.zip" aria-label="Download 0.1.0 (11)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.0 MB</span></a></div><div class="build"><div class="v num">0.1.0 (10)</div><div class="d num">13 Sep 2026</div><div class="notes">Welcome to Hintora.<code>5e30cfb</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-10/Hintora-Installer.zip" aria-label="Download 0.1.0 (10)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">6.0 MB</span></a></div><div class="build"><div class="v num">0.1.0 (9)</div><div class="d num">11 Sep 2026</div><div class="notes">Welcome to Hintora.<code>90e6678</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-9/Hintora-Installer.zip" aria-label="Download 0.1.0 (9)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">5.6 MB</span></a></div><div class="build"><div class="v num">0.1.0 (6)</div><div class="d num">10 Sep 2026</div><div class="notes">Welcome to Hintora.<code>c8f66c3</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-6/Hintora-Installer.zip" aria-label="Download 0.1.0 (6)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">4.9 MB</span></a></div><div class="build"><div class="v num">0.1.0 (3)</div><div class="d num">10 Sep 2026</div><div class="notes">Welcome to Hintora.<code>79e1991</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-3/Hintora-Installer.zip" aria-label="Download 0.1.0 (3)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">4.8 MB</span></a></div><div class="build"><div class="v num">0.1.0 (1)</div><div class="d num">10 Sep 2026</div><div class="notes">Welcome to Hintora.<code>c5b3d39</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.1.0-1/Hintora-Installer.zip" aria-label="Download 0.1.0 (1)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">4.8 MB</span></a></div></div>
+</section>
 </main>
 <footer>
-  <span>Hintora for Mac · macOS 14 or later · Apple silicon and Intel</span>
-  <span>
-    <a href="../../mac/prod/appcast.xml">prod feed</a> ·
-    <a href="../../mac/stage/appcast.xml">stage feed</a> ·
-    <a href="../../mac/dev/appcast.xml">dev feed</a>
-  </span>
+  <div class="shell">
+    <span>Hintora for Mac · macOS 14 or later · Apple silicon and Intel</span>
+    <nav>
+      <a href="../../mac/prod/appcast.xml">Production feed</a>
+      <a href="../../mac/stage/appcast.xml">Stage feed</a>
+      <a href="../../mac/dev/appcast.xml">Development feed</a>
+    </nav>
+  </div>
 </footer>
-</div>
 </body>
 </html>
