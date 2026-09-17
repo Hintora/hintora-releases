@@ -2,6 +2,23 @@
   {
     "channel": "prod",
     "version": "0.3.0",
+    "build": "90",
+    "display": "0.3.0 (90)",
+    "tag": "mac-prod-0.3.0-90",
+    "message": "Welcome to Hintora.",
+    "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.3.0-90/Hintora-Installer.zip",
+    "installer_bytes": 11139790,
+    "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.3.0-90/Hintora-90.zip",
+    "download_page": "https://hintora.github.io/hintora-releases/mac/prod/",
+    "minimum_macos": "14.0",
+    "source_commit": "95864ff19fb827ca7cac0caae515dd7c44af332d",
+    "published_at": "2026-09-17T17:12:56Z",
+    "signing_mode": "adhoc",
+    "notarized": false
+  },
+  {
+    "channel": "prod",
+    "version": "0.3.0",
     "build": "82",
     "display": "0.3.0 (82)",
     "tag": "mac-prod-0.3.0-82",
