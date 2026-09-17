@@ -5,14 +5,14 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Hintora</title>
         <item>
             <title>0.3.0</title>
-            <pubDate>Thu, 17 Sep 2026 19:59:16 +0300</pubDate>
-            <sparkle:version>89</sparkle:version>
+            <pubDate>Fri, 18 Sep 2026 00:39:58 +0300</pubDate>
+            <sparkle:version>93</sparkle:version>
             <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-89/Hintora-89.zip" length="10536495" type="application/octet-stream" sparkle:edSignature="JOKU5ruVOXe7Owl6DMsv8E/NZDZG42K1GvWciJWkebJ4JBU3/uHhxzBZIYa76azYT/9XC3jfJumO9z1ozzsWBQ=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-93/Hintora-93.zip" length="10755567" type="application/octet-stream" sparkle:edSignature="fowOyMvmVMdN5dbwvM+ge3m3WvSDuhqDoMxDqKWvnfRFfP1h1KQ29mMO3pUMbTW4q8LPE5o70pFI3+dYzdKzAA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: MX3pS8pANx11tIToGTZ7c9AldKk2PSN0+rOZ7geMgG8/SE0Hm+vplfPUiXOjtPLkVP1XRJ4TTnEFYxCSsgSzAg==
+edSignature: 53YWol5h0+olmUFyDF9hZkvPE9TACyEm19F4wmw9UoRLLUBLZRzus3P8t1GGKkTpuyq7oAW4kg7MP040Xq2AAg==
 length: 1057
 -->
