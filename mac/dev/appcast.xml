@@ -5,14 +5,14 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Hintora</title>
         <item>
             <title>0.3.0</title>
-            <pubDate>Fri, 18 Sep 2026 21:23:44 +0300</pubDate>
-            <sparkle:version>135</sparkle:version>
+            <pubDate>Fri, 18 Sep 2026 21:37:34 +0300</pubDate>
+            <sparkle:version>137</sparkle:version>
             <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-135/Hintora-135.zip" length="12980410" type="application/octet-stream" sparkle:edSignature="8R8zz4DYgzLiG4N5/Lsxd4ssQmFtEhu0L5vmCnd6SX11zrGJ95Wa6N7mEQCaxBtAdWXcBXrTRNqSCQYNLSOcBg=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-137/Hintora-137.zip" length="13036639" type="application/octet-stream" sparkle:edSignature="qfHlokwpZNwAHbWmHd00Un8usa+IoxbDrYc3RCx15jUa6kfJsjiRWorSkMcKNl3k4qJAS3T/ERaLZowY318qCA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Jfs7oKVR1G++Ot5mxKrvaCWjgXWamHB6QwPQUk/pfAPUl1r9Y4q4LC1rphf/yKneBJfyGYfA5NPCZuwCStw2CQ==
+edSignature: /HeNDZzl2qThhySff5jfaIcHjeqbYmT7FiqKGdcfa8mrhEhK+7jqxM+K7oPH4kq2ZegjCSHHGRGMV1w1g2ZZAg==
 length: 1058
 -->
