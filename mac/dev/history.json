@@ -2,6 +2,23 @@
   {
     "channel": "dev",
     "version": "0.3.0",
+    "build": "138",
+    "display": "0.3.0 (138)",
+    "tag": "mac-dev-0.3.0-138",
+    "message": "Welcome to Hintora.",
+    "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-138/Hintora-Installer.zip",
+    "installer_bytes": 13632349,
+    "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-138/Hintora-138.zip",
+    "download_page": "https://hintora.github.io/hintora-releases/mac/dev/",
+    "minimum_macos": "14.0",
+    "source_commit": "ff20a6a46f3cb1388dce1d592570ca7bb3f135ed",
+    "published_at": "2026-09-18T18:52:51Z",
+    "signing_mode": "adhoc",
+    "notarized": false
+  },
+  {
+    "channel": "dev",
+    "version": "0.3.0",
     "build": "137",
     "display": "0.3.0 (137)",
     "tag": "mac-dev-0.3.0-137",
@@ -489,23 +506,6 @@
     "minimum_macos": "14.0",
     "source_commit": "0e7a1984d51f72ccd47528a137b3aa87f66c18bf",
     "published_at": "2026-09-17T16:09:02Z",
-    "signing_mode": "adhoc",
-    "notarized": false
-  },
-  {
-    "channel": "dev",
-    "version": "0.3.0",
-    "build": "83",
-    "display": "0.3.0 (83)",
-    "tag": "mac-dev-0.3.0-83",
-    "message": "Welcome to Hintora.",
-    "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-83/Hintora-Installer.zip",
-    "installer_bytes": 11103683,
-    "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.3.0-83/Hintora-83.zip",
-    "download_page": "https://hintora.github.io/hintora-releases/mac/dev/",
-    "minimum_macos": "14.0",
-    "source_commit": "79e166e21ae442a22e1eb7f6f4003c64891f6aa4",
-    "published_at": "2026-09-17T15:58:55Z",
     "signing_mode": "adhoc",
     "notarized": false
   }
