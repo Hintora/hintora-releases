@@ -2,6 +2,23 @@
   {
     "channel": "stage",
     "version": "0.3.0",
+    "build": "154",
+    "display": "0.3.0 (154)",
+    "tag": "mac-stage-0.3.0-154",
+    "message": "Welcome to Hintora.",
+    "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-154/Hintora-Installer.zip",
+    "installer_bytes": 13807308,
+    "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-154/Hintora-154.zip",
+    "download_page": "https://hintora.github.io/hintora-releases/mac/stage/",
+    "minimum_macos": "14.0",
+    "source_commit": "3a3742df28a6621ee1a170925cdf5c0801c47ae0",
+    "published_at": "2026-09-19T12:15:08Z",
+    "signing_mode": "adhoc",
+    "notarized": false
+  },
+  {
+    "channel": "stage",
+    "version": "0.3.0",
     "build": "150",
     "display": "0.3.0 (150)",
     "tag": "mac-stage-0.3.0-150",
@@ -489,23 +506,6 @@
     "minimum_macos": "14.0",
     "source_commit": "bb2b59485b3f2b39bc9f6f22a7166e4e296c58b9",
     "published_at": "2026-09-17T15:30:42Z",
-    "signing_mode": "adhoc",
-    "notarized": false
-  },
-  {
-    "channel": "stage",
-    "version": "0.3.0",
-    "build": "78",
-    "display": "0.3.0 (78)",
-    "tag": "mac-stage-0.3.0-78",
-    "message": "Welcome to Hintora.",
-    "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-78/Hintora-Installer.zip",
-    "installer_bytes": 11174419,
-    "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.3.0-78/Hintora-78.zip",
-    "download_page": "https://hintora.github.io/hintora-releases/mac/stage/",
-    "minimum_macos": "14.0",
-    "source_commit": "55166a2f90579916c34f25403581bdf0a5758d10",
-    "published_at": "2026-09-17T15:17:02Z",
     "signing_mode": "adhoc",
     "notarized": false
   }
