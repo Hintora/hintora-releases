@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hintora 0.4.356 · Stage</title>
+<title>Hintora 0.5.359 · Stage</title>
 <meta name="description" content="Welcome to Hintora.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f7f3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="Hintora 0.4.356 · Stage">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Hintora 0.5.359 · Stage">
 <meta property="og:description" content="Welcome to Hintora.">
 <link rel="icon" type="image/png" href="../../assets/hintora-icon.png">
 <link rel="apple-touch-icon" href="../../assets/hintora-icon.png">
@@ -39,19 +39,19 @@
   --hn-palette-neutral-800: #303133;
   --hn-palette-neutral-900: #212224;
   --hn-palette-neutral-950: #121316;
-  --hn-palette-night-50: #eceef3;
-  --hn-palette-night-100: #e3e5eb;
-  --hn-palette-night-200: #d2d5de;
-  --hn-palette-night-300: #b4b9c6;
-  --hn-palette-night-400: #939aab;
-  --hn-palette-night-500: #6b7183;
-  --hn-palette-night-600: #454b5c;
-  --hn-palette-night-700: #2e3342;
-  --hn-palette-night-750: #232734;
-  --hn-palette-night-800: #1b1e2a;
-  --hn-palette-night-850: #141620;
-  --hn-palette-night-900: #10121a;
-  --hn-palette-night-950: #0b0c0f;
+  --hn-palette-night-50: #f0edeb;
+  --hn-palette-night-100: #e8e4e2;
+  --hn-palette-night-200: #d8d4d1;
+  --hn-palette-night-300: #bdb8b4;
+  --hn-palette-night-400: #9f9994;
+  --hn-palette-night-500: #77706b;
+  --hn-palette-night-600: #514a45;
+  --hn-palette-night-700: #39322d;
+  --hn-palette-night-750: #2c2622;
+  --hn-palette-night-800: #231e1a;
+  --hn-palette-night-850: #1a1612;
+  --hn-palette-night-900: #16120e;
+  --hn-palette-night-950: #0e0b09;
   --hn-palette-blue-50: #eff4ff;
   --hn-palette-blue-100: #dce9ff;
   --hn-palette-blue-200: #bfd2ff;
@@ -63,6 +63,18 @@
   --hn-palette-blue-800: #223dad;
   --hn-palette-blue-900: #1d3290;
   --hn-palette-blue-950: #172770;
+  --hn-palette-layer-blue: #3848fa;
+  --hn-palette-layer-green-teal: #16987c;
+  --hn-palette-layer-violet: #752efa;
+  --hn-palette-layer-teal: #0c978b;
+  --hn-palette-layer-indigo: #6a46d8;
+  --hn-palette-layer-sea: #0c9789;
+  --hn-palette-layer-blue-bright: #5f6dff;
+  --hn-palette-layer-green-teal-bright: #20a88f;
+  --hn-palette-layer-violet-bright: #9b6bff;
+  --hn-palette-layer-teal-bright: #17a596;
+  --hn-palette-layer-indigo-bright: #8a6cf0;
+  --hn-palette-layer-sea-bright: #14a594;
   --hn-palette-azure-300: #85b4ff;
   --hn-palette-azure-500: #3380ff;
   --hn-palette-azure-700: #1a5fd6;
@@ -96,6 +108,31 @@
   --hn-palette-peach-700: #b34a14;
   --hn-palette-peach-800: #8a3b12;
   --hn-palette-peach-900: #6e3010;
+  --hn-palette-peach-950: #4a1f0b;
+  --hn-palette-ember-100: #ffc9bd;
+  --hn-palette-ember-300: #fca390;
+  --hn-palette-ember-400: #ee765a;
+  --hn-palette-ember-500: #dc5a3a;
+  --hn-palette-ember-600: #c34728;
+  --hn-palette-ember-800: #85311e;
+  --hn-palette-apricot-100: #ffe1ac;
+  --hn-palette-apricot-300: #fec678;
+  --hn-palette-apricot-400: #f0ab4d;
+  --hn-palette-apricot-500: #df9129;
+  --hn-palette-apricot-600: #c57920;
+  --hn-palette-apricot-800: #804d18;
+  --hn-palette-sand-100: #eae1ca;
+  --hn-palette-sand-300: #dfcca1;
+  --hn-palette-sand-400: #d1af70;
+  --hn-palette-sand-500: #b69255;
+  --hn-palette-sand-600: #9b7a47;
+  --hn-palette-sand-800: #644e2f;
+  --hn-palette-clay-100: #e8c7ba;
+  --hn-palette-clay-300: #e2a58e;
+  --hn-palette-clay-400: #d38568;
+  --hn-palette-clay-500: #ba6b4d;
+  --hn-palette-clay-600: #9f593f;
+  --hn-palette-clay-800: #673a29;
   --hn-palette-green-50: #edf8f2;
   --hn-palette-green-100: #d5f0e1;
   --hn-palette-green-200: #b3e3c9;
@@ -139,9 +176,10 @@
   --hn-palette-alpha-ink-64: rgb(18 19 22 / 0.64);
   --hn-palette-alpha-ink-70: rgb(18 19 22 / 0.7);
   --hn-palette-alpha-ink-80: rgb(18 19 22 / 0.8);
-  --hn-palette-alpha-frost-30: rgb(236 238 243 / 0.3);
-  --hn-palette-alpha-frost-46: rgb(236 238 243 / 0.46);
-  --hn-palette-alpha-frost-64: rgb(236 238 243 / 0.64);
+  --hn-palette-alpha-frost-30: rgb(240 237 235 / 0.3);
+  --hn-palette-alpha-frost-46: rgb(240 237 235 / 0.46);
+  --hn-palette-alpha-frost-52: rgb(240 237 235 / 0.52);
+  --hn-palette-alpha-frost-64: rgb(240 237 235 / 0.64);
   --hn-palette-alpha-white-6: rgb(255 255 255 / 0.06);
   --hn-palette-alpha-white-10: rgb(255 255 255 / 0.1);
   --hn-palette-alpha-white-18: rgb(255 255 255 / 0.18);
@@ -254,6 +292,7 @@
   --hn-font-weight-medium: 500;
   --hn-font-weight-semibold: 600;
   --hn-font-weight-bold: 700;
+  --hn-font-size-10: 10px;
   --hn-font-size-11: 11px;
   --hn-font-size-12: 12px;
   --hn-font-size-13: 13px;
@@ -300,10 +339,18 @@
   --hn-motion-press-scale: 0.99;
   --hn-motion-wave: 1200ms;
   --hn-motion-wave-lift: 2px;
+  --hn-motion-agent-breath: 1800ms;
   --hn-motion-shimmer: 1800ms;
   --hn-motion-progress-creep: 4000ms;
   --hn-motion-progress-pulse: 600ms;
   --hn-motion-celebrate: 900ms;
+  --hn-motion-mark-guide-stroke: 2.5px;
+  --hn-motion-mark-guide-stroke-contrast: 3.5px;
+  --hn-motion-mark-guide-dash: 7px;
+  --hn-motion-mark-guide-gap: 3px;
+  --hn-motion-mark-pointer-gap: 7px;
+  --hn-motion-mark-clear-gap: 6px;
+  --hn-motion-mark-ink-stroke: 3.5px;
 
   /* radius */
   --hn-radius-control-compact: 8px;
@@ -317,6 +364,10 @@
   --hn-radius-notch-flare: 12px;
   --hn-radius-notch-rest-corner: 10px;
   --hn-radius-pill: 9999px;
+  --hn-radius-hub-key: 6px;
+  --hn-radius-hub-control: 9px;
+  --hn-radius-hub-card: 14px;
+  --hn-radius-hub-sheet: 16px;
 
   /* size */
   --hn-size-control-sm: 36px;
@@ -495,7 +546,7 @@
   --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
   --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
   --hn-color-fg-inverse: #ffffff;
-  --hn-color-fg-brand: #2d52eb;
+  --hn-color-fg-brand: #8a3b12;
   --hn-color-fg-on-accent: #ffffff;
   --hn-color-line: rgb(18 19 22 / 0.1);
   --hn-color-line-subtle: #e7e7e1;
@@ -505,19 +556,50 @@
   --hn-color-accent-pressed: #223dad;
   --hn-color-accent-subtle: #dce9ff;
   --hn-color-accent-line: #bfd2ff;
+  --hn-color-hub-card-ember-from: #8a3b12;
+  --hn-color-hub-card-ember-to: #b34a14;
+  --hn-color-hub-card-ember-fg: #ffffff;
+  --hn-color-hub-card-ember-fg-muted: rgb(255 255 255 / 0.88);
+  --hn-color-hub-card-peach-from: #fff6ef;
+  --hn-color-hub-card-peach-to: #ffe5d3;
+  --hn-color-hub-card-peach-line: #ffd0b0;
+  --hn-color-hub-card-peach-fg-accent: #8a3b12;
+  --hn-color-app-accent: #b34a14;
+  --hn-color-app-accent-hover: #8a3b12;
+  --hn-color-app-accent-pressed: #6e3010;
+  --hn-color-app-accent-on: #ffffff;
+  --hn-color-app-accent-subtle: #ffe5d3;
+  --hn-color-app-accent-line: #ffd0b0;
+  --hn-color-app-accent-fg: #b34a14;
+  --hn-color-app-accent-focus: #d9601a;
+  --hn-color-app-accent-selection: #ffe5d3;
+  --hn-color-app-accent-contrast: #8a3b12;
+  --hn-color-app-accent-contrast-hover: #6e3010;
+  --hn-color-app-accent-contrast-on: #ffffff;
+  --hn-color-app-accent-contrast-fg: #6e3010;
+  --hn-color-app-accent-contrast-focus: #8a3b12;
   --hn-color-state-hover: rgb(18 19 22 / 0.05);
   --hn-color-state-pressed: rgb(18 19 22 / 0.08);
-  --hn-color-focus: #2d52eb;
-  --hn-color-selection: #dce9ff;
-  --hn-color-guide: #3380ff;
-  --hn-color-guide-halo: rgb(51 128 255 / 0.22);
-  --hn-color-guide-bright: #85b4ff;
-  --hn-color-guide-deep: #1a5fd6;
+  --hn-color-focus: #b34a14;
+  --hn-color-selection: #ffe5d3;
+  --hn-color-guide: #d9601a;
+  --hn-color-guide-halo: rgb(217 96 26 / 0.22);
+  --hn-color-guide-bright: #fb9559;
+  --hn-color-guide-deep: #b34a14;
   --hn-color-guide-on: #ffffff;
   --hn-color-guide-contrast-deep: #d9601a;
   --hn-color-guide-contrast: #f07a2e;
   --hn-color-guide-contrast-bright: #fb9559;
   --hn-color-guide-contrast-marker: #ffb98a;
+  --hn-color-guide-layer-one: #d9601a;
+  --hn-color-guide-layer-two: #6a46d8;
+  --hn-color-guide-layer-three: #0c9789;
+  --hn-color-guide-layer-a-two: #3848fa;
+  --hn-color-guide-layer-a-three: #16987c;
+  --hn-color-guide-layer-b-two: #752efa;
+  --hn-color-guide-layer-b-three: #0c978b;
+  --hn-color-guide-layer-c-two: #6a46d8;
+  --hn-color-guide-layer-c-three: #0c9789;
   --hn-color-guide-accent-orange: #d9601a;
   --hn-color-guide-accent-orange-bright: #fb9559;
   --hn-color-guide-accent-orange-strong: #b34a14;
@@ -526,14 +608,6 @@
   --hn-color-guide-accent-orange-ink-light: #d9601a;
   --hn-color-guide-accent-orange-ink-middle: #f07a2e;
   --hn-color-guide-accent-orange-ink-dark: #fb9559;
-  --hn-color-guide-accent-blue: #3380ff;
-  --hn-color-guide-accent-blue-bright: #85b4ff;
-  --hn-color-guide-accent-blue-strong: #1a5fd6;
-  --hn-color-guide-accent-blue-on: #ffffff;
-  --hn-color-guide-accent-blue-marker: #85b4ff;
-  --hn-color-guide-accent-blue-ink-light: #1a5fd6;
-  --hn-color-guide-accent-blue-ink-middle: #3380ff;
-  --hn-color-guide-accent-blue-ink-dark: #3380ff;
   --hn-color-success: #0a7d4a;
   --hn-color-success-subtle: #edf8f2;
   --hn-color-success-line: #b3e3c9;
@@ -554,14 +628,22 @@
   --hn-color-info-line: #bfd2ff;
   --hn-color-info-solid: #2d52eb;
   --hn-color-info-on-solid: #ffffff;
-  --hn-color-tint-sky: #dce9ff;
-  --hn-color-tint-sky-fg: #2143cf;
-  --hn-color-tint-lavender: #e9e4ff;
-  --hn-color-tint-lavender-fg: #3b2a8f;
-  --hn-color-tint-mint: #def2e7;
-  --hn-color-tint-mint-fg: #065f46;
   --hn-color-tint-peach: #ffe5d3;
   --hn-color-tint-peach-fg: #8a3b12;
+  --hn-color-tint-ember: #ffc9bd;
+  --hn-color-tint-ember-fg: #85311e;
+  --hn-color-tint-apricot: #ffe1ac;
+  --hn-color-tint-apricot-fg: #804d18;
+  --hn-color-tint-sand: #eae1ca;
+  --hn-color-tint-sand-fg: #644e2f;
+  --hn-color-tint-clay: #e8c7ba;
+  --hn-color-tint-clay-fg: #673a29;
+  --hn-color-tint-sky: #ffc9bd;
+  --hn-color-tint-sky-fg: #85311e;
+  --hn-color-tint-lavender: #e8c7ba;
+  --hn-color-tint-lavender-fg: #673a29;
+  --hn-color-tint-mint: #ffe1ac;
+  --hn-color-tint-mint-fg: #804d18;
   --hn-color-notch-ground: #000000;
   --hn-color-notch-well: rgb(255 255 255 / 0.06);
   --hn-color-notch-hairline: rgb(255 255 255 / 0.1);
@@ -569,25 +651,25 @@
   --hn-color-notch-key-face-lit: rgb(255 255 255 / 0.24);
   --hn-color-notch-key-edge: rgb(255 255 255 / 0.08);
   --hn-color-notch-key-rim: rgb(255 255 255 / 0.14);
-  --hn-color-notch-accent: #3380ff;
+  --hn-color-notch-accent: #d9601a;
   --hn-color-notch-ink: #ffffff;
   --hn-color-notch-ink-secondary: rgb(255 255 255 / 0.64);
   --hn-color-notch-ink-quiet: rgb(255 255 255 / 0.5);
   --hn-color-notch-contrast-secondary: rgb(255 255 255 / 0.8);
   --hn-color-notch-contrast-quiet: rgb(255 255 255 / 0.68);
   --hn-color-notch-contrast-hairline: rgb(255 255 255 / 0.32);
-  --hn-color-graph-person: #a28bfa;
-  --hn-color-graph-project: #7b93ff;
-  --hn-color-graph-app: #5cbf8e;
-  --hn-color-graph-site: #1f875c;
-  --hn-color-graph-org: #e0a544;
+  --hn-color-graph-person: #ba6b4d;
+  --hn-color-graph-project: #dc5a3a;
+  --hn-color-graph-app: #c57920;
+  --hn-color-graph-site: #804d18;
+  --hn-color-graph-org: #9b7a47;
   --hn-color-graph-place: #fb9559;
   --hn-color-graph-preference: #fb9559;
   --hn-color-graph-memory: #ff7a8a;
   --hn-color-graph-edge: rgb(18 19 22 / 0.45);
-  --hn-color-graph-edge-active: #2d52eb;
+  --hn-color-graph-edge-active: #b34a14;
   --hn-color-graph-dimmed: #e7e7e1;
-  --hn-color-graph-ring: #2d52eb;
+  --hn-color-graph-ring: #b34a14;
   --hn-color-graph-grid: rgb(255 255 255 / 0);
   --hn-color-graph-vignette: #efefeb;
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
@@ -597,11 +679,12 @@
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
   --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
   --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(18 19 22 / 0.45);
   --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
   --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
   --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
   --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
-  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #2d52eb;
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #b34a14;
 }
 
 /* Dark: the `dark` class that next-themes sets, or data-theme="dark" on any element. */
@@ -611,28 +694,52 @@
   color-scheme: dark;
 
   /* color */
-  --hn-color-canvas: #0b0c0f;
-  --hn-color-surface: #141620;
-  --hn-color-surface-raised: #1b1e2a;
-  --hn-color-surface-sunken: #10121a;
+  --hn-color-canvas: #0e0b09;
+  --hn-color-surface: #1a1612;
+  --hn-color-surface-raised: #231e1a;
+  --hn-color-surface-sunken: #16120e;
   --hn-color-surface-inverse: #f7f7f3;
   --hn-color-scrim: rgb(0 0 0 / 0.6);
-  --hn-color-fg: #eceef3;
-  --hn-color-fg-muted: rgb(236 238 243 / 0.64);
-  --hn-color-fg-subtle: rgb(236 238 243 / 0.46);
-  --hn-color-fg-disabled: rgb(236 238 243 / 0.3);
+  --hn-color-fg: #f0edeb;
+  --hn-color-fg-muted: rgb(240 237 235 / 0.64);
+  --hn-color-fg-subtle: rgb(240 237 235 / 0.52);
+  --hn-color-fg-disabled: rgb(240 237 235 / 0.3);
   --hn-color-fg-inverse: #121316;
-  --hn-color-fg-brand: #7b93ff;
+  --hn-color-fg-brand: #ffb98a;
   --hn-color-line: rgb(255 255 255 / 0.1);
-  --hn-color-line-subtle: #232734;
+  --hn-color-line-subtle: #2c2622;
   --hn-color-line-strong: rgb(255 255 255 / 0.18);
   --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
   --hn-color-accent-line: rgb(123 147 255 / 0.35);
+  --hn-color-hub-card-ember-from: #4a1f0b;
+  --hn-color-hub-card-ember-to: #6e3010;
+  --hn-color-hub-card-peach-from: rgb(251 149 89 / 0.08);
+  --hn-color-hub-card-peach-to: rgb(251 149 89 / 0.16);
+  --hn-color-hub-card-peach-line: rgb(251 149 89 / 0.3);
+  --hn-color-hub-card-peach-fg-accent: #ffb98a;
+  --hn-color-app-accent-subtle: rgb(251 149 89 / 0.14);
+  --hn-color-app-accent-line: rgb(251 149 89 / 0.35);
+  --hn-color-app-accent-fg: #ffb98a;
+  --hn-color-app-accent-focus: #fb9559;
+  --hn-color-app-accent-selection: rgb(251 149 89 / 0.3);
+  --hn-color-app-accent-contrast: #fb9559;
+  --hn-color-app-accent-contrast-hover: #ffb98a;
+  --hn-color-app-accent-contrast-on: #121316;
+  --hn-color-app-accent-contrast-fg: #ffd0b0;
+  --hn-color-app-accent-contrast-focus: #ffb98a;
   --hn-color-state-hover: rgb(255 255 255 / 0.06);
   --hn-color-state-pressed: rgb(255 255 255 / 0.1);
-  --hn-color-focus: #7b93ff;
-  --hn-color-selection: rgb(123 147 255 / 0.3);
-  --hn-color-guide-halo: rgb(51 128 255 / 0.3);
+  --hn-color-focus: #fb9559;
+  --hn-color-selection: rgb(251 149 89 / 0.3);
+  --hn-color-guide-halo: rgb(217 96 26 / 0.3);
+  --hn-color-guide-layer-two: #8a6cf0;
+  --hn-color-guide-layer-three: #14a594;
+  --hn-color-guide-layer-a-two: #5f6dff;
+  --hn-color-guide-layer-a-three: #20a88f;
+  --hn-color-guide-layer-b-two: #9b6bff;
+  --hn-color-guide-layer-b-three: #17a596;
+  --hn-color-guide-layer-c-two: #8a6cf0;
+  --hn-color-guide-layer-c-three: #14a594;
   --hn-color-success: #46c88a;
   --hn-color-success-subtle: rgb(70 200 138 / 0.12);
   --hn-color-success-line: rgb(70 200 138 / 0.3);
@@ -645,40 +752,49 @@
   --hn-color-info: #7b93ff;
   --hn-color-info-subtle: rgb(123 147 255 / 0.12);
   --hn-color-info-line: rgb(123 147 255 / 0.3);
-  --hn-color-tint-sky: rgb(123 147 255 / 0.14);
-  --hn-color-tint-sky-fg: #9ab7fc;
-  --hn-color-tint-lavender: rgb(162 139 250 / 0.14);
-  --hn-color-tint-lavender-fg: #c4b5fd;
-  --hn-color-tint-mint: rgb(92 191 142 / 0.14);
-  --hn-color-tint-mint-fg: #8fd6b0;
   --hn-color-tint-peach: rgb(251 149 89 / 0.14);
   --hn-color-tint-peach-fg: #ffb98a;
-  --hn-color-graph-person: #c4b5fd;
-  --hn-color-graph-project: #9ab7fc;
-  --hn-color-graph-app: #8fd6b0;
-  --hn-color-graph-site: #34a574;
-  --hn-color-graph-org: #fcd34d;
+  --hn-color-tint-ember: rgb(238 118 90 / 0.14);
+  --hn-color-tint-ember-fg: #fca390;
+  --hn-color-tint-apricot: rgb(240 171 77 / 0.14);
+  --hn-color-tint-apricot-fg: #fec678;
+  --hn-color-tint-sand: rgb(209 175 112 / 0.14);
+  --hn-color-tint-sand-fg: #dfcca1;
+  --hn-color-tint-clay: rgb(211 133 104 / 0.14);
+  --hn-color-tint-clay-fg: #e2a58e;
+  --hn-color-tint-sky: rgb(238 118 90 / 0.14);
+  --hn-color-tint-sky-fg: #fca390;
+  --hn-color-tint-lavender: rgb(211 133 104 / 0.14);
+  --hn-color-tint-lavender-fg: #e2a58e;
+  --hn-color-tint-mint: rgb(240 171 77 / 0.14);
+  --hn-color-tint-mint-fg: #fec678;
+  --hn-color-graph-person: #e2a58e;
+  --hn-color-graph-project: #fca390;
+  --hn-color-graph-app: #fec678;
+  --hn-color-graph-site: #df9129;
+  --hn-color-graph-org: #dfcca1;
   --hn-color-graph-place: #ffb98a;
   --hn-color-graph-preference: #ffb98a;
   --hn-color-graph-memory: #fda4af;
-  --hn-color-graph-edge: #454b5c;
-  --hn-color-graph-edge-active: #7b93ff;
-  --hn-color-graph-dimmed: #2e3342;
-  --hn-color-graph-ring: #7b93ff;
+  --hn-color-graph-edge: #514a45;
+  --hn-color-graph-edge-active: #f07a2e;
+  --hn-color-graph-dimmed: #39322d;
+  --hn-color-graph-ring: #f07a2e;
   --hn-color-graph-grid: rgb(255 255 255 / 0.06);
-  --hn-color-graph-vignette: #0b0c0f;
+  --hn-color-graph-vignette: #0e0b09;
   --hn-color-graph-node-edge: rgb(255 255 255 / 0);
-  --hn-color-graph-label: #d2d5de;
+  --hn-color-graph-label: #d8d4d1;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
   --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
   --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(0 0 0 / 0.7);
   --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
   --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
   --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
   --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
-  --hn-shadow-focus-ring: 0px 0px 0px 2px #0b0c0f, 0px 0px 0px 4px #7b93ff;
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #0e0b09, 0px 0px 0px 4px #fb9559;
 }
 
 /* A light island inside a dark page. */
@@ -699,17 +815,41 @@
   --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
   --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
   --hn-color-fg-inverse: #ffffff;
-  --hn-color-fg-brand: #2d52eb;
+  --hn-color-fg-brand: #8a3b12;
   --hn-color-line: rgb(18 19 22 / 0.1);
   --hn-color-line-subtle: #e7e7e1;
   --hn-color-line-strong: rgb(18 19 22 / 0.2);
   --hn-color-accent-subtle: #dce9ff;
   --hn-color-accent-line: #bfd2ff;
+  --hn-color-hub-card-ember-from: #8a3b12;
+  --hn-color-hub-card-ember-to: #b34a14;
+  --hn-color-hub-card-peach-from: #fff6ef;
+  --hn-color-hub-card-peach-to: #ffe5d3;
+  --hn-color-hub-card-peach-line: #ffd0b0;
+  --hn-color-hub-card-peach-fg-accent: #8a3b12;
+  --hn-color-app-accent-subtle: #ffe5d3;
+  --hn-color-app-accent-line: #ffd0b0;
+  --hn-color-app-accent-fg: #b34a14;
+  --hn-color-app-accent-focus: #d9601a;
+  --hn-color-app-accent-selection: #ffe5d3;
+  --hn-color-app-accent-contrast: #8a3b12;
+  --hn-color-app-accent-contrast-hover: #6e3010;
+  --hn-color-app-accent-contrast-on: #ffffff;
+  --hn-color-app-accent-contrast-fg: #6e3010;
+  --hn-color-app-accent-contrast-focus: #8a3b12;
   --hn-color-state-hover: rgb(18 19 22 / 0.05);
   --hn-color-state-pressed: rgb(18 19 22 / 0.08);
-  --hn-color-focus: #2d52eb;
-  --hn-color-selection: #dce9ff;
-  --hn-color-guide-halo: rgb(51 128 255 / 0.22);
+  --hn-color-focus: #b34a14;
+  --hn-color-selection: #ffe5d3;
+  --hn-color-guide-halo: rgb(217 96 26 / 0.22);
+  --hn-color-guide-layer-two: #6a46d8;
+  --hn-color-guide-layer-three: #0c9789;
+  --hn-color-guide-layer-a-two: #3848fa;
+  --hn-color-guide-layer-a-three: #16987c;
+  --hn-color-guide-layer-b-two: #752efa;
+  --hn-color-guide-layer-b-three: #0c978b;
+  --hn-color-guide-layer-c-two: #6a46d8;
+  --hn-color-guide-layer-c-three: #0c9789;
   --hn-color-success: #0a7d4a;
   --hn-color-success-subtle: #edf8f2;
   --hn-color-success-line: #b3e3c9;
@@ -722,26 +862,34 @@
   --hn-color-info: #2d52eb;
   --hn-color-info-subtle: #eff4ff;
   --hn-color-info-line: #bfd2ff;
-  --hn-color-tint-sky: #dce9ff;
-  --hn-color-tint-sky-fg: #2143cf;
-  --hn-color-tint-lavender: #e9e4ff;
-  --hn-color-tint-lavender-fg: #3b2a8f;
-  --hn-color-tint-mint: #def2e7;
-  --hn-color-tint-mint-fg: #065f46;
   --hn-color-tint-peach: #ffe5d3;
   --hn-color-tint-peach-fg: #8a3b12;
-  --hn-color-graph-person: #a28bfa;
-  --hn-color-graph-project: #7b93ff;
-  --hn-color-graph-app: #5cbf8e;
-  --hn-color-graph-site: #1f875c;
-  --hn-color-graph-org: #e0a544;
+  --hn-color-tint-ember: #ffc9bd;
+  --hn-color-tint-ember-fg: #85311e;
+  --hn-color-tint-apricot: #ffe1ac;
+  --hn-color-tint-apricot-fg: #804d18;
+  --hn-color-tint-sand: #eae1ca;
+  --hn-color-tint-sand-fg: #644e2f;
+  --hn-color-tint-clay: #e8c7ba;
+  --hn-color-tint-clay-fg: #673a29;
+  --hn-color-tint-sky: #ffc9bd;
+  --hn-color-tint-sky-fg: #85311e;
+  --hn-color-tint-lavender: #e8c7ba;
+  --hn-color-tint-lavender-fg: #673a29;
+  --hn-color-tint-mint: #ffe1ac;
+  --hn-color-tint-mint-fg: #804d18;
+  --hn-color-graph-person: #ba6b4d;
+  --hn-color-graph-project: #dc5a3a;
+  --hn-color-graph-app: #c57920;
+  --hn-color-graph-site: #804d18;
+  --hn-color-graph-org: #9b7a47;
   --hn-color-graph-place: #fb9559;
   --hn-color-graph-preference: #fb9559;
   --hn-color-graph-memory: #ff7a8a;
   --hn-color-graph-edge: rgb(18 19 22 / 0.45);
-  --hn-color-graph-edge-active: #2d52eb;
+  --hn-color-graph-edge-active: #b34a14;
   --hn-color-graph-dimmed: #e7e7e1;
-  --hn-color-graph-ring: #2d52eb;
+  --hn-color-graph-ring: #b34a14;
   --hn-color-graph-grid: rgb(255 255 255 / 0);
   --hn-color-graph-vignette: #efefeb;
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
@@ -751,11 +899,12 @@
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
   --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
   --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(18 19 22 / 0.45);
   --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
   --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
   --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
   --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
-  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #2d52eb;
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #b34a14;
 }
 
 /* data-theme="system" follows the operating system. */
@@ -765,28 +914,52 @@
     color-scheme: dark;
 
     /* color */
-    --hn-color-canvas: #0b0c0f;
-    --hn-color-surface: #141620;
-    --hn-color-surface-raised: #1b1e2a;
-    --hn-color-surface-sunken: #10121a;
+    --hn-color-canvas: #0e0b09;
+    --hn-color-surface: #1a1612;
+    --hn-color-surface-raised: #231e1a;
+    --hn-color-surface-sunken: #16120e;
     --hn-color-surface-inverse: #f7f7f3;
     --hn-color-scrim: rgb(0 0 0 / 0.6);
-    --hn-color-fg: #eceef3;
-    --hn-color-fg-muted: rgb(236 238 243 / 0.64);
-    --hn-color-fg-subtle: rgb(236 238 243 / 0.46);
-    --hn-color-fg-disabled: rgb(236 238 243 / 0.3);
+    --hn-color-fg: #f0edeb;
+    --hn-color-fg-muted: rgb(240 237 235 / 0.64);
+    --hn-color-fg-subtle: rgb(240 237 235 / 0.52);
+    --hn-color-fg-disabled: rgb(240 237 235 / 0.3);
     --hn-color-fg-inverse: #121316;
-    --hn-color-fg-brand: #7b93ff;
+    --hn-color-fg-brand: #ffb98a;
     --hn-color-line: rgb(255 255 255 / 0.1);
-    --hn-color-line-subtle: #232734;
+    --hn-color-line-subtle: #2c2622;
     --hn-color-line-strong: rgb(255 255 255 / 0.18);
     --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
     --hn-color-accent-line: rgb(123 147 255 / 0.35);
+    --hn-color-hub-card-ember-from: #4a1f0b;
+    --hn-color-hub-card-ember-to: #6e3010;
+    --hn-color-hub-card-peach-from: rgb(251 149 89 / 0.08);
+    --hn-color-hub-card-peach-to: rgb(251 149 89 / 0.16);
+    --hn-color-hub-card-peach-line: rgb(251 149 89 / 0.3);
+    --hn-color-hub-card-peach-fg-accent: #ffb98a;
+    --hn-color-app-accent-subtle: rgb(251 149 89 / 0.14);
+    --hn-color-app-accent-line: rgb(251 149 89 / 0.35);
+    --hn-color-app-accent-fg: #ffb98a;
+    --hn-color-app-accent-focus: #fb9559;
+    --hn-color-app-accent-selection: rgb(251 149 89 / 0.3);
+    --hn-color-app-accent-contrast: #fb9559;
+    --hn-color-app-accent-contrast-hover: #ffb98a;
+    --hn-color-app-accent-contrast-on: #121316;
+    --hn-color-app-accent-contrast-fg: #ffd0b0;
+    --hn-color-app-accent-contrast-focus: #ffb98a;
     --hn-color-state-hover: rgb(255 255 255 / 0.06);
     --hn-color-state-pressed: rgb(255 255 255 / 0.1);
-    --hn-color-focus: #7b93ff;
-    --hn-color-selection: rgb(123 147 255 / 0.3);
-    --hn-color-guide-halo: rgb(51 128 255 / 0.3);
+    --hn-color-focus: #fb9559;
+    --hn-color-selection: rgb(251 149 89 / 0.3);
+    --hn-color-guide-halo: rgb(217 96 26 / 0.3);
+    --hn-color-guide-layer-two: #8a6cf0;
+    --hn-color-guide-layer-three: #14a594;
+    --hn-color-guide-layer-a-two: #5f6dff;
+    --hn-color-guide-layer-a-three: #20a88f;
+    --hn-color-guide-layer-b-two: #9b6bff;
+    --hn-color-guide-layer-b-three: #17a596;
+    --hn-color-guide-layer-c-two: #8a6cf0;
+    --hn-color-guide-layer-c-three: #14a594;
     --hn-color-success: #46c88a;
     --hn-color-success-subtle: rgb(70 200 138 / 0.12);
     --hn-color-success-line: rgb(70 200 138 / 0.3);
@@ -799,40 +972,49 @@
     --hn-color-info: #7b93ff;
     --hn-color-info-subtle: rgb(123 147 255 / 0.12);
     --hn-color-info-line: rgb(123 147 255 / 0.3);
-    --hn-color-tint-sky: rgb(123 147 255 / 0.14);
-    --hn-color-tint-sky-fg: #9ab7fc;
-    --hn-color-tint-lavender: rgb(162 139 250 / 0.14);
-    --hn-color-tint-lavender-fg: #c4b5fd;
-    --hn-color-tint-mint: rgb(92 191 142 / 0.14);
-    --hn-color-tint-mint-fg: #8fd6b0;
     --hn-color-tint-peach: rgb(251 149 89 / 0.14);
     --hn-color-tint-peach-fg: #ffb98a;
-    --hn-color-graph-person: #c4b5fd;
-    --hn-color-graph-project: #9ab7fc;
-    --hn-color-graph-app: #8fd6b0;
-    --hn-color-graph-site: #34a574;
-    --hn-color-graph-org: #fcd34d;
+    --hn-color-tint-ember: rgb(238 118 90 / 0.14);
+    --hn-color-tint-ember-fg: #fca390;
+    --hn-color-tint-apricot: rgb(240 171 77 / 0.14);
+    --hn-color-tint-apricot-fg: #fec678;
+    --hn-color-tint-sand: rgb(209 175 112 / 0.14);
+    --hn-color-tint-sand-fg: #dfcca1;
+    --hn-color-tint-clay: rgb(211 133 104 / 0.14);
+    --hn-color-tint-clay-fg: #e2a58e;
+    --hn-color-tint-sky: rgb(238 118 90 / 0.14);
+    --hn-color-tint-sky-fg: #fca390;
+    --hn-color-tint-lavender: rgb(211 133 104 / 0.14);
+    --hn-color-tint-lavender-fg: #e2a58e;
+    --hn-color-tint-mint: rgb(240 171 77 / 0.14);
+    --hn-color-tint-mint-fg: #fec678;
+    --hn-color-graph-person: #e2a58e;
+    --hn-color-graph-project: #fca390;
+    --hn-color-graph-app: #fec678;
+    --hn-color-graph-site: #df9129;
+    --hn-color-graph-org: #dfcca1;
     --hn-color-graph-place: #ffb98a;
     --hn-color-graph-preference: #ffb98a;
     --hn-color-graph-memory: #fda4af;
-    --hn-color-graph-edge: #454b5c;
-    --hn-color-graph-edge-active: #7b93ff;
-    --hn-color-graph-dimmed: #2e3342;
-    --hn-color-graph-ring: #7b93ff;
+    --hn-color-graph-edge: #514a45;
+    --hn-color-graph-edge-active: #f07a2e;
+    --hn-color-graph-dimmed: #39322d;
+    --hn-color-graph-ring: #f07a2e;
     --hn-color-graph-grid: rgb(255 255 255 / 0.06);
-    --hn-color-graph-vignette: #0b0c0f;
+    --hn-color-graph-vignette: #0e0b09;
     --hn-color-graph-node-edge: rgb(255 255 255 / 0);
-    --hn-color-graph-label: #d2d5de;
+    --hn-color-graph-label: #d8d4d1;
 
     /* shadow */
     --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
     --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
     --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+    --hn-shadow-notch-float: 0px 14px 40px -24px rgb(0 0 0 / 0.7);
     --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
     --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
     --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
     --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
-    --hn-shadow-focus-ring: 0px 0px 0px 2px #0b0c0f, 0px 0px 0px 4px #7b93ff;
+    --hn-shadow-focus-ring: 0px 0px 0px 2px #0e0b09, 0px 0px 0px 4px #fb9559;
   }
 }
 
@@ -969,7 +1151,7 @@ h2 { margin: 8px 0 0; font-family: var(--serif); font-weight: 400; font-size: cl
 .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .channel { display: flex; flex-direction: column; padding: 26px; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s; }
 .channel:hover { transform: translateY(-2px); box-shadow: var(--hn-shadow-raised); border-color: var(--hn-color-line-strong); }
-.channel.recommended { box-shadow: 0 0 0 1px var(--hn-color-accent-line), var(--hn-shadow-raised); border-color: transparent; }
+.channel.recommended { box-shadow: 0 0 0 1px var(--hn-color-app-accent-line), var(--hn-shadow-raised); border-color: transparent; }
 .channel .top { display: flex; align-items: center; gap: 12px; }
 .tile { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; }
 .tint-mint { background: var(--hn-color-tint-mint); color: var(--hn-color-tint-mint-fg); }
@@ -979,7 +1161,7 @@ h2 { margin: 8px 0 0; font-family: var(--serif); font-weight: 400; font-size: cl
 .channel h3 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
 .badge {
   margin-left: auto; display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
-  font-size: 12px; font-weight: 600; color: var(--hn-color-fg-brand); background: var(--hn-color-accent-subtle);
+  font-size: 12px; font-weight: 600; color: var(--hn-color-tint-peach-fg); background: var(--hn-color-app-accent-subtle);
 }
 .badge.neutral { color: var(--hn-color-fg-muted); background: var(--hn-color-state-hover); }
 .version { margin-top: 26px; font-family: var(--serif); font-size: 44px; line-height: 1; letter-spacing: -.02em; }
@@ -1085,15 +1267,15 @@ footer a:hover { color: var(--hn-color-fg); }
   <div class="inner">
     <div>
       <div class="crumb reveal"><a href="../../index.html">Downloads</a><span aria-hidden="true">/</span><span>Stage</span></div>
-      <h1 class="display reveal d1 num">Hintora 0.4.356</h1>
+      <h1 class="display reveal d1 num">Hintora 0.5.359</h1>
       <p class="lede reveal d1">Release candidates, one step before production. Welcome to Hintora.</p>
       <div class="cta reveal d2">
-        <a class="btn btn-cream" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.356/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.37 12.55c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.88.69c1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.3-.88-2.32-3.55zM14.2 6.07c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.69.98.08 1.99-.5 2.6-1.23z"/></svg>Download build 356</a>
+        <a class="btn btn-cream" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.359/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.37 12.55c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.88.69c1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.3-.88-2.32-3.55zM14.2 6.07c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.69.98.08 1.99-.5 2.6-1.23z"/></svg>Download build 359</a>
         <a class="btn btn-glass" href="../../index.html#channels">All channels <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
       </div>
       <div class="chips reveal d3 num">
-        <span class="chip">Published 7 Oct 2026, 22:33 UTC</span>
-        <span class="chip">57.1 MB</span>
+        <span class="chip">Published 23 Oct 2026, 15:38 UTC</span>
+        <span class="chip">64.4 MB</span>
         <span class="chip">macOS 14.0 or later</span>
       </div>
     </div>
@@ -1122,7 +1304,7 @@ footer a:hover { color: var(--hn-color-fg); }
     <div><div class="kicker">Builds</div><h2>Every stage build</h2></div>
     <p>Build numbers only go up, across every channel, so a higher number is always newer.</p>
   </div>
-  <div class="card builds"><div class="build"><div class="v num">0.4.356<span class="badge">Latest</span></div><div class="d num">7 Oct 2026</div><div class="notes">Welcome to Hintora.<code>69ce2c9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.356/Hintora-Installer.zip" aria-label="Download 0.4.356"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.355</div><div class="d num">7 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f60a751</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.355/Hintora-Installer.zip" aria-label="Download 0.4.355"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.352</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>1136546</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.352/Hintora-Installer.zip" aria-label="Download 0.4.352"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.350</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>1f18db4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.350/Hintora-Installer.zip" aria-label="Download 0.4.350"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.0 MB</span></a></div><div class="build"><div class="v num">0.4.348</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>43b3222</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.348/Hintora-Installer.zip" aria-label="Download 0.4.348"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.9 MB</span></a></div><div class="build"><div class="v num">0.4.344</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2579599</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.344/Hintora-Installer.zip" aria-label="Download 0.4.344"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.8 MB</span></a></div><div class="build"><div class="v num">0.4.342</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2165ea4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.342/Hintora-Installer.zip" aria-label="Download 0.4.342"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (340)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>5879251</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-340/Hintora-Installer.zip" aria-label="Download 0.4.0 (340)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (338)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>60983ee</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-338/Hintora-Installer.zip" aria-label="Download 0.4.0 (338)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (332)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>57a7320</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-332/Hintora-Installer.zip" aria-label="Download 0.4.0 (332)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (329)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>4248bd1</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-329/Hintora-Installer.zip" aria-label="Download 0.4.0 (329)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.1 MB</span></a></div><div class="build"><div class="v num">0.4.0 (324)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>06372a5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-324/Hintora-Installer.zip" aria-label="Download 0.4.0 (324)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (322)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>88a6343</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-322/Hintora-Installer.zip" aria-label="Download 0.4.0 (322)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (317)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>575c9ea</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-317/Hintora-Installer.zip" aria-label="Download 0.4.0 (317)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (315)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f2a2f3d</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-315/Hintora-Installer.zip" aria-label="Download 0.4.0 (315)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (313)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>9430c17</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-313/Hintora-Installer.zip" aria-label="Download 0.4.0 (313)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (311)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>ba4de89</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-311/Hintora-Installer.zip" aria-label="Download 0.4.0 (311)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (309)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>fdf50fa</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-309/Hintora-Installer.zip" aria-label="Download 0.4.0 (309)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.2 MB</span></a></div><div class="build"><div class="v num">0.4.0 (307)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>0ba979a</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-307/Hintora-Installer.zip" aria-label="Download 0.4.0 (307)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (305)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>7be10ce</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-305/Hintora-Installer.zip" aria-label="Download 0.4.0 (305)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (303)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>04ed401</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-303/Hintora-Installer.zip" aria-label="Download 0.4.0 (303)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (301)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>6a931dc</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-301/Hintora-Installer.zip" aria-label="Download 0.4.0 (301)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (299)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>3317cb9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-299/Hintora-Installer.zip" aria-label="Download 0.4.0 (299)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (297)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>17afcf4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-297/Hintora-Installer.zip" aria-label="Download 0.4.0 (297)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (295)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b88f302</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-295/Hintora-Installer.zip" aria-label="Download 0.4.0 (295)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.3 MB</span></a></div><div class="build"><div class="v num">0.4.0 (293)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>fe1fbee</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-293/Hintora-Installer.zip" aria-label="Download 0.4.0 (293)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.1 MB</span></a></div><div class="build"><div class="v num">0.4.0 (291)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>7d721f9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-291/Hintora-Installer.zip" aria-label="Download 0.4.0 (291)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.8 MB</span></a></div><div class="build"><div class="v num">0.4.0 (288)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>03755c4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-288/Hintora-Installer.zip" aria-label="Download 0.4.0 (288)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.8 MB</span></a></div><div class="build"><div class="v num">0.4.0 (282)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2197aca</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-282/Hintora-Installer.zip" aria-label="Download 0.4.0 (282)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.3 MB</span></a></div><div class="build"><div class="v num">0.4.0 (278)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>1a2ea3c</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-278/Hintora-Installer.zip" aria-label="Download 0.4.0 (278)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.3 MB</span></a></div></div>
+  <div class="card builds"><div class="build"><div class="v num">0.5.359<span class="badge">Latest</span></div><div class="d num">23 Oct 2026</div><div class="notes">Welcome to Hintora.<code>e3c5823</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.359/Hintora-Installer.zip" aria-label="Download 0.5.359"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">64.4 MB</span></a></div><div class="build"><div class="v num">0.4.356</div><div class="d num">7 Oct 2026</div><div class="notes">Welcome to Hintora.<code>69ce2c9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.356/Hintora-Installer.zip" aria-label="Download 0.4.356"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.355</div><div class="d num">7 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f60a751</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.355/Hintora-Installer.zip" aria-label="Download 0.4.355"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.352</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>1136546</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.352/Hintora-Installer.zip" aria-label="Download 0.4.352"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.350</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>1f18db4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.350/Hintora-Installer.zip" aria-label="Download 0.4.350"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.0 MB</span></a></div><div class="build"><div class="v num">0.4.348</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>43b3222</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.348/Hintora-Installer.zip" aria-label="Download 0.4.348"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.9 MB</span></a></div><div class="build"><div class="v num">0.4.344</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2579599</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.344/Hintora-Installer.zip" aria-label="Download 0.4.344"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.8 MB</span></a></div><div class="build"><div class="v num">0.4.342</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2165ea4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.342/Hintora-Installer.zip" aria-label="Download 0.4.342"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (340)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>5879251</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-340/Hintora-Installer.zip" aria-label="Download 0.4.0 (340)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (338)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>60983ee</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-338/Hintora-Installer.zip" aria-label="Download 0.4.0 (338)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (332)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>57a7320</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-332/Hintora-Installer.zip" aria-label="Download 0.4.0 (332)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (329)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>4248bd1</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-329/Hintora-Installer.zip" aria-label="Download 0.4.0 (329)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.1 MB</span></a></div><div class="build"><div class="v num">0.4.0 (324)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>06372a5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-324/Hintora-Installer.zip" aria-label="Download 0.4.0 (324)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (322)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>88a6343</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-322/Hintora-Installer.zip" aria-label="Download 0.4.0 (322)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (317)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>575c9ea</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-317/Hintora-Installer.zip" aria-label="Download 0.4.0 (317)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (315)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f2a2f3d</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-315/Hintora-Installer.zip" aria-label="Download 0.4.0 (315)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (313)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>9430c17</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-313/Hintora-Installer.zip" aria-label="Download 0.4.0 (313)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (311)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>ba4de89</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-311/Hintora-Installer.zip" aria-label="Download 0.4.0 (311)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (309)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>fdf50fa</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-309/Hintora-Installer.zip" aria-label="Download 0.4.0 (309)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.2 MB</span></a></div><div class="build"><div class="v num">0.4.0 (307)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>0ba979a</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-307/Hintora-Installer.zip" aria-label="Download 0.4.0 (307)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (305)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>7be10ce</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-305/Hintora-Installer.zip" aria-label="Download 0.4.0 (305)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (303)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>04ed401</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-303/Hintora-Installer.zip" aria-label="Download 0.4.0 (303)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (301)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>6a931dc</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-301/Hintora-Installer.zip" aria-label="Download 0.4.0 (301)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (299)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>3317cb9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-299/Hintora-Installer.zip" aria-label="Download 0.4.0 (299)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (297)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>17afcf4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-297/Hintora-Installer.zip" aria-label="Download 0.4.0 (297)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (295)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b88f302</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-295/Hintora-Installer.zip" aria-label="Download 0.4.0 (295)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.3 MB</span></a></div><div class="build"><div class="v num">0.4.0 (293)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>fe1fbee</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-293/Hintora-Installer.zip" aria-label="Download 0.4.0 (293)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.1 MB</span></a></div><div class="build"><div class="v num">0.4.0 (291)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>7d721f9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-291/Hintora-Installer.zip" aria-label="Download 0.4.0 (291)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.8 MB</span></a></div><div class="build"><div class="v num">0.4.0 (288)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>03755c4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-288/Hintora-Installer.zip" aria-label="Download 0.4.0 (288)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.8 MB</span></a></div><div class="build"><div class="v num">0.4.0 (282)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2197aca</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.4.0-282/Hintora-Installer.zip" aria-label="Download 0.4.0 (282)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.3 MB</span></a></div></div>
 </section>
 </main>
 <footer>
