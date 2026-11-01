@@ -121,6 +121,7 @@
   --hn-palette-apricot-500: #df9129;
   --hn-palette-apricot-600: #c57920;
   --hn-palette-apricot-800: #804d18;
+  --hn-palette-sand-50: #fbf6ec;
   --hn-palette-sand-100: #eae1ca;
   --hn-palette-sand-300: #dfcca1;
   --hn-palette-sand-400: #d1af70;
@@ -163,6 +164,11 @@
   --hn-palette-rose-700: #be123c;
   --hn-palette-rose-800: #9f1239;
   --hn-palette-rose-900: #881337;
+  --hn-palette-signal-amber-ink: #856000;
+  --hn-palette-signal-green-ink: #1b7a34;
+  --hn-palette-signal-green-bright: #30d158;
+  --hn-palette-signal-red-ink: #c9001a;
+  --hn-palette-signal-red-bright: #ff453a;
   --hn-palette-alpha-ink-3: rgb(18 19 22 / 0.03);
   --hn-palette-alpha-ink-4: rgb(18 19 22 / 0.04);
   --hn-palette-alpha-ink-5: rgb(18 19 22 / 0.05);
@@ -337,6 +343,10 @@
   /* motion */
   --hn-motion-hover-lift: -2px;
   --hn-motion-press-scale: 0.99;
+  --hn-motion-caption-word: 150ms;
+  --hn-motion-caption-in: 280ms;
+  --hn-motion-caption-out: 220ms;
+  --hn-motion-caption-rise: 6px;
   --hn-motion-wave: 1200ms;
   --hn-motion-wave-lift: 2px;
   --hn-motion-agent-breath: 1800ms;
@@ -346,8 +356,8 @@
   --hn-motion-celebrate: 900ms;
   --hn-motion-mark-guide-stroke: 2.5px;
   --hn-motion-mark-guide-stroke-contrast: 3.5px;
-  --hn-motion-mark-guide-dash: 7px;
-  --hn-motion-mark-guide-gap: 3px;
+  --hn-motion-mark-guide-dash: 14px;
+  --hn-motion-mark-guide-gap: 6px;
   --hn-motion-mark-pointer-gap: 7px;
   --hn-motion-mark-clear-gap: 6px;
   --hn-motion-mark-ink-stroke: 3.5px;
@@ -628,6 +638,31 @@
   --hn-color-info-line: #bfd2ff;
   --hn-color-info-solid: #2d52eb;
   --hn-color-info-on-solid: #ffffff;
+  --hn-color-status-working: #b34a14;
+  --hn-color-status-working-subtle: rgb(179 74 20 / 0.06);
+  --hn-color-status-working-line: rgb(179 74 20 / 0.3);
+  --hn-color-status-working-solid: #fb9559;
+  --hn-color-status-working-on-solid: #0e0b09;
+  --hn-color-status-needs-you: #856000;
+  --hn-color-status-needs-you-subtle: rgb(133 96 0 / 0.06);
+  --hn-color-status-needs-you-line: rgb(133 96 0 / 0.3);
+  --hn-color-status-needs-you-solid: #fcd34d;
+  --hn-color-status-needs-you-on-solid: #0e0b09;
+  --hn-color-status-done: #1b7a34;
+  --hn-color-status-done-subtle: rgb(27 122 52 / 0.06);
+  --hn-color-status-done-line: rgb(27 122 52 / 0.3);
+  --hn-color-status-done-solid: #30d158;
+  --hn-color-status-done-on-solid: #0e0b09;
+  --hn-color-status-failed: #c9001a;
+  --hn-color-status-failed-subtle: rgb(201 0 26 / 0.06);
+  --hn-color-status-failed-line: rgb(201 0 26 / 0.3);
+  --hn-color-status-failed-solid: #ff453a;
+  --hn-color-status-failed-on-solid: #0e0b09;
+  --hn-color-status-paused: #5f5f60;
+  --hn-color-status-paused-subtle: rgb(95 95 96 / 0.06);
+  --hn-color-status-paused-line: rgb(95 95 96 / 0.3);
+  --hn-color-status-paused-solid: #9f9994;
+  --hn-color-status-paused-on-solid: #0e0b09;
   --hn-color-tint-peach: #ffe5d3;
   --hn-color-tint-peach-fg: #8a3b12;
   --hn-color-tint-ember: #ffc9bd;
@@ -646,7 +681,7 @@
   --hn-color-tint-mint-fg: #804d18;
   --hn-color-notch-ground: #000000;
   --hn-color-notch-well: rgb(255 255 255 / 0.06);
-  --hn-color-notch-hairline: rgb(255 255 255 / 0.1);
+  --hn-color-notch-hairline: rgb(255 255 255 / 0.08);
   --hn-color-notch-key-face: rgb(255 255 255 / 0.16);
   --hn-color-notch-key-face-lit: rgb(255 255 255 / 0.24);
   --hn-color-notch-key-edge: rgb(255 255 255 / 0.08);
@@ -655,6 +690,9 @@
   --hn-color-notch-ink: #ffffff;
   --hn-color-notch-ink-secondary: rgb(255 255 255 / 0.64);
   --hn-color-notch-ink-quiet: rgb(255 255 255 / 0.5);
+  --hn-color-notch-caption-unspoken: rgb(255 255 255 / 0.4);
+  --hn-color-notch-caption-close: rgb(255 255 255 / 0.64);
+  --hn-color-notch-caption-ground: rgb(0 0 0 / 0.62);
   --hn-color-notch-contrast-secondary: rgb(255 255 255 / 0.8);
   --hn-color-notch-contrast-quiet: rgb(255 255 255 / 0.68);
   --hn-color-notch-contrast-hairline: rgb(255 255 255 / 0.32);
@@ -674,6 +712,7 @@
   --hn-color-graph-vignette: #efefeb;
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
   --hn-color-graph-label: #303133;
+  --hn-color-board-ground: #fbf6ec;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
@@ -752,6 +791,21 @@
   --hn-color-info: #7b93ff;
   --hn-color-info-subtle: rgb(123 147 255 / 0.12);
   --hn-color-info-line: rgb(123 147 255 / 0.3);
+  --hn-color-status-working: #ffb98a;
+  --hn-color-status-working-subtle: rgb(255 185 138 / 0.06);
+  --hn-color-status-working-line: rgb(255 185 138 / 0.3);
+  --hn-color-status-needs-you: #fcd34d;
+  --hn-color-status-needs-you-subtle: rgb(252 211 77 / 0.06);
+  --hn-color-status-needs-you-line: rgb(252 211 77 / 0.3);
+  --hn-color-status-done: #30d158;
+  --hn-color-status-done-subtle: rgb(48 209 88 / 0.06);
+  --hn-color-status-done-line: rgb(48 209 88 / 0.3);
+  --hn-color-status-failed: #ff453a;
+  --hn-color-status-failed-subtle: rgb(255 69 58 / 0.06);
+  --hn-color-status-failed-line: rgb(255 69 58 / 0.3);
+  --hn-color-status-paused: #9f9994;
+  --hn-color-status-paused-subtle: rgb(159 153 148 / 0.06);
+  --hn-color-status-paused-line: rgb(159 153 148 / 0.3);
   --hn-color-tint-peach: rgb(251 149 89 / 0.14);
   --hn-color-tint-peach-fg: #ffb98a;
   --hn-color-tint-ember: rgb(238 118 90 / 0.14);
@@ -784,6 +838,7 @@
   --hn-color-graph-vignette: #0e0b09;
   --hn-color-graph-node-edge: rgb(255 255 255 / 0);
   --hn-color-graph-label: #d8d4d1;
+  --hn-color-board-ground: #1a1612;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
@@ -862,6 +917,21 @@
   --hn-color-info: #2d52eb;
   --hn-color-info-subtle: #eff4ff;
   --hn-color-info-line: #bfd2ff;
+  --hn-color-status-working: #b34a14;
+  --hn-color-status-working-subtle: rgb(179 74 20 / 0.06);
+  --hn-color-status-working-line: rgb(179 74 20 / 0.3);
+  --hn-color-status-needs-you: #856000;
+  --hn-color-status-needs-you-subtle: rgb(133 96 0 / 0.06);
+  --hn-color-status-needs-you-line: rgb(133 96 0 / 0.3);
+  --hn-color-status-done: #1b7a34;
+  --hn-color-status-done-subtle: rgb(27 122 52 / 0.06);
+  --hn-color-status-done-line: rgb(27 122 52 / 0.3);
+  --hn-color-status-failed: #c9001a;
+  --hn-color-status-failed-subtle: rgb(201 0 26 / 0.06);
+  --hn-color-status-failed-line: rgb(201 0 26 / 0.3);
+  --hn-color-status-paused: #5f5f60;
+  --hn-color-status-paused-subtle: rgb(95 95 96 / 0.06);
+  --hn-color-status-paused-line: rgb(95 95 96 / 0.3);
   --hn-color-tint-peach: #ffe5d3;
   --hn-color-tint-peach-fg: #8a3b12;
   --hn-color-tint-ember: #ffc9bd;
@@ -894,6 +964,7 @@
   --hn-color-graph-vignette: #efefeb;
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
   --hn-color-graph-label: #303133;
+  --hn-color-board-ground: #fbf6ec;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
@@ -972,6 +1043,21 @@
     --hn-color-info: #7b93ff;
     --hn-color-info-subtle: rgb(123 147 255 / 0.12);
     --hn-color-info-line: rgb(123 147 255 / 0.3);
+    --hn-color-status-working: #ffb98a;
+    --hn-color-status-working-subtle: rgb(255 185 138 / 0.06);
+    --hn-color-status-working-line: rgb(255 185 138 / 0.3);
+    --hn-color-status-needs-you: #fcd34d;
+    --hn-color-status-needs-you-subtle: rgb(252 211 77 / 0.06);
+    --hn-color-status-needs-you-line: rgb(252 211 77 / 0.3);
+    --hn-color-status-done: #30d158;
+    --hn-color-status-done-subtle: rgb(48 209 88 / 0.06);
+    --hn-color-status-done-line: rgb(48 209 88 / 0.3);
+    --hn-color-status-failed: #ff453a;
+    --hn-color-status-failed-subtle: rgb(255 69 58 / 0.06);
+    --hn-color-status-failed-line: rgb(255 69 58 / 0.3);
+    --hn-color-status-paused: #9f9994;
+    --hn-color-status-paused-subtle: rgb(159 153 148 / 0.06);
+    --hn-color-status-paused-line: rgb(159 153 148 / 0.3);
     --hn-color-tint-peach: rgb(251 149 89 / 0.14);
     --hn-color-tint-peach-fg: #ffb98a;
     --hn-color-tint-ember: rgb(238 118 90 / 0.14);
@@ -1004,6 +1090,7 @@
     --hn-color-graph-vignette: #0e0b09;
     --hn-color-graph-node-edge: rgb(255 255 255 / 0);
     --hn-color-graph-label: #d8d4d1;
+    --hn-color-board-ground: #1a1612;
 
     /* shadow */
     --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
