@@ -4,15 +4,15 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Hintora</title>
         <item>
-            <title>0.5.367</title>
-            <pubDate>Mon, 02 Nov 2026 01:48:00 +0200</pubDate>
-            <sparkle:version>367</sparkle:version>
-            <sparkle:shortVersionString>0.5.367</sparkle:shortVersionString>
+            <title>0.5.375</title>
+            <pubDate>Tue, 03 Nov 2026 12:30:21 +0200</pubDate>
+            <sparkle:version>375</sparkle:version>
+            <sparkle:shortVersionString>0.5.375</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.367/Hintora-367.zip" length="73040806" type="application/octet-stream" sparkle:edSignature="fRQe+IRvw5GvTRzPE9bGWVnIdbOtKkedJTcSjeJiiLFFmMy3cOS26prNXdSFvnKJPq/aFCxNBVhOI78DkXNRAg=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.375/Hintora-375.zip" length="74912916" type="application/octet-stream" sparkle:edSignature="nb2q1TXFMgvIcZ3H3MmQvqUNewAN8YwEAHadHz2/KKTP5wHjUPypMnSpQTkQtwC0k/R0d2/liSZ5PreVr3acCw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 1dOWKDtFd3kDBatSPIMoS2ZLHBjpHb8181e5ENcpCvyGvifjCjppe7mlKdjInZAsEyOO1eWzYWlHfOnCCs1ODA==
+edSignature: vMm+DTw/oEQMdw0zo/Xo98cIodLwT+drLdtdq2phwVooeHlM0M2LtzljRsx/IHG3TEPnicswYTgYzlSsuh7+Cg==
 length: 1062
 -->
