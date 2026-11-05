@@ -30,8 +30,10 @@
   --hn-palette-mist-25: #fbfbfc;
   --hn-palette-mist-50: #f6f6f8;
   --hn-palette-mist-100: #f1f1f3;
+  --hn-palette-mist-125: #efeff2;
   --hn-palette-mist-150: #ececef;
   --hn-palette-mist-200: #e4e4e8;
+  --hn-palette-mist-600: #727882;
   --hn-palette-mist-800: #2a2b30;
   --hn-palette-mist-850: #232428;
   --hn-palette-mist-900: #1d1e21;
@@ -121,6 +123,41 @@
   --hn-palette-peach-800: #8a3b12;
   --hn-palette-peach-900: #6e3010;
   --hn-palette-peach-950: #4a1f0b;
+  --hn-palette-neon-pink-300: #ffb3d6;
+  --hn-palette-neon-pink-400: #ff5ca8;
+  --hn-palette-neon-pink-500: #ff4d9d;
+  --hn-palette-neon-pink-600: #f0157f;
+  --hn-palette-neon-pink-700: #a6005a;
+  --hn-palette-neon-purple-300: #e0b3ff;
+  --hn-palette-neon-purple-400: #c96bff;
+  --hn-palette-neon-purple-500: #c25cff;
+  --hn-palette-neon-purple-600: #b026ff;
+  --hn-palette-neon-purple-700: #8a1fd1;
+  --hn-palette-neon-blue-300: #b3ccff;
+  --hn-palette-neon-blue-400: #6aa2ff;
+  --hn-palette-neon-blue-500: #5c95ff;
+  --hn-palette-neon-blue-600: #2f7bff;
+  --hn-palette-neon-blue-700: #1452d9;
+  --hn-palette-neon-green-300: #a8f5c0;
+  --hn-palette-neon-green-400: #2ee66b;
+  --hn-palette-neon-green-500: #00c94f;
+  --hn-palette-neon-green-600: #009e3a;
+  --hn-palette-neon-green-700: #007a2e;
+  --hn-palette-neon-yellow-300: #fff3a3;
+  --hn-palette-neon-yellow-400: #ffe100;
+  --hn-palette-neon-yellow-500: #ffd60a;
+  --hn-palette-neon-yellow-600: #ffd000;
+  --hn-palette-neon-yellow-700: #f5b800;
+  --hn-palette-neon-brown-300: #e8c4a4;
+  --hn-palette-neon-brown-400: #d39a6a;
+  --hn-palette-neon-brown-500: #c8875a;
+  --hn-palette-neon-brown-600: #a0612f;
+  --hn-palette-neon-brown-700: #6e3d1c;
+  --hn-palette-neon-red-300: #ffadb5;
+  --hn-palette-neon-red-400: #ff5c6c;
+  --hn-palette-neon-red-500: #ff4757;
+  --hn-palette-neon-red-600: #ff1f3d;
+  --hn-palette-neon-red-700: #b5001a;
   --hn-palette-ember-100: #ffc9bd;
   --hn-palette-ember-300: #fca390;
   --hn-palette-ember-400: #ee765a;
@@ -134,6 +171,7 @@
   --hn-palette-apricot-600: #c57920;
   --hn-palette-apricot-800: #804d18;
   --hn-palette-sand-50: #fbf6ec;
+  --hn-palette-sand-75: #f3ecdc;
   --hn-palette-sand-100: #eae1ca;
   --hn-palette-sand-300: #dfcca1;
   --hn-palette-sand-400: #d1af70;
@@ -250,6 +288,7 @@
   /* border-width */
   --hn-border-width-hairline: 1px;
   --hn-border-width-strong: 2px;
+  --hn-border-width-ink: 1.75px;
 
   /* breakpoint */
   --hn-breakpoint-xs: 390px;
@@ -355,7 +394,7 @@
   /* motion */
   --hn-motion-hover-lift: -2px;
   --hn-motion-press-scale: 0.99;
-  --hn-motion-notch-hover-open-delay: 200ms;
+  --hn-motion-notch-hover-open-delay: 450ms;
   --hn-motion-mark-hand-imperfection: 1.4;
   --hn-motion-caption-word: 150ms;
   --hn-motion-caption-in: 280ms;
@@ -640,6 +679,62 @@
   --hn-color-guide-accent-orange-ink-light: #d9601a;
   --hn-color-guide-accent-orange-ink-middle: #f07a2e;
   --hn-color-guide-accent-orange-ink-dark: #fb9559;
+  --hn-color-guide-accent-pink: #f0157f;
+  --hn-color-guide-accent-pink-bright: #ff5ca8;
+  --hn-color-guide-accent-pink-strong: #a6005a;
+  --hn-color-guide-accent-pink-on: #ffffff;
+  --hn-color-guide-accent-pink-marker: #ffb3d6;
+  --hn-color-guide-accent-pink-ink-light: #f0157f;
+  --hn-color-guide-accent-pink-ink-middle: #ff4d9d;
+  --hn-color-guide-accent-pink-ink-dark: #ff5ca8;
+  --hn-color-guide-accent-purple: #b026ff;
+  --hn-color-guide-accent-purple-bright: #c96bff;
+  --hn-color-guide-accent-purple-strong: #8a1fd1;
+  --hn-color-guide-accent-purple-on: #ffffff;
+  --hn-color-guide-accent-purple-marker: #e0b3ff;
+  --hn-color-guide-accent-purple-ink-light: #b026ff;
+  --hn-color-guide-accent-purple-ink-middle: #c25cff;
+  --hn-color-guide-accent-purple-ink-dark: #c96bff;
+  --hn-color-guide-accent-brown: #a0612f;
+  --hn-color-guide-accent-brown-bright: #d39a6a;
+  --hn-color-guide-accent-brown-strong: #6e3d1c;
+  --hn-color-guide-accent-brown-on: #ffffff;
+  --hn-color-guide-accent-brown-marker: #e8c4a4;
+  --hn-color-guide-accent-brown-ink-light: #a0612f;
+  --hn-color-guide-accent-brown-ink-middle: #c8875a;
+  --hn-color-guide-accent-brown-ink-dark: #d39a6a;
+  --hn-color-guide-accent-electric: #2f7bff;
+  --hn-color-guide-accent-electric-bright: #6aa2ff;
+  --hn-color-guide-accent-electric-strong: #1452d9;
+  --hn-color-guide-accent-electric-on: #ffffff;
+  --hn-color-guide-accent-electric-marker: #b3ccff;
+  --hn-color-guide-accent-electric-ink-light: #2f7bff;
+  --hn-color-guide-accent-electric-ink-middle: #5c95ff;
+  --hn-color-guide-accent-electric-ink-dark: #6aa2ff;
+  --hn-color-guide-accent-green: #009e3a;
+  --hn-color-guide-accent-green-bright: #2ee66b;
+  --hn-color-guide-accent-green-strong: #007a2e;
+  --hn-color-guide-accent-green-on: #ffffff;
+  --hn-color-guide-accent-green-marker: #a8f5c0;
+  --hn-color-guide-accent-green-ink-light: #009e3a;
+  --hn-color-guide-accent-green-ink-middle: #00c94f;
+  --hn-color-guide-accent-green-ink-dark: #2ee66b;
+  --hn-color-guide-accent-yellow: #ffd000;
+  --hn-color-guide-accent-yellow-bright: #ffe100;
+  --hn-color-guide-accent-yellow-strong: #f5b800;
+  --hn-color-guide-accent-yellow-on: #121316;
+  --hn-color-guide-accent-yellow-marker: #fff3a3;
+  --hn-color-guide-accent-yellow-ink-light: #ffd000;
+  --hn-color-guide-accent-yellow-ink-middle: #ffd60a;
+  --hn-color-guide-accent-yellow-ink-dark: #ffe100;
+  --hn-color-guide-accent-red: #ff1f3d;
+  --hn-color-guide-accent-red-bright: #ff5c6c;
+  --hn-color-guide-accent-red-strong: #b5001a;
+  --hn-color-guide-accent-red-on: #ffffff;
+  --hn-color-guide-accent-red-marker: #ffadb5;
+  --hn-color-guide-accent-red-ink-light: #ff1f3d;
+  --hn-color-guide-accent-red-ink-middle: #ff4757;
+  --hn-color-guide-accent-red-ink-dark: #ff5c6c;
   --hn-color-success: #0a7d4a;
   --hn-color-success-subtle: #edf8f2;
   --hn-color-success-line: #b3e3c9;
@@ -735,6 +830,24 @@
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
   --hn-color-graph-label: #303133;
   --hn-color-board-ground: #fbf6ec;
+  --hn-color-board-paper: #f6f6f8;
+  --hn-color-board-grid: #efeff2;
+  --hn-color-board-strip: #ececef;
+  --hn-color-board-strip-rule: #e4e4e8;
+  --hn-color-board-ink: #2a2b30;
+  --hn-color-board-structure: #727882;
+  --hn-color-board-fill-neutral: #f3ecdc;
+  --hn-color-board-fill-input: #dce9ff;
+  --hn-color-board-fill-output: #d5f0e1;
+  --hn-color-board-fill-warn: #fef3c7;
+  --hn-color-board-photo-card: #ffffff;
+  --hn-color-board-photo-tape: #bfd2ff;
+  --hn-color-board-stroke-neutral: #727882;
+  --hn-color-board-stroke-input: #2d52eb;
+  --hn-color-board-stroke-output: #0f8f58;
+  --hn-color-board-stroke-warn: #d9601a;
+  --hn-color-board-note: #b3e3c9;
+  --hn-color-board-note-fold: #7fd1a8;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
@@ -869,6 +982,22 @@
   --hn-color-graph-node-edge: rgb(255 255 255 / 0);
   --hn-color-graph-label: #d8d4d1;
   --hn-color-board-ground: #1a1612;
+  --hn-color-board-paper: #1d1e21;
+  --hn-color-board-grid: #232428;
+  --hn-color-board-strip: #17181a;
+  --hn-color-board-strip-rule: #2a2b30;
+  --hn-color-board-ink: #fbfbfc;
+  --hn-color-board-fill-neutral: #644e2f;
+  --hn-color-board-fill-input: #1d3290;
+  --hn-color-board-fill-output: #064e30;
+  --hn-color-board-fill-warn: #5c3605;
+  --hn-color-board-photo-card: #2a2b30;
+  --hn-color-board-photo-tape: #7b93ff;
+  --hn-color-board-stroke-input: #7b93ff;
+  --hn-color-board-stroke-output: #46c88a;
+  --hn-color-board-stroke-warn: #fb9559;
+  --hn-color-board-note: #07603a;
+  --hn-color-board-note-fold: #0a7d4a;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
@@ -1003,6 +1132,22 @@
   --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
   --hn-color-graph-label: #303133;
   --hn-color-board-ground: #fbf6ec;
+  --hn-color-board-paper: #f6f6f8;
+  --hn-color-board-grid: #efeff2;
+  --hn-color-board-strip: #ececef;
+  --hn-color-board-strip-rule: #e4e4e8;
+  --hn-color-board-ink: #2a2b30;
+  --hn-color-board-fill-neutral: #f3ecdc;
+  --hn-color-board-fill-input: #dce9ff;
+  --hn-color-board-fill-output: #d5f0e1;
+  --hn-color-board-fill-warn: #fef3c7;
+  --hn-color-board-photo-card: #ffffff;
+  --hn-color-board-photo-tape: #bfd2ff;
+  --hn-color-board-stroke-input: #2d52eb;
+  --hn-color-board-stroke-output: #0f8f58;
+  --hn-color-board-stroke-warn: #d9601a;
+  --hn-color-board-note: #b3e3c9;
+  --hn-color-board-note-fold: #7fd1a8;
 
   /* shadow */
   --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
@@ -1137,6 +1282,22 @@
     --hn-color-graph-node-edge: rgb(255 255 255 / 0);
     --hn-color-graph-label: #d8d4d1;
     --hn-color-board-ground: #1a1612;
+    --hn-color-board-paper: #1d1e21;
+    --hn-color-board-grid: #232428;
+    --hn-color-board-strip: #17181a;
+    --hn-color-board-strip-rule: #2a2b30;
+    --hn-color-board-ink: #fbfbfc;
+    --hn-color-board-fill-neutral: #644e2f;
+    --hn-color-board-fill-input: #1d3290;
+    --hn-color-board-fill-output: #064e30;
+    --hn-color-board-fill-warn: #5c3605;
+    --hn-color-board-photo-card: #2a2b30;
+    --hn-color-board-photo-tape: #7b93ff;
+    --hn-color-board-stroke-input: #7b93ff;
+    --hn-color-board-stroke-output: #46c88a;
+    --hn-color-board-stroke-warn: #fb9559;
+    --hn-color-board-note: #07603a;
+    --hn-color-board-note-fold: #0a7d4a;
 
     /* shadow */
     --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
@@ -1413,7 +1574,7 @@ footer a:hover { color: var(--hn-color-fg); }
     <div><div class="kicker">Channels</div><h2>Pick how early you want it</h2></div>
     <p>Production is the one for everyone. Stage and Development get changes first, and update just as quietly.</p>
   </div>
-  <div class="channels"><article class="card channel recommended"><div class="top"><span class="tile tint-mint"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Production</h3><span class="badge">Recommended</span></div><div class="version num">0.5.374<small>build 374</small></div><p>The release for everyone. It only moves after a build has run on stage.</p><p class="when num">Published 2 Nov 2026 · 77.6 MB</p><div class="actions"><a class="btn sm btn-ink" href="https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.374/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/prod/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article><article class="card channel"><div class="top"><span class="tile tint-peach"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Stage</h3></div><div class="version num">0.5.376<small>build 376</small></div><p>Release candidates, one step before production.</p><p class="when num">Published 3 Nov 2026 · 77.6 MB</p><div class="actions"><a class="btn sm btn-quiet" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.376/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/stage/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article><article class="card channel"><div class="top"><span class="tile tint-sky"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Development</h3></div><div class="version num">0.4.357<small>build 357</small></div><p>Every change merged to main, published minutes after it lands.</p><p class="when num">Published 7 Oct 2026 · 57.1 MB</p><div class="actions"><a class="btn sm btn-quiet" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.357/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/dev/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article></div>
+  <div class="channels"><article class="card channel recommended"><div class="top"><span class="tile tint-mint"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Production</h3><span class="badge">Recommended</span></div><div class="version num">0.5.374<small>build 374</small></div><p>The release for everyone. It only moves after a build has run on stage.</p><p class="when num">Published 2 Nov 2026 · 77.6 MB</p><div class="actions"><a class="btn sm btn-ink" href="https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.374/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/prod/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article><article class="card channel"><div class="top"><span class="tile tint-peach"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Stage</h3></div><div class="version num">0.5.381<small>build 381</small></div><p>Release candidates, one step before production.</p><p class="when num">Published 5 Nov 2026 · 78.5 MB</p><div class="actions"><a class="btn sm btn-quiet" href="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.381/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/stage/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article><article class="card channel"><div class="top"><span class="tile tint-sky"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span><h3>Development</h3></div><div class="version num">0.4.357<small>build 357</small></div><p>Every change merged to main, published minutes after it lands.</p><p class="when num">Published 7 Oct 2026 · 57.1 MB</p><div class="actions"><a class="btn sm btn-quiet" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.357/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>Download</a><a class="btn sm btn-quiet" href="mac/dev/index.html">Details <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></article></div>
 </section>
 <section id="updates">
   <div class="head">
