@@ -4,15 +4,15 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Hintora</title>
         <item>
-            <title>0.5.409</title>
-            <pubDate>Sat, 14 Nov 2026 20:19:11 +0200</pubDate>
-            <sparkle:version>409</sparkle:version>
-            <sparkle:shortVersionString>0.5.409</sparkle:shortVersionString>
+            <title>0.5.411</title>
+            <pubDate>Tue, 17 Nov 2026 03:12:55 +0200</pubDate>
+            <sparkle:version>411</sparkle:version>
+            <sparkle:shortVersionString>0.5.411</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.409/Hintora-409.zip" length="79313244" type="application/octet-stream" sparkle:edSignature="zWQFYlBbNRm8izyv/Srvd/813NilAW0w+vAEZFhd9VNUpgE3AN+9K/Z/zhLRDj92FRlJ8xK9VzEw0MKXtc+qCA=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.411/Hintora-411.zip" length="90031419" type="application/octet-stream" sparkle:edSignature="74h2k+e78JvQHPY+PDCrQTNjeBTmlAuZX12XydERT8hUsAB1is+J8vQg9cHftPvnzltgMgoKefN4d4pUjcR2DQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: bEyADj9MP6LxULVv4IjL2QcEms7AdA3+TvDzEePLk2uWhxlfjiXemv/I2WKLhKjEXLQXJyz2bkVcRuCZE5u+CQ==
+edSignature: dJ7ae6JE2tqOveEDA8evQwZdnBcwUu7kADydlILqwUfro1ZJCdxDa+TtH1fNkIblpGH0EzsIsSqAB/xWeuJ0Dg==
 length: 1062
 -->
