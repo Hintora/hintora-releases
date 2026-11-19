@@ -1,0 +1,19 @@
+{
+  "platform": "windows",
+  "channel": "stage",
+  "version": "0.5.1",
+  "build": "1",
+  "display": "0.5.1",
+  "tag": "windows-stage-0.5.1",
+  "message": "Welcome to Hintora.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/windows-stage-0.5.1/Hintora-Setup-0.5.1-win-x64.exe",
+  "stable_url": "https://github.com/Hintora/hintora-releases/releases/download/windows-stage-latest/Hintora-Setup.exe",
+  "installer_bytes": 107111216,
+  "installer_sha256": "177f07fa00a146c2b73d11931d3f481993ac3d80d5053e83bd38e99e6b4029a7",
+  "download_page": "https://hintora.github.io/hintora-releases/windows/stage/",
+  "minimum_windows": "10",
+  "source_commit": "3b9b69a6a2a5cf71037d653573f45bd0935322a4",
+  "published_at": "2026-11-19T22:08:39Z",
+  "signing_mode": "trusted-signing",
+  "signed": true
+}
