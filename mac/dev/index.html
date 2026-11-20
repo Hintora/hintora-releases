@@ -1,1 +1,1696 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta http-equiv="refresh" content="0; url=https://hintora.ai"><link rel="canonical" href="https://hintora.ai"><title>Hintora</title></head><body><a href="https://hintora.ai">Hintora</a></body></html>
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hintora 0.4.357 · Development</title>
+<meta name="description" content="Welcome to Hintora.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0b09" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Hintora 0.4.357 · Development">
+<meta property="og:description" content="Welcome to Hintora.">
+<link rel="icon" type="image/png" href="../../assets/hintora-icon.png">
+<link rel="apple-touch-icon" href="../../assets/hintora-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+<style>:root {
+  color-scheme: light;
+
+  /* palette */
+  --hn-palette-white: #ffffff;
+  --hn-palette-black: #000000;
+  --hn-palette-brand-blue: #224dea;
+  --hn-palette-brand-cream: #efe8e0;
+  --hn-palette-brand-orange: #f2601c;
+  --hn-palette-brand-ink: #121316;
+  --hn-palette-brand-paper: #f7f7f3;
+  --hn-palette-mist-0: #ffffff;
+  --hn-palette-mist-25: #fbfbfc;
+  --hn-palette-mist-50: #f6f6f8;
+  --hn-palette-mist-100: #f1f1f3;
+  --hn-palette-mist-125: #efeff2;
+  --hn-palette-mist-150: #ececef;
+  --hn-palette-mist-200: #e4e4e8;
+  --hn-palette-mist-600: #727882;
+  --hn-palette-mist-800: #2a2b30;
+  --hn-palette-mist-850: #232428;
+  --hn-palette-mist-900: #1d1e21;
+  --hn-palette-mist-950: #17181a;
+  --hn-palette-mist-shade: #828898;
+  --hn-palette-onboarding-paper: #f5f2ee;
+  --hn-palette-onboarding-ink: #151312;
+  --hn-palette-onboarding-soft: #5e5650;
+  --hn-palette-onboarding-orange-from: #ff8a45;
+  --hn-palette-onboarding-orange-to: #f0600f;
+  --hn-palette-onboarding-dark-from: #26262b;
+  --hn-palette-onboarding-dark-to: #0d0d10;
+  --hn-palette-neutral-0: #ffffff;
+  --hn-palette-neutral-25: #fbfbf9;
+  --hn-palette-neutral-50: #f7f7f3;
+  --hn-palette-neutral-100: #efefeb;
+  --hn-palette-neutral-150: #e7e7e1;
+  --hn-palette-neutral-200: #ddddda;
+  --hn-palette-neutral-300: #c3c3c1;
+  --hn-palette-neutral-400: #9e9e9d;
+  --hn-palette-neutral-500: #7a7b7b;
+  --hn-palette-neutral-600: #5f5f60;
+  --hn-palette-neutral-700: #454547;
+  --hn-palette-neutral-800: #303133;
+  --hn-palette-neutral-900: #212224;
+  --hn-palette-neutral-950: #121316;
+  --hn-palette-night-50: #f0edeb;
+  --hn-palette-night-100: #e8e4e2;
+  --hn-palette-night-200: #d8d4d1;
+  --hn-palette-night-300: #bdb8b4;
+  --hn-palette-night-400: #9f9994;
+  --hn-palette-night-500: #77706b;
+  --hn-palette-night-600: #514a45;
+  --hn-palette-night-700: #39322d;
+  --hn-palette-night-750: #2c2622;
+  --hn-palette-night-800: #231e1a;
+  --hn-palette-night-850: #1a1612;
+  --hn-palette-night-900: #16120e;
+  --hn-palette-night-950: #0e0b09;
+  --hn-palette-sky-300: #8fc1f7;
+  --hn-palette-sky-500: #4c9bf2;
+  --hn-palette-blue-50: #eff4ff;
+  --hn-palette-blue-100: #dce9ff;
+  --hn-palette-blue-200: #bfd2ff;
+  --hn-palette-blue-300: #9ab7fc;
+  --hn-palette-blue-400: #7b93ff;
+  --hn-palette-blue-500: #5075ff;
+  --hn-palette-blue-600: #2d52eb;
+  --hn-palette-blue-700: #2143cf;
+  --hn-palette-blue-800: #223dad;
+  --hn-palette-blue-900: #1d3290;
+  --hn-palette-blue-950: #172770;
+  --hn-palette-layer-blue: #3848fa;
+  --hn-palette-layer-green-teal: #16987c;
+  --hn-palette-layer-violet: #752efa;
+  --hn-palette-layer-teal: #0c978b;
+  --hn-palette-layer-indigo: #6a46d8;
+  --hn-palette-layer-sea: #0c9789;
+  --hn-palette-layer-blue-bright: #5f6dff;
+  --hn-palette-layer-green-teal-bright: #20a88f;
+  --hn-palette-layer-violet-bright: #9b6bff;
+  --hn-palette-layer-teal-bright: #17a596;
+  --hn-palette-layer-indigo-bright: #8a6cf0;
+  --hn-palette-layer-sea-bright: #14a594;
+  --hn-palette-azure-300: #85b4ff;
+  --hn-palette-azure-500: #3380ff;
+  --hn-palette-azure-700: #1a5fd6;
+  --hn-palette-lavender-50: #f5f2ff;
+  --hn-palette-lavender-100: #e9e4ff;
+  --hn-palette-lavender-200: #d9d0ff;
+  --hn-palette-lavender-300: #c4b5fd;
+  --hn-palette-lavender-400: #a28bfa;
+  --hn-palette-lavender-500: #7c5cf0;
+  --hn-palette-lavender-600: #6541d6;
+  --hn-palette-lavender-700: #5233b3;
+  --hn-palette-lavender-800: #45299b;
+  --hn-palette-lavender-900: #3b2a8f;
+  --hn-palette-mint-50: #f1faf5;
+  --hn-palette-mint-100: #def2e7;
+  --hn-palette-mint-200: #c1e7d2;
+  --hn-palette-mint-300: #8fd6b0;
+  --hn-palette-mint-400: #5cbf8e;
+  --hn-palette-mint-500: #34a574;
+  --hn-palette-mint-600: #1f875c;
+  --hn-palette-mint-700: #146c4b;
+  --hn-palette-mint-800: #065f46;
+  --hn-palette-mint-900: #064e3b;
+  --hn-palette-peach-50: #fff6ef;
+  --hn-palette-peach-100: #ffe5d3;
+  --hn-palette-peach-200: #ffd0b0;
+  --hn-palette-peach-300: #ffb98a;
+  --hn-palette-peach-400: #fb9559;
+  --hn-palette-peach-500: #f07a2e;
+  --hn-palette-peach-600: #d9601a;
+  --hn-palette-peach-700: #ee6933;
+  --hn-palette-peach-800: #8a3b12;
+  --hn-palette-peach-900: #6e3010;
+  --hn-palette-peach-950: #4a1f0b;
+  --hn-palette-neon-pink-300: #ffb3d6;
+  --hn-palette-neon-pink-400: #ff5ca8;
+  --hn-palette-neon-pink-500: #ff4d9d;
+  --hn-palette-neon-pink-600: #f0157f;
+  --hn-palette-neon-pink-700: #a6005a;
+  --hn-palette-neon-purple-300: #e0b3ff;
+  --hn-palette-neon-purple-400: #c96bff;
+  --hn-palette-neon-purple-500: #c25cff;
+  --hn-palette-neon-purple-600: #b026ff;
+  --hn-palette-neon-purple-700: #8a1fd1;
+  --hn-palette-neon-blue-300: #b3ccff;
+  --hn-palette-neon-blue-400: #6aa2ff;
+  --hn-palette-neon-blue-500: #5c95ff;
+  --hn-palette-neon-blue-600: #2f7bff;
+  --hn-palette-neon-blue-700: #1452d9;
+  --hn-palette-neon-green-300: #a8f5c0;
+  --hn-palette-neon-green-400: #2ee66b;
+  --hn-palette-neon-green-500: #00c94f;
+  --hn-palette-neon-green-600: #009e3a;
+  --hn-palette-neon-green-700: #007a2e;
+  --hn-palette-neon-yellow-300: #fff3a3;
+  --hn-palette-neon-yellow-400: #ffe100;
+  --hn-palette-neon-yellow-500: #ffd60a;
+  --hn-palette-neon-yellow-600: #ffd000;
+  --hn-palette-neon-yellow-700: #f5b800;
+  --hn-palette-neon-brown-300: #e8c4a4;
+  --hn-palette-neon-brown-400: #d39a6a;
+  --hn-palette-neon-brown-500: #c8875a;
+  --hn-palette-neon-brown-600: #a0612f;
+  --hn-palette-neon-brown-700: #6e3d1c;
+  --hn-palette-neon-red-300: #ffadb5;
+  --hn-palette-neon-red-400: #ff5c6c;
+  --hn-palette-neon-red-500: #ff4757;
+  --hn-palette-neon-red-600: #ff1f3d;
+  --hn-palette-neon-red-700: #b5001a;
+  --hn-palette-tomato-500: #d23a24;
+  --hn-palette-tomato-600: #b92d1b;
+  --hn-palette-ember-100: #ffc9bd;
+  --hn-palette-ember-300: #fca390;
+  --hn-palette-ember-400: #ee765a;
+  --hn-palette-ember-500: #dc5a3a;
+  --hn-palette-ember-600: #c34728;
+  --hn-palette-ember-800: #85311e;
+  --hn-palette-apricot-100: #ffe1ac;
+  --hn-palette-apricot-300: #fec678;
+  --hn-palette-apricot-400: #f0ab4d;
+  --hn-palette-apricot-500: #df9129;
+  --hn-palette-apricot-600: #c57920;
+  --hn-palette-apricot-800: #804d18;
+  --hn-palette-sand-50: #fbf6ec;
+  --hn-palette-sand-60: #f6f2e5;
+  --hn-palette-sand-75: #f3ecdc;
+  --hn-palette-sand-90: #e2dac6;
+  --hn-palette-sand-100: #eae1ca;
+  --hn-palette-sand-300: #dfcca1;
+  --hn-palette-sand-400: #d1af70;
+  --hn-palette-sand-500: #b69255;
+  --hn-palette-sand-600: #9b7a47;
+  --hn-palette-sand-800: #644e2f;
+  --hn-palette-clay-100: #e8c7ba;
+  --hn-palette-clay-300: #e2a58e;
+  --hn-palette-clay-400: #d38568;
+  --hn-palette-clay-500: #ba6b4d;
+  --hn-palette-clay-600: #9f593f;
+  --hn-palette-clay-800: #673a29;
+  --hn-palette-green-50: #edf8f2;
+  --hn-palette-green-100: #d5f0e1;
+  --hn-palette-green-200: #b3e3c9;
+  --hn-palette-green-300: #7fd1a8;
+  --hn-palette-green-400: #46c88a;
+  --hn-palette-green-500: #22a86b;
+  --hn-palette-green-600: #0f8f58;
+  --hn-palette-green-700: #0a7d4a;
+  --hn-palette-green-800: #07603a;
+  --hn-palette-green-900: #064e30;
+  --hn-palette-amber-50: #fffbeb;
+  --hn-palette-amber-100: #fef3c7;
+  --hn-palette-amber-150: #fae8b5;
+  --hn-palette-amber-200: #fde68a;
+  --hn-palette-amber-300: #fcd34d;
+  --hn-palette-amber-400: #e0a544;
+  --hn-palette-amber-450: #e0b738;
+  --hn-palette-amber-500: #f59e0b;
+  --hn-palette-amber-600: #d97706;
+  --hn-palette-amber-700: #a15c00;
+  --hn-palette-amber-800: #7c4a03;
+  --hn-palette-amber-900: #5c3605;
+  --hn-palette-rose-50: #fff1f2;
+  --hn-palette-rose-100: #ffe4e6;
+  --hn-palette-rose-200: #fecdd3;
+  --hn-palette-rose-300: #fda4af;
+  --hn-palette-rose-400: #ff7a8a;
+  --hn-palette-rose-500: #f43f5e;
+  --hn-palette-rose-600: #e11d48;
+  --hn-palette-rose-700: #be123c;
+  --hn-palette-rose-800: #9f1239;
+  --hn-palette-rose-900: #881337;
+  --hn-palette-signal-amber-ink: #856000;
+  --hn-palette-signal-green-ink: #1b7a34;
+  --hn-palette-signal-green-bright: #30d158;
+  --hn-palette-signal-red-ink: #c9001a;
+  --hn-palette-signal-red-bright: #ff453a;
+  --hn-palette-alpha-ink-3: rgb(18 19 22 / 0.03);
+  --hn-palette-alpha-ink-4: rgb(18 19 22 / 0.04);
+  --hn-palette-alpha-ink-5: rgb(18 19 22 / 0.05);
+  --hn-palette-alpha-ink-6: rgb(18 19 22 / 0.06);
+  --hn-palette-alpha-ink-8: rgb(18 19 22 / 0.08);
+  --hn-palette-alpha-ink-10: rgb(18 19 22 / 0.1);
+  --hn-palette-alpha-ink-20: rgb(18 19 22 / 0.2);
+  --hn-palette-alpha-ink-32: rgb(18 19 22 / 0.32);
+  --hn-palette-alpha-ink-45: rgb(18 19 22 / 0.45);
+  --hn-palette-alpha-ink-50: rgb(18 19 22 / 0.5);
+  --hn-palette-alpha-ink-64: rgb(18 19 22 / 0.64);
+  --hn-palette-alpha-ink-70: rgb(18 19 22 / 0.7);
+  --hn-palette-alpha-ink-80: rgb(18 19 22 / 0.8);
+  --hn-palette-alpha-frost-30: rgb(240 237 235 / 0.3);
+  --hn-palette-alpha-frost-46: rgb(240 237 235 / 0.46);
+  --hn-palette-alpha-frost-52: rgb(240 237 235 / 0.52);
+  --hn-palette-alpha-frost-64: rgb(240 237 235 / 0.64);
+  --hn-palette-alpha-white-6: rgb(255 255 255 / 0.06);
+  --hn-palette-alpha-white-10: rgb(255 255 255 / 0.1);
+  --hn-palette-alpha-white-18: rgb(255 255 255 / 0.18);
+  --hn-palette-alpha-black-40: rgb(0 0 0 / 0.4);
+  --hn-palette-alpha-black-60: rgb(0 0 0 / 0.6);
+  --hn-palette-alpha-black-70: rgb(0 0 0 / 0.7);
+  --hn-palette-alpha-black-80: rgb(0 0 0 / 0.8);
+  --hn-palette-alpha-black-90: rgb(0 0 0 / 0.9);
+  --hn-palette-alpha-blue-60: rgb(45 82 235 / 0.6);
+  --hn-palette-alpha-blue-85: rgb(45 82 235 / 0.85);
+
+  /* space */
+  --hn-space-0: 0px;
+  --hn-space-2: 2px;
+  --hn-space-4: 4px;
+  --hn-space-6: 6px;
+  --hn-space-8: 8px;
+  --hn-space-10: 10px;
+  --hn-space-12: 12px;
+  --hn-space-14: 14px;
+  --hn-space-16: 16px;
+  --hn-space-20: 20px;
+  --hn-space-24: 24px;
+  --hn-space-28: 28px;
+  --hn-space-32: 32px;
+  --hn-space-36: 36px;
+  --hn-space-40: 40px;
+  --hn-space-44: 44px;
+  --hn-space-48: 48px;
+  --hn-space-56: 56px;
+  --hn-space-64: 64px;
+  --hn-space-80: 80px;
+  --hn-space-96: 96px;
+  --hn-space-112: 112px;
+  --hn-space-128: 128px;
+
+  /* radius */
+  --hn-radius-0: 0px;
+  --hn-radius-4: 4px;
+  --hn-radius-6: 6px;
+  --hn-radius-8: 8px;
+  --hn-radius-12: 12px;
+  --hn-radius-16: 16px;
+  --hn-radius-20: 20px;
+  --hn-radius-24: 24px;
+  --hn-radius-28: 28px;
+  --hn-radius-36: 36px;
+  --hn-radius-full: 9999px;
+
+  /* border-width */
+  --hn-border-width-hairline: 1px;
+  --hn-border-width-strong: 2px;
+  --hn-border-width-ink: 1.75px;
+
+  /* breakpoint */
+  --hn-breakpoint-xs: 390px;
+  --hn-breakpoint-sm: 640px;
+  --hn-breakpoint-md: 768px;
+  --hn-breakpoint-lg: 1024px;
+  --hn-breakpoint-xl: 1280px;
+  --hn-breakpoint-2xl: 1536px;
+
+  /* z-index */
+  --hn-z-index-base: 0;
+  --hn-z-index-raised: 10;
+  --hn-z-index-dropdown: 40;
+  --hn-z-index-sticky: 50;
+  --hn-z-index-overlay: 80;
+  --hn-z-index-modal: 100;
+  --hn-z-index-toast: 120;
+  --hn-z-index-max: 9999;
+
+  /* opacity */
+  --hn-opacity-disabled: 0.5;
+
+  /* duration */
+  --hn-duration-fast: 120ms;
+  --hn-duration-quick: 150ms;
+  --hn-duration-base: 200ms;
+  --hn-duration-moderate: 300ms;
+  --hn-duration-slow: 500ms;
+  --hn-duration-slower: 700ms;
+
+  /* easing */
+  --hn-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --hn-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+  --hn-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+  --hn-easing-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+  --hn-easing-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --hn-easing-write: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* spring */
+  --hn-spring-snappy-duration: 190ms;
+  --hn-spring-snappy-easing: linear(0, 0.067, 0.208, 0.368, 0.518, 0.645, 0.746, 0.823, 0.88, 0.921, 0.949, 0.969, 0.981, 0.989, 0.995, 0.998, 1);
+  --hn-spring-settle-duration: 180ms;
+  --hn-spring-settle-easing: linear(0, 0.093, 0.273, 0.457, 0.614, 0.735, 0.824, 0.885, 0.927, 0.954, 0.972, 0.983, 0.99, 0.994, 0.997, 0.998, 1);
+  --hn-spring-playful-duration: 650ms;
+  --hn-spring-playful-easing: linear(0, 0.028, 0.101, 0.202, 0.32, 0.444, 0.566, 0.679, 0.78, 0.867, 0.938, 0.994, 1.037, 1.066, 1.084, 1.093, 1.095, 1.091, 1.083, 1.073, 1.062, 1.05, 1.039, 1.028, 1.019, 1.011, 1.005, 0.999, 0.996, 0.993, 0.992, 0.991, 0.991, 0.992, 0.992, 0.993, 0.994, 0.996, 0.997, 0.998, 0.998, 1);
+  --hn-spring-notch-morph-duration: 510ms;
+  --hn-spring-notch-morph-easing: linear(0, 0.03, 0.101, 0.196, 0.298, 0.401, 0.498, 0.585, 0.663, 0.73, 0.786, 0.833, 0.871, 0.902, 0.927, 0.946, 0.961, 0.973, 0.981, 0.988, 0.992, 0.996, 0.998, 1, 1.001, 1.001, 1.001, 1.002, 1.002, 1.001, 1.001, 1.001, 1);
+  --hn-spring-notch-micro-duration: 340ms;
+  --hn-spring-notch-micro-easing: linear(0, 0.065, 0.206, 0.369, 0.523, 0.656, 0.762, 0.843, 0.901, 0.942, 0.969, 0.986, 0.996, 1.002, 1.004, 1.005, 1.005, 1.004, 1.003, 1.003, 1.002, 1.001, 1);
+
+  /* font */
+  --hn-font-family-sans: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-font-family-app: "Inter Variable", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --hn-font-family-serif: "Source Serif 4 Variable", "Source Serif 4", "New York", ui-serif, Georgia, serif;
+  --hn-font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --hn-font-weight-regular: 400;
+  --hn-font-weight-medium: 500;
+  --hn-font-weight-semibold: 600;
+  --hn-font-weight-bold: 700;
+  --hn-font-size-10: 10px;
+  --hn-font-size-11: 11px;
+  --hn-font-size-12: 12px;
+  --hn-font-size-13: 13px;
+  --hn-font-size-14: 14px;
+  --hn-font-size-15: 15px;
+  --hn-font-size-16: 16px;
+  --hn-font-size-18: 18px;
+  --hn-font-size-20: 20px;
+  --hn-font-size-24: 24px;
+  --hn-font-size-28: 28px;
+  --hn-font-size-34: 34px;
+  --hn-font-size-44: 44px;
+  --hn-font-size-64: 64px;
+  --hn-font-size-88: 88px;
+  --hn-font-letter-spacing-tightest: -0.05em;
+  --hn-font-letter-spacing-tighter: -0.045em;
+  --hn-font-letter-spacing-tight: -0.035em;
+  --hn-font-letter-spacing-snug: -0.02em;
+  --hn-font-letter-spacing-subtle: -0.015em;
+  --hn-font-letter-spacing-normal: 0em;
+  --hn-font-letter-spacing-wide: 0.08em;
+  --hn-font-letter-spacing-wider: 0.14em;
+  --hn-font-letter-spacing-widest: 0.18em;
+  --hn-font-line-height-none: 1;
+  --hn-font-line-height-display: 0.98;
+  --hn-font-line-height-heading: 1.04;
+  --hn-font-line-height-tight: 1.1;
+  --hn-font-line-height-snug: 1.2;
+  --hn-font-line-height-title: 1.35;
+  --hn-font-line-height-normal: 1.5;
+  --hn-font-line-height-relaxed: 1.6;
+
+  /* transition */
+  --hn-transition-notch-content: 150ms cubic-bezier(0, 0, 0.2, 1) 60ms;
+  --hn-transition-hover: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-press: 120ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-fade: 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  --hn-transition-panel: 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --hn-transition-layout: 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --hn-transition-reveal: 700ms cubic-bezier(0.22, 1, 0.36, 1) 0ms;
+
+  /* motion */
+  --hn-motion-hover-lift: -2px;
+  --hn-motion-press-scale: 0.99;
+  --hn-motion-notch-hover-open-delay: 450ms;
+  --hn-motion-mark-hand-imperfection: 1.4;
+  --hn-motion-caption-word: 150ms;
+  --hn-motion-caption-in: 280ms;
+  --hn-motion-caption-out: 220ms;
+  --hn-motion-caption-rise: 6px;
+  --hn-motion-wave: 1200ms;
+  --hn-motion-wave-lift: 2px;
+  --hn-motion-agent-breath: 1800ms;
+  --hn-motion-shimmer: 1800ms;
+  --hn-motion-progress-creep: 4000ms;
+  --hn-motion-progress-pulse: 600ms;
+  --hn-motion-celebrate: 900ms;
+  --hn-motion-mark-guide-stroke: 2.5px;
+  --hn-motion-mark-guide-stroke-contrast: 3.5px;
+  --hn-motion-mark-guide-dash: 14px;
+  --hn-motion-mark-guide-gap: 4px;
+  --hn-motion-painter-fly-off: 300ms;
+  --hn-motion-painter-rest-bob: 3px;
+  --hn-motion-board-part-gap: 450ms;
+  --hn-motion-board-part-fade: 550ms;
+  --hn-motion-painter-board-pause: 400ms;
+  --hn-motion-painter-board-outline: 600ms;
+  --hn-motion-painter-board-writing-speed: 190px;
+  --hn-motion-painter-board-line-speed: 520px;
+  --hn-motion-board3d-part-step: 800ms;
+  --hn-motion-board3d-part-grow: 700ms;
+  --hn-motion-board3d-assembly-most: 9000ms;
+  --hn-motion-painter-park-bob: 6px;
+  --hn-motion-mark-pointer-gap: 7px;
+  --hn-motion-mark-clear-gap: 6px;
+  --hn-motion-mark-ink-stroke: 3.5px;
+
+  /* radius */
+  --hn-radius-control-compact: 8px;
+  --hn-radius-control: 12px;
+  --hn-radius-popover: 16px;
+  --hn-radius-card: 24px;
+  --hn-radius-feature: 28px;
+  --hn-radius-frame: 36px;
+  --hn-radius-notch-shoulder: 16px;
+  --hn-radius-notch-corner: 24px;
+  --hn-radius-notch-flare: 12px;
+  --hn-radius-notch-rest-corner: 10px;
+  --hn-radius-pill: 9999px;
+  --hn-radius-hub-key: 6px;
+  --hn-radius-hub-control: 9px;
+  --hn-radius-hub-card: 14px;
+  --hn-radius-hub-sheet: 16px;
+
+  /* size */
+  --hn-size-control-sm: 36px;
+  --hn-size-control-md: 44px;
+  --hn-size-control-lg: 48px;
+  --hn-size-icon-sm: 16px;
+  --hn-size-icon-md: 20px;
+  --hn-size-icon-lg: 24px;
+  --hn-size-avatar-sm: 28px;
+  --hn-size-avatar-md: 40px;
+  --hn-size-avatar-lg: 56px;
+  --hn-size-header: 80px;
+  --hn-size-header-compact: 56px;
+  --hn-size-notch-open-width: 480px;
+  --hn-size-notch-open-drop: 86px;
+  --hn-size-notch-open-drop-max: 340px;
+  --hn-size-notch-content-gap: 6px;
+  --hn-size-notch-foot: 20px;
+  --hn-size-notch-foot-gap: 4px;
+  --hn-size-notch-answer-lines: 2;
+  --hn-size-notch-transport: 26px;
+  --hn-size-notch-answer-line-gap: 2px;
+  --hn-size-notch-answer-block-gap: 6px;
+  --hn-size-notch-answer-item-gap: 2px;
+  --hn-size-notch-voice-wave: 14px;
+  --hn-size-notch-wave-dot: 3px;
+  --hn-size-notch-wave-dot-gap: 3px;
+
+  /* layout */
+  --hn-layout-page: 1320px;
+  --hn-layout-content: 1120px;
+  --hn-layout-reading: 760px;
+  --hn-layout-measure: 680px;
+  --hn-layout-narrow: 560px;
+  --hn-layout-gutter-sm: 20px;
+  --hn-layout-gutter-md: 32px;
+  --hn-layout-gutter-lg: 48px;
+  --hn-layout-section-sm: 80px;
+  --hn-layout-section-lg: 112px;
+
+  /* focus */
+  --hn-focus-width: 2px;
+  --hn-focus-offset: 2px;
+
+  /* typography */
+  --hn-typography-display-xl-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-display-xl-font-size: clamp(2.5rem, 1.1854rem + 5.3933vw, 5.5rem);
+  --hn-typography-display-xl-font-weight: 600;
+  --hn-typography-display-xl-letter-spacing: -0.05em;
+  --hn-typography-display-xl-line-height: 0.98;
+  --hn-typography-display-xl-text-transform: none;
+  --hn-typography-display-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-display-lg-font-size: clamp(2.375rem, 1.6629rem + 2.9213vw, 4rem);
+  --hn-typography-display-lg-font-weight: 600;
+  --hn-typography-display-lg-letter-spacing: -0.045em;
+  --hn-typography-display-lg-line-height: 1.04;
+  --hn-typography-display-lg-text-transform: none;
+  --hn-typography-heading-1-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-1-font-size: clamp(2.125rem, 1.8511rem + 1.1236vw, 2.75rem);
+  --hn-typography-heading-1-font-weight: 600;
+  --hn-typography-heading-1-letter-spacing: -0.045em;
+  --hn-typography-heading-1-line-height: 1.04;
+  --hn-typography-heading-1-text-transform: none;
+  --hn-typography-heading-2-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-2-font-size: clamp(1.75rem, 1.5857rem + 0.6742vw, 2.125rem);
+  --hn-typography-heading-2-font-weight: 600;
+  --hn-typography-heading-2-letter-spacing: -0.035em;
+  --hn-typography-heading-2-line-height: 1.1;
+  --hn-typography-heading-2-text-transform: none;
+  --hn-typography-heading-3-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-3-font-size: 24px;
+  --hn-typography-heading-3-font-weight: 600;
+  --hn-typography-heading-3-letter-spacing: -0.035em;
+  --hn-typography-heading-3-line-height: 1.2;
+  --hn-typography-heading-3-text-transform: none;
+  --hn-typography-heading-4-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-heading-4-font-size: 18px;
+  --hn-typography-heading-4-font-weight: 600;
+  --hn-typography-heading-4-letter-spacing: -0.02em;
+  --hn-typography-heading-4-line-height: 1.35;
+  --hn-typography-heading-4-text-transform: none;
+  --hn-typography-body-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-lg-font-size: clamp(1rem, 0.8904rem + 0.4494vw, 1.25rem);
+  --hn-typography-body-lg-font-weight: 400;
+  --hn-typography-body-lg-letter-spacing: -0.015em;
+  --hn-typography-body-lg-line-height: 1.6;
+  --hn-typography-body-lg-text-transform: none;
+  --hn-typography-body-md-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-md-font-size: 16px;
+  --hn-typography-body-md-font-weight: 400;
+  --hn-typography-body-md-letter-spacing: 0em;
+  --hn-typography-body-md-line-height: 1.6;
+  --hn-typography-body-md-text-transform: none;
+  --hn-typography-body-sm-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-body-sm-font-size: 14px;
+  --hn-typography-body-sm-font-weight: 400;
+  --hn-typography-body-sm-letter-spacing: 0em;
+  --hn-typography-body-sm-line-height: 1.6;
+  --hn-typography-body-sm-text-transform: none;
+  --hn-typography-caption-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-caption-font-size: 13px;
+  --hn-typography-caption-font-weight: 400;
+  --hn-typography-caption-letter-spacing: 0em;
+  --hn-typography-caption-line-height: 1.5;
+  --hn-typography-caption-text-transform: none;
+  --hn-typography-label-lg-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-lg-font-size: 15px;
+  --hn-typography-label-lg-font-weight: 600;
+  --hn-typography-label-lg-letter-spacing: 0em;
+  --hn-typography-label-lg-line-height: 1;
+  --hn-typography-label-lg-text-transform: none;
+  --hn-typography-label-md-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-md-font-size: 14px;
+  --hn-typography-label-md-font-weight: 600;
+  --hn-typography-label-md-letter-spacing: 0em;
+  --hn-typography-label-md-line-height: 1;
+  --hn-typography-label-md-text-transform: none;
+  --hn-typography-label-sm-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-label-sm-font-size: 13px;
+  --hn-typography-label-sm-font-weight: 600;
+  --hn-typography-label-sm-letter-spacing: 0em;
+  --hn-typography-label-sm-line-height: 1;
+  --hn-typography-label-sm-text-transform: none;
+  --hn-typography-eyebrow-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-eyebrow-font-size: 12px;
+  --hn-typography-eyebrow-font-weight: 700;
+  --hn-typography-eyebrow-letter-spacing: 0.18em;
+  --hn-typography-eyebrow-line-height: 1.2;
+  --hn-typography-eyebrow-text-transform: uppercase;
+  --hn-typography-overline-font-family: "DM Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hn-typography-overline-font-size: 11px;
+  --hn-typography-overline-font-weight: 700;
+  --hn-typography-overline-letter-spacing: 0.14em;
+  --hn-typography-overline-line-height: 1.2;
+  --hn-typography-overline-text-transform: uppercase;
+  --hn-typography-code-font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --hn-typography-code-font-size: 13px;
+  --hn-typography-code-font-weight: 400;
+  --hn-typography-code-letter-spacing: 0em;
+  --hn-typography-code-line-height: 1.5;
+  --hn-typography-code-text-transform: none;
+  --hn-typography-notch-title-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-typography-notch-title-font-size: 15px;
+  --hn-typography-notch-title-font-weight: 600;
+  --hn-typography-notch-title-letter-spacing: 0em;
+  --hn-typography-notch-title-line-height: 1.2;
+  --hn-typography-notch-title-text-transform: none;
+  --hn-typography-notch-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-typography-notch-body-font-size: 13px;
+  --hn-typography-notch-body-font-weight: 400;
+  --hn-typography-notch-body-letter-spacing: 0em;
+  --hn-typography-notch-body-line-height: 1.5;
+  --hn-typography-notch-body-text-transform: none;
+  --hn-typography-notch-detail-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-typography-notch-detail-font-size: 12px;
+  --hn-typography-notch-detail-font-weight: 500;
+  --hn-typography-notch-detail-letter-spacing: 0em;
+  --hn-typography-notch-detail-line-height: 1.2;
+  --hn-typography-notch-detail-text-transform: none;
+  --hn-typography-notch-label-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --hn-typography-notch-label-font-size: 11px;
+  --hn-typography-notch-label-font-weight: 600;
+  --hn-typography-notch-label-letter-spacing: 0em;
+  --hn-typography-notch-label-line-height: 1.2;
+  --hn-typography-notch-label-text-transform: none;
+
+  /* color */
+  --hn-color-canvas: #f7f7f3;
+  --hn-color-surface: #ffffff;
+  --hn-color-surface-raised: #ffffff;
+  --hn-color-surface-sunken: rgb(18 19 22 / 0.03);
+  --hn-color-surface-inverse: #121316;
+  --hn-color-scrim: rgb(18 19 22 / 0.5);
+  --hn-color-fg: #121316;
+  --hn-color-fg-muted: rgb(18 19 22 / 0.64);
+  --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
+  --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
+  --hn-color-fg-inverse: #ffffff;
+  --hn-color-fg-brand: #8a3b12;
+  --hn-color-fg-on-accent: #ffffff;
+  --hn-color-line: rgb(18 19 22 / 0.1);
+  --hn-color-line-subtle: #e7e7e1;
+  --hn-color-line-strong: rgb(18 19 22 / 0.2);
+  --hn-color-accent: #2d52eb;
+  --hn-color-accent-hover: #2143cf;
+  --hn-color-accent-pressed: #223dad;
+  --hn-color-accent-subtle: #dce9ff;
+  --hn-color-accent-line: #bfd2ff;
+  --hn-color-hub-card-ember-from: #8a3b12;
+  --hn-color-hub-card-ember-to: #d9601a;
+  --hn-color-hub-card-ember-fg: #ffffff;
+  --hn-color-hub-card-ember-fg-muted: rgb(255 255 255 / 0.88);
+  --hn-color-hub-card-peach-from: #ffffff;
+  --hn-color-hub-card-peach-to: #f6f6f8;
+  --hn-color-hub-card-peach-line: #e4e4e8;
+  --hn-color-hub-card-peach-fg-accent: #8a3b12;
+  --hn-color-hub-soft-ground: #f1f1f3;
+  --hn-color-hub-soft-sheet: #fbfbfc;
+  --hn-color-hub-soft-card: #ffffff;
+  --hn-color-hub-soft-raised-from: #ffffff;
+  --hn-color-hub-soft-raised-to: #ececef;
+  --hn-color-hub-soft-well: #ececef;
+  --hn-color-hub-soft-highlight: rgb(255 255 255 / 0.92);
+  --hn-color-hub-soft-shade: rgb(130 136 152 / 0.3);
+  --hn-color-app-accent: #d9601a;
+  --hn-color-app-accent-hover: #8a3b12;
+  --hn-color-app-accent-pressed: #6e3010;
+  --hn-color-app-accent-on: #ffffff;
+  --hn-color-app-accent-subtle: #ffe5d3;
+  --hn-color-app-accent-line: #ffd0b0;
+  --hn-color-app-accent-fg: #8a3b12;
+  --hn-color-app-accent-focus: #d9601a;
+  --hn-color-app-accent-selection: #ffe5d3;
+  --hn-color-app-accent-contrast: #8a3b12;
+  --hn-color-app-accent-contrast-hover: #6e3010;
+  --hn-color-app-accent-contrast-on: #ffffff;
+  --hn-color-app-accent-contrast-fg: #6e3010;
+  --hn-color-app-accent-contrast-focus: #8a3b12;
+  --hn-color-onboarding-paper: #f5f2ee;
+  --hn-color-onboarding-ink: #151312;
+  --hn-color-onboarding-soft: #5e5650;
+  --hn-color-onboarding-name: #d9601a;
+  --hn-color-onboarding-button-orange-from: #ff8a45;
+  --hn-color-onboarding-button-orange-to: #f0600f;
+  --hn-color-onboarding-button-orange-on: #121316;
+  --hn-color-onboarding-button-dark-from: #26262b;
+  --hn-color-onboarding-button-dark-to: #0d0d10;
+  --hn-color-onboarding-button-dark-on: #ffffff;
+  --hn-color-state-hover: rgb(18 19 22 / 0.05);
+  --hn-color-state-pressed: rgb(18 19 22 / 0.08);
+  --hn-color-focus: #d9601a;
+  --hn-color-selection: #ffe5d3;
+  --hn-color-guide: #d9601a;
+  --hn-color-guide-halo: rgb(217 96 26 / 0.22);
+  --hn-color-guide-bright: #fb9559;
+  --hn-color-guide-deep: #8a3b12;
+  --hn-color-guide-on: #ffffff;
+  --hn-color-guide-contrast-deep: #d9601a;
+  --hn-color-guide-contrast: #f07a2e;
+  --hn-color-guide-contrast-bright: #fb9559;
+  --hn-color-guide-contrast-marker: #ffb98a;
+  --hn-color-guide-layer-one: #d9601a;
+  --hn-color-guide-layer-two: #6a46d8;
+  --hn-color-guide-layer-three: #0c9789;
+  --hn-color-guide-layer-a-two: #3848fa;
+  --hn-color-guide-layer-a-three: #16987c;
+  --hn-color-guide-layer-b-two: #752efa;
+  --hn-color-guide-layer-b-three: #0c978b;
+  --hn-color-guide-layer-c-two: #6a46d8;
+  --hn-color-guide-layer-c-three: #0c9789;
+  --hn-color-guide-accent-orange: #d9601a;
+  --hn-color-guide-accent-orange-bright: #fb9559;
+  --hn-color-guide-accent-orange-strong: #8a3b12;
+  --hn-color-guide-accent-orange-on: #ffffff;
+  --hn-color-guide-accent-orange-marker: #ffb98a;
+  --hn-color-guide-accent-orange-ink-light: #d9601a;
+  --hn-color-guide-accent-orange-ink-middle: #f07a2e;
+  --hn-color-guide-accent-orange-ink-dark: #fb9559;
+  --hn-color-guide-accent-pink: #f0157f;
+  --hn-color-guide-accent-pink-bright: #ff5ca8;
+  --hn-color-guide-accent-pink-strong: #a6005a;
+  --hn-color-guide-accent-pink-on: #ffffff;
+  --hn-color-guide-accent-pink-marker: #ffb3d6;
+  --hn-color-guide-accent-pink-ink-light: #f0157f;
+  --hn-color-guide-accent-pink-ink-middle: #ff4d9d;
+  --hn-color-guide-accent-pink-ink-dark: #ff5ca8;
+  --hn-color-guide-accent-purple: #b026ff;
+  --hn-color-guide-accent-purple-bright: #c96bff;
+  --hn-color-guide-accent-purple-strong: #8a1fd1;
+  --hn-color-guide-accent-purple-on: #ffffff;
+  --hn-color-guide-accent-purple-marker: #e0b3ff;
+  --hn-color-guide-accent-purple-ink-light: #b026ff;
+  --hn-color-guide-accent-purple-ink-middle: #c25cff;
+  --hn-color-guide-accent-purple-ink-dark: #c96bff;
+  --hn-color-guide-accent-electric: #2f7bff;
+  --hn-color-guide-accent-electric-bright: #6aa2ff;
+  --hn-color-guide-accent-electric-strong: #1452d9;
+  --hn-color-guide-accent-electric-on: #ffffff;
+  --hn-color-guide-accent-electric-marker: #b3ccff;
+  --hn-color-guide-accent-electric-ink-light: #2f7bff;
+  --hn-color-guide-accent-electric-ink-middle: #5c95ff;
+  --hn-color-guide-accent-electric-ink-dark: #6aa2ff;
+  --hn-color-guide-accent-green: #009e3a;
+  --hn-color-guide-accent-green-bright: #2ee66b;
+  --hn-color-guide-accent-green-strong: #007a2e;
+  --hn-color-guide-accent-green-on: #ffffff;
+  --hn-color-guide-accent-green-marker: #a8f5c0;
+  --hn-color-guide-accent-green-ink-light: #009e3a;
+  --hn-color-guide-accent-green-ink-middle: #00c94f;
+  --hn-color-guide-accent-green-ink-dark: #2ee66b;
+  --hn-color-guide-accent-yellow: #ffd000;
+  --hn-color-guide-accent-yellow-bright: #ffe100;
+  --hn-color-guide-accent-yellow-strong: #f5b800;
+  --hn-color-guide-accent-yellow-on: #121316;
+  --hn-color-guide-accent-yellow-marker: #fff3a3;
+  --hn-color-guide-accent-yellow-ink-light: #ffd000;
+  --hn-color-guide-accent-yellow-ink-middle: #ffd60a;
+  --hn-color-guide-accent-yellow-ink-dark: #ffe100;
+  --hn-color-guide-accent-red: #ff1f3d;
+  --hn-color-guide-accent-red-bright: #ff5c6c;
+  --hn-color-guide-accent-red-strong: #b5001a;
+  --hn-color-guide-accent-red-on: #ffffff;
+  --hn-color-guide-accent-red-marker: #ffadb5;
+  --hn-color-guide-accent-red-ink-light: #ff1f3d;
+  --hn-color-guide-accent-red-ink-middle: #ff4757;
+  --hn-color-guide-accent-red-ink-dark: #ff5c6c;
+  --hn-color-guide-liquid-orange: #d9601a;
+  --hn-color-guide-liquid-amber: #f59e0b;
+  --hn-color-guide-liquid-blue: #5075ff;
+  --hn-color-guide-liquid-deep: #223dad;
+  --hn-color-success: #0a7d4a;
+  --hn-color-success-subtle: #edf8f2;
+  --hn-color-success-line: #b3e3c9;
+  --hn-color-success-solid: #0a7d4a;
+  --hn-color-success-on-solid: #ffffff;
+  --hn-color-warning: #a15c00;
+  --hn-color-warning-subtle: #fffbeb;
+  --hn-color-warning-line: #fde68a;
+  --hn-color-warning-solid: #f59e0b;
+  --hn-color-warning-on-solid: #121316;
+  --hn-color-danger: #be123c;
+  --hn-color-danger-subtle: #fff1f2;
+  --hn-color-danger-line: #fecdd3;
+  --hn-color-danger-solid: #be123c;
+  --hn-color-danger-on-solid: #ffffff;
+  --hn-color-info: #2d52eb;
+  --hn-color-info-subtle: #eff4ff;
+  --hn-color-info-line: #bfd2ff;
+  --hn-color-info-solid: #2d52eb;
+  --hn-color-info-on-solid: #ffffff;
+  --hn-color-status-working: #8a3b12;
+  --hn-color-status-working-subtle: rgb(138 59 18 / 0.06);
+  --hn-color-status-working-line: rgb(138 59 18 / 0.3);
+  --hn-color-status-working-solid: #fb9559;
+  --hn-color-status-working-on-solid: #0e0b09;
+  --hn-color-status-needs-you: #856000;
+  --hn-color-status-needs-you-subtle: rgb(133 96 0 / 0.06);
+  --hn-color-status-needs-you-line: rgb(133 96 0 / 0.3);
+  --hn-color-status-needs-you-solid: #fcd34d;
+  --hn-color-status-needs-you-on-solid: #0e0b09;
+  --hn-color-status-done: #1b7a34;
+  --hn-color-status-done-subtle: rgb(27 122 52 / 0.06);
+  --hn-color-status-done-line: rgb(27 122 52 / 0.3);
+  --hn-color-status-done-solid: #30d158;
+  --hn-color-status-done-on-solid: #0e0b09;
+  --hn-color-status-failed: #c9001a;
+  --hn-color-status-failed-subtle: rgb(201 0 26 / 0.06);
+  --hn-color-status-failed-line: rgb(201 0 26 / 0.3);
+  --hn-color-status-failed-solid: #ff453a;
+  --hn-color-status-failed-on-solid: #0e0b09;
+  --hn-color-status-paused: #5f5f60;
+  --hn-color-status-paused-subtle: rgb(95 95 96 / 0.06);
+  --hn-color-status-paused-line: rgb(95 95 96 / 0.3);
+  --hn-color-status-paused-solid: #9f9994;
+  --hn-color-status-paused-on-solid: #0e0b09;
+  --hn-color-tint-peach: #ffe5d3;
+  --hn-color-tint-peach-fg: #8a3b12;
+  --hn-color-tint-ember: #ffc9bd;
+  --hn-color-tint-ember-fg: #85311e;
+  --hn-color-tint-apricot: #ffe1ac;
+  --hn-color-tint-apricot-fg: #804d18;
+  --hn-color-tint-sand: #eae1ca;
+  --hn-color-tint-sand-fg: #644e2f;
+  --hn-color-tint-clay: #e8c7ba;
+  --hn-color-tint-clay-fg: #673a29;
+  --hn-color-tint-sky: #ffc9bd;
+  --hn-color-tint-sky-fg: #85311e;
+  --hn-color-tint-lavender: #e8c7ba;
+  --hn-color-tint-lavender-fg: #673a29;
+  --hn-color-tint-mint: #ffe1ac;
+  --hn-color-tint-mint-fg: #804d18;
+  --hn-color-notch-ground: #000000;
+  --hn-color-notch-well: rgb(255 255 255 / 0.06);
+  --hn-color-notch-hairline: rgb(255 255 255 / 0.08);
+  --hn-color-notch-key-face: rgb(255 255 255 / 0.16);
+  --hn-color-notch-key-face-lit: rgb(255 255 255 / 0.24);
+  --hn-color-notch-key-edge: rgb(255 255 255 / 0.08);
+  --hn-color-notch-key-rim: rgb(255 255 255 / 0.14);
+  --hn-color-notch-accent: #d9601a;
+  --hn-color-notch-ink: #ffffff;
+  --hn-color-notch-ink-secondary: rgb(255 255 255 / 0.64);
+  --hn-color-notch-ink-quiet: rgb(255 255 255 / 0.5);
+  --hn-color-notch-caption-unspoken: rgb(255 255 255 / 0.4);
+  --hn-color-notch-caption-close: rgb(255 255 255 / 0.64);
+  --hn-color-notch-caption-ground: rgb(0 0 0 / 0.62);
+  --hn-color-notch-contrast-secondary: rgb(255 255 255 / 0.8);
+  --hn-color-notch-contrast-quiet: rgb(255 255 255 / 0.68);
+  --hn-color-notch-contrast-hairline: rgb(255 255 255 / 0.32);
+  --hn-color-graph-person: #ba6b4d;
+  --hn-color-graph-project: #dc5a3a;
+  --hn-color-graph-app: #c57920;
+  --hn-color-graph-site: #804d18;
+  --hn-color-graph-org: #9b7a47;
+  --hn-color-graph-place: #fb9559;
+  --hn-color-graph-preference: #fb9559;
+  --hn-color-graph-memory: #ff7a8a;
+  --hn-color-graph-edge: rgb(18 19 22 / 0.45);
+  --hn-color-graph-edge-active: #d9601a;
+  --hn-color-graph-dimmed: #e7e7e1;
+  --hn-color-graph-ring: #d9601a;
+  --hn-color-graph-grid: rgb(255 255 255 / 0);
+  --hn-color-graph-vignette: #efefeb;
+  --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
+  --hn-color-graph-label: #303133;
+  --hn-color-board-ground: #fbf6ec;
+  --hn-color-board-paper: #ffffff;
+  --hn-color-board-grid: #e4e4e8;
+  --hn-color-board-strip: #ececef;
+  --hn-color-board-strip-rule: #e4e4e8;
+  --hn-color-board-ink: #2a2b30;
+  --hn-color-board-structure: #2a2b30;
+  --hn-color-board-subtitle: #727882;
+  --hn-color-board-accent: #4c9bf2;
+  --hn-color-board-fill-neutral: #f3ecdc;
+  --hn-color-board-wall: #dfcca1;
+  --hn-color-board-glass: #eff4ff;
+  --hn-color-board-liquid-red: #b92d1b;
+  --hn-color-board-liquid-yellow: #fcd34d;
+  --hn-color-board-liquid-green: #22a86b;
+  --hn-color-board-liquid-amber: #d97706;
+  --hn-color-board-liquid-clear: #dce9ff;
+  --hn-color-board-fill-input: #dce9ff;
+  --hn-color-board-fill-output: #d5f0e1;
+  --hn-color-board-fill-warn: #fef3c7;
+  --hn-color-board-photo-card: #ddddda;
+  --hn-color-board-photo-card-ink: #212224;
+  --hn-color-board-photo-tape: #bfd2ff;
+  --hn-color-board-stroke-neutral: #2a2b30;
+  --hn-color-board-stroke-input: #2d52eb;
+  --hn-color-board-stroke-output: #0f8f58;
+  --hn-color-board-stroke-warn: #d9601a;
+  --hn-color-board-note: #fae8b5;
+  --hn-color-board-note-fold: #e0b738;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #d9601a;
+}
+
+/* Dark: the `dark` class that next-themes sets, or data-theme="dark" on any element. */
+
+.dark,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* color */
+  --hn-color-canvas: #0e0b09;
+  --hn-color-surface: #1a1612;
+  --hn-color-surface-raised: #231e1a;
+  --hn-color-surface-sunken: #16120e;
+  --hn-color-surface-inverse: #f7f7f3;
+  --hn-color-scrim: rgb(0 0 0 / 0.6);
+  --hn-color-fg: #f0edeb;
+  --hn-color-fg-muted: rgb(240 237 235 / 0.64);
+  --hn-color-fg-subtle: rgb(240 237 235 / 0.52);
+  --hn-color-fg-disabled: rgb(240 237 235 / 0.3);
+  --hn-color-fg-inverse: #121316;
+  --hn-color-fg-brand: #ffb98a;
+  --hn-color-line: rgb(255 255 255 / 0.1);
+  --hn-color-line-subtle: #2c2622;
+  --hn-color-line-strong: rgb(255 255 255 / 0.18);
+  --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
+  --hn-color-accent-line: rgb(123 147 255 / 0.35);
+  --hn-color-hub-card-ember-from: #4a1f0b;
+  --hn-color-hub-card-ember-to: #6e3010;
+  --hn-color-hub-card-peach-from: #232428;
+  --hn-color-hub-card-peach-to: #2a2b30;
+  --hn-color-hub-card-peach-line: rgb(255 255 255 / 0.08);
+  --hn-color-hub-card-peach-fg-accent: #ffb98a;
+  --hn-color-hub-soft-ground: #17181a;
+  --hn-color-hub-soft-sheet: #1d1e21;
+  --hn-color-hub-soft-card: #232428;
+  --hn-color-hub-soft-raised-from: #2a2b30;
+  --hn-color-hub-soft-raised-to: #232428;
+  --hn-color-hub-soft-well: #17181a;
+  --hn-color-hub-soft-highlight: rgb(255 255 255 / 0.05);
+  --hn-color-hub-soft-shade: rgb(0 0 0 / 0.55);
+  --hn-color-app-accent: #ee6933;
+  --hn-color-app-accent-hover: #d9601a;
+  --hn-color-app-accent-pressed: #8a3b12;
+  --hn-color-app-accent-subtle: rgb(251 149 89 / 0.14);
+  --hn-color-app-accent-line: rgb(251 149 89 / 0.35);
+  --hn-color-app-accent-fg: #ffb98a;
+  --hn-color-app-accent-focus: #fb9559;
+  --hn-color-app-accent-selection: rgb(251 149 89 / 0.3);
+  --hn-color-app-accent-contrast: #fb9559;
+  --hn-color-app-accent-contrast-hover: #ffb98a;
+  --hn-color-app-accent-contrast-on: #121316;
+  --hn-color-app-accent-contrast-fg: #ffd0b0;
+  --hn-color-app-accent-contrast-focus: #ffb98a;
+  --hn-color-state-hover: rgb(255 255 255 / 0.06);
+  --hn-color-state-pressed: rgb(255 255 255 / 0.1);
+  --hn-color-focus: #fb9559;
+  --hn-color-selection: rgb(251 149 89 / 0.3);
+  --hn-color-guide-halo: rgb(217 96 26 / 0.3);
+  --hn-color-guide-layer-two: #8a6cf0;
+  --hn-color-guide-layer-three: #14a594;
+  --hn-color-guide-layer-a-two: #5f6dff;
+  --hn-color-guide-layer-a-three: #20a88f;
+  --hn-color-guide-layer-b-two: #9b6bff;
+  --hn-color-guide-layer-b-three: #17a596;
+  --hn-color-guide-layer-c-two: #8a6cf0;
+  --hn-color-guide-layer-c-three: #14a594;
+  --hn-color-success: #46c88a;
+  --hn-color-success-subtle: rgb(70 200 138 / 0.12);
+  --hn-color-success-line: rgb(70 200 138 / 0.3);
+  --hn-color-warning: #e0a544;
+  --hn-color-warning-subtle: rgb(224 165 68 / 0.12);
+  --hn-color-warning-line: rgb(224 165 68 / 0.3);
+  --hn-color-danger: #ff7a8a;
+  --hn-color-danger-subtle: rgb(255 122 138 / 0.12);
+  --hn-color-danger-line: rgb(255 122 138 / 0.3);
+  --hn-color-info: #7b93ff;
+  --hn-color-info-subtle: rgb(123 147 255 / 0.12);
+  --hn-color-info-line: rgb(123 147 255 / 0.3);
+  --hn-color-status-working: #ffb98a;
+  --hn-color-status-working-subtle: rgb(255 185 138 / 0.06);
+  --hn-color-status-working-line: rgb(255 185 138 / 0.3);
+  --hn-color-status-needs-you: #fcd34d;
+  --hn-color-status-needs-you-subtle: rgb(252 211 77 / 0.06);
+  --hn-color-status-needs-you-line: rgb(252 211 77 / 0.3);
+  --hn-color-status-done: #30d158;
+  --hn-color-status-done-subtle: rgb(48 209 88 / 0.06);
+  --hn-color-status-done-line: rgb(48 209 88 / 0.3);
+  --hn-color-status-failed: #ff453a;
+  --hn-color-status-failed-subtle: rgb(255 69 58 / 0.06);
+  --hn-color-status-failed-line: rgb(255 69 58 / 0.3);
+  --hn-color-status-paused: #9f9994;
+  --hn-color-status-paused-subtle: rgb(159 153 148 / 0.06);
+  --hn-color-status-paused-line: rgb(159 153 148 / 0.3);
+  --hn-color-tint-peach: rgb(251 149 89 / 0.14);
+  --hn-color-tint-peach-fg: #ffb98a;
+  --hn-color-tint-ember: rgb(238 118 90 / 0.14);
+  --hn-color-tint-ember-fg: #fca390;
+  --hn-color-tint-apricot: rgb(240 171 77 / 0.14);
+  --hn-color-tint-apricot-fg: #fec678;
+  --hn-color-tint-sand: rgb(209 175 112 / 0.14);
+  --hn-color-tint-sand-fg: #dfcca1;
+  --hn-color-tint-clay: rgb(211 133 104 / 0.14);
+  --hn-color-tint-clay-fg: #e2a58e;
+  --hn-color-tint-sky: rgb(238 118 90 / 0.14);
+  --hn-color-tint-sky-fg: #fca390;
+  --hn-color-tint-lavender: rgb(211 133 104 / 0.14);
+  --hn-color-tint-lavender-fg: #e2a58e;
+  --hn-color-tint-mint: rgb(240 171 77 / 0.14);
+  --hn-color-tint-mint-fg: #fec678;
+  --hn-color-graph-person: #e2a58e;
+  --hn-color-graph-project: #fca390;
+  --hn-color-graph-app: #fec678;
+  --hn-color-graph-site: #df9129;
+  --hn-color-graph-org: #dfcca1;
+  --hn-color-graph-place: #ffb98a;
+  --hn-color-graph-preference: #ffb98a;
+  --hn-color-graph-memory: #fda4af;
+  --hn-color-graph-edge: #514a45;
+  --hn-color-graph-edge-active: #f07a2e;
+  --hn-color-graph-dimmed: #39322d;
+  --hn-color-graph-ring: #f07a2e;
+  --hn-color-graph-grid: rgb(255 255 255 / 0.06);
+  --hn-color-graph-vignette: #0e0b09;
+  --hn-color-graph-node-edge: rgb(255 255 255 / 0);
+  --hn-color-graph-label: #d8d4d1;
+  --hn-color-board-ground: #1a1612;
+  --hn-color-board-paper: #1d1e21;
+  --hn-color-board-grid: #232428;
+  --hn-color-board-strip: #17181a;
+  --hn-color-board-strip-rule: #2a2b30;
+  --hn-color-board-ink: #fbfbfc;
+  --hn-color-board-structure: #fbfbfc;
+  --hn-color-board-accent: #8fc1f7;
+  --hn-color-board-fill-neutral: #644e2f;
+  --hn-color-board-wall: #d1af70;
+  --hn-color-board-glass: #dce9ff;
+  --hn-color-board-liquid-red: #d23a24;
+  --hn-color-board-liquid-green: #46c88a;
+  --hn-color-board-liquid-amber: #f59e0b;
+  --hn-color-board-liquid-clear: #bfd2ff;
+  --hn-color-board-fill-input: #1d3290;
+  --hn-color-board-fill-output: #064e30;
+  --hn-color-board-fill-warn: #5c3605;
+  --hn-color-board-photo-card: #e4e4e8;
+  --hn-color-board-photo-card-ink: #2a2b30;
+  --hn-color-board-photo-tape: #7b93ff;
+  --hn-color-board-stroke-neutral: #fbfbfc;
+  --hn-color-board-stroke-input: #7b93ff;
+  --hn-color-board-stroke-output: #46c88a;
+  --hn-color-board-stroke-warn: #fb9559;
+  --hn-color-board-note: #7c4a03;
+  --hn-color-board-note-fold: #a15c00;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(0 0 0 / 0.7);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #0e0b09, 0px 0px 0px 4px #fb9559;
+}
+
+/* A light island inside a dark page. */
+
+.light,
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* color */
+  --hn-color-canvas: #f7f7f3;
+  --hn-color-surface: #ffffff;
+  --hn-color-surface-raised: #ffffff;
+  --hn-color-surface-sunken: rgb(18 19 22 / 0.03);
+  --hn-color-surface-inverse: #121316;
+  --hn-color-scrim: rgb(18 19 22 / 0.5);
+  --hn-color-fg: #121316;
+  --hn-color-fg-muted: rgb(18 19 22 / 0.64);
+  --hn-color-fg-subtle: rgb(18 19 22 / 0.5);
+  --hn-color-fg-disabled: rgb(18 19 22 / 0.32);
+  --hn-color-fg-inverse: #ffffff;
+  --hn-color-fg-brand: #8a3b12;
+  --hn-color-line: rgb(18 19 22 / 0.1);
+  --hn-color-line-subtle: #e7e7e1;
+  --hn-color-line-strong: rgb(18 19 22 / 0.2);
+  --hn-color-accent-subtle: #dce9ff;
+  --hn-color-accent-line: #bfd2ff;
+  --hn-color-hub-card-ember-from: #8a3b12;
+  --hn-color-hub-card-ember-to: #d9601a;
+  --hn-color-hub-card-peach-from: #ffffff;
+  --hn-color-hub-card-peach-to: #f6f6f8;
+  --hn-color-hub-card-peach-line: #e4e4e8;
+  --hn-color-hub-card-peach-fg-accent: #8a3b12;
+  --hn-color-hub-soft-ground: #f1f1f3;
+  --hn-color-hub-soft-sheet: #fbfbfc;
+  --hn-color-hub-soft-card: #ffffff;
+  --hn-color-hub-soft-raised-from: #ffffff;
+  --hn-color-hub-soft-raised-to: #ececef;
+  --hn-color-hub-soft-well: #ececef;
+  --hn-color-hub-soft-highlight: rgb(255 255 255 / 0.92);
+  --hn-color-hub-soft-shade: rgb(130 136 152 / 0.3);
+  --hn-color-app-accent: #d9601a;
+  --hn-color-app-accent-hover: #8a3b12;
+  --hn-color-app-accent-pressed: #6e3010;
+  --hn-color-app-accent-subtle: #ffe5d3;
+  --hn-color-app-accent-line: #ffd0b0;
+  --hn-color-app-accent-fg: #8a3b12;
+  --hn-color-app-accent-focus: #d9601a;
+  --hn-color-app-accent-selection: #ffe5d3;
+  --hn-color-app-accent-contrast: #8a3b12;
+  --hn-color-app-accent-contrast-hover: #6e3010;
+  --hn-color-app-accent-contrast-on: #ffffff;
+  --hn-color-app-accent-contrast-fg: #6e3010;
+  --hn-color-app-accent-contrast-focus: #8a3b12;
+  --hn-color-state-hover: rgb(18 19 22 / 0.05);
+  --hn-color-state-pressed: rgb(18 19 22 / 0.08);
+  --hn-color-focus: #d9601a;
+  --hn-color-selection: #ffe5d3;
+  --hn-color-guide-halo: rgb(217 96 26 / 0.22);
+  --hn-color-guide-layer-two: #6a46d8;
+  --hn-color-guide-layer-three: #0c9789;
+  --hn-color-guide-layer-a-two: #3848fa;
+  --hn-color-guide-layer-a-three: #16987c;
+  --hn-color-guide-layer-b-two: #752efa;
+  --hn-color-guide-layer-b-three: #0c978b;
+  --hn-color-guide-layer-c-two: #6a46d8;
+  --hn-color-guide-layer-c-three: #0c9789;
+  --hn-color-success: #0a7d4a;
+  --hn-color-success-subtle: #edf8f2;
+  --hn-color-success-line: #b3e3c9;
+  --hn-color-warning: #a15c00;
+  --hn-color-warning-subtle: #fffbeb;
+  --hn-color-warning-line: #fde68a;
+  --hn-color-danger: #be123c;
+  --hn-color-danger-subtle: #fff1f2;
+  --hn-color-danger-line: #fecdd3;
+  --hn-color-info: #2d52eb;
+  --hn-color-info-subtle: #eff4ff;
+  --hn-color-info-line: #bfd2ff;
+  --hn-color-status-working: #8a3b12;
+  --hn-color-status-working-subtle: rgb(138 59 18 / 0.06);
+  --hn-color-status-working-line: rgb(138 59 18 / 0.3);
+  --hn-color-status-needs-you: #856000;
+  --hn-color-status-needs-you-subtle: rgb(133 96 0 / 0.06);
+  --hn-color-status-needs-you-line: rgb(133 96 0 / 0.3);
+  --hn-color-status-done: #1b7a34;
+  --hn-color-status-done-subtle: rgb(27 122 52 / 0.06);
+  --hn-color-status-done-line: rgb(27 122 52 / 0.3);
+  --hn-color-status-failed: #c9001a;
+  --hn-color-status-failed-subtle: rgb(201 0 26 / 0.06);
+  --hn-color-status-failed-line: rgb(201 0 26 / 0.3);
+  --hn-color-status-paused: #5f5f60;
+  --hn-color-status-paused-subtle: rgb(95 95 96 / 0.06);
+  --hn-color-status-paused-line: rgb(95 95 96 / 0.3);
+  --hn-color-tint-peach: #ffe5d3;
+  --hn-color-tint-peach-fg: #8a3b12;
+  --hn-color-tint-ember: #ffc9bd;
+  --hn-color-tint-ember-fg: #85311e;
+  --hn-color-tint-apricot: #ffe1ac;
+  --hn-color-tint-apricot-fg: #804d18;
+  --hn-color-tint-sand: #eae1ca;
+  --hn-color-tint-sand-fg: #644e2f;
+  --hn-color-tint-clay: #e8c7ba;
+  --hn-color-tint-clay-fg: #673a29;
+  --hn-color-tint-sky: #ffc9bd;
+  --hn-color-tint-sky-fg: #85311e;
+  --hn-color-tint-lavender: #e8c7ba;
+  --hn-color-tint-lavender-fg: #673a29;
+  --hn-color-tint-mint: #ffe1ac;
+  --hn-color-tint-mint-fg: #804d18;
+  --hn-color-graph-person: #ba6b4d;
+  --hn-color-graph-project: #dc5a3a;
+  --hn-color-graph-app: #c57920;
+  --hn-color-graph-site: #804d18;
+  --hn-color-graph-org: #9b7a47;
+  --hn-color-graph-place: #fb9559;
+  --hn-color-graph-preference: #fb9559;
+  --hn-color-graph-memory: #ff7a8a;
+  --hn-color-graph-edge: rgb(18 19 22 / 0.45);
+  --hn-color-graph-edge-active: #d9601a;
+  --hn-color-graph-dimmed: #e7e7e1;
+  --hn-color-graph-ring: #d9601a;
+  --hn-color-graph-grid: rgb(255 255 255 / 0);
+  --hn-color-graph-vignette: #efefeb;
+  --hn-color-graph-node-edge: rgb(18 19 22 / 0.32);
+  --hn-color-graph-label: #303133;
+  --hn-color-board-ground: #fbf6ec;
+  --hn-color-board-paper: #ffffff;
+  --hn-color-board-grid: #e4e4e8;
+  --hn-color-board-strip: #ececef;
+  --hn-color-board-strip-rule: #e4e4e8;
+  --hn-color-board-ink: #2a2b30;
+  --hn-color-board-structure: #2a2b30;
+  --hn-color-board-accent: #4c9bf2;
+  --hn-color-board-fill-neutral: #f3ecdc;
+  --hn-color-board-wall: #dfcca1;
+  --hn-color-board-glass: #eff4ff;
+  --hn-color-board-liquid-red: #b92d1b;
+  --hn-color-board-liquid-green: #22a86b;
+  --hn-color-board-liquid-amber: #d97706;
+  --hn-color-board-liquid-clear: #dce9ff;
+  --hn-color-board-fill-input: #dce9ff;
+  --hn-color-board-fill-output: #d5f0e1;
+  --hn-color-board-fill-warn: #fef3c7;
+  --hn-color-board-photo-card: #ddddda;
+  --hn-color-board-photo-card-ink: #212224;
+  --hn-color-board-photo-tape: #bfd2ff;
+  --hn-color-board-stroke-neutral: #2a2b30;
+  --hn-color-board-stroke-input: #2d52eb;
+  --hn-color-board-stroke-output: #0f8f58;
+  --hn-color-board-stroke-warn: #d9601a;
+  --hn-color-board-note: #fae8b5;
+  --hn-color-board-note-fold: #e0b738;
+
+  /* shadow */
+  --hn-shadow-hairline: 0px 1px 2px 0px rgb(18 19 22 / 0.04);
+  --hn-shadow-raised: 0px 1px 2px 0px rgb(18 19 22 / 0.06), 0px 6px 16px -10px rgb(18 19 22 / 0.2);
+  --hn-shadow-floating: 0px 18px 45px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-notch-float: 0px 14px 40px -24px rgb(18 19 22 / 0.45);
+  --hn-shadow-popover: 0px 24px 60px -28px rgb(18 19 22 / 0.5);
+  --hn-shadow-overlay: 0px 32px 80px -38px rgb(18 19 22 / 0.8);
+  --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.85);
+  --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(18 19 22 / 0.7);
+  --hn-shadow-focus-ring: 0px 0px 0px 2px #f7f7f3, 0px 0px 0px 4px #d9601a;
+}
+
+/* data-theme="system" follows the operating system. */
+
+@media (prefers-color-scheme: dark) {
+  [data-theme='system'] {
+    color-scheme: dark;
+
+    /* color */
+    --hn-color-canvas: #0e0b09;
+    --hn-color-surface: #1a1612;
+    --hn-color-surface-raised: #231e1a;
+    --hn-color-surface-sunken: #16120e;
+    --hn-color-surface-inverse: #f7f7f3;
+    --hn-color-scrim: rgb(0 0 0 / 0.6);
+    --hn-color-fg: #f0edeb;
+    --hn-color-fg-muted: rgb(240 237 235 / 0.64);
+    --hn-color-fg-subtle: rgb(240 237 235 / 0.52);
+    --hn-color-fg-disabled: rgb(240 237 235 / 0.3);
+    --hn-color-fg-inverse: #121316;
+    --hn-color-fg-brand: #ffb98a;
+    --hn-color-line: rgb(255 255 255 / 0.1);
+    --hn-color-line-subtle: #2c2622;
+    --hn-color-line-strong: rgb(255 255 255 / 0.18);
+    --hn-color-accent-subtle: rgb(123 147 255 / 0.14);
+    --hn-color-accent-line: rgb(123 147 255 / 0.35);
+    --hn-color-hub-card-ember-from: #4a1f0b;
+    --hn-color-hub-card-ember-to: #6e3010;
+    --hn-color-hub-card-peach-from: #232428;
+    --hn-color-hub-card-peach-to: #2a2b30;
+    --hn-color-hub-card-peach-line: rgb(255 255 255 / 0.08);
+    --hn-color-hub-card-peach-fg-accent: #ffb98a;
+    --hn-color-hub-soft-ground: #17181a;
+    --hn-color-hub-soft-sheet: #1d1e21;
+    --hn-color-hub-soft-card: #232428;
+    --hn-color-hub-soft-raised-from: #2a2b30;
+    --hn-color-hub-soft-raised-to: #232428;
+    --hn-color-hub-soft-well: #17181a;
+    --hn-color-hub-soft-highlight: rgb(255 255 255 / 0.05);
+    --hn-color-hub-soft-shade: rgb(0 0 0 / 0.55);
+    --hn-color-app-accent: #ee6933;
+    --hn-color-app-accent-hover: #d9601a;
+    --hn-color-app-accent-pressed: #8a3b12;
+    --hn-color-app-accent-subtle: rgb(251 149 89 / 0.14);
+    --hn-color-app-accent-line: rgb(251 149 89 / 0.35);
+    --hn-color-app-accent-fg: #ffb98a;
+    --hn-color-app-accent-focus: #fb9559;
+    --hn-color-app-accent-selection: rgb(251 149 89 / 0.3);
+    --hn-color-app-accent-contrast: #fb9559;
+    --hn-color-app-accent-contrast-hover: #ffb98a;
+    --hn-color-app-accent-contrast-on: #121316;
+    --hn-color-app-accent-contrast-fg: #ffd0b0;
+    --hn-color-app-accent-contrast-focus: #ffb98a;
+    --hn-color-state-hover: rgb(255 255 255 / 0.06);
+    --hn-color-state-pressed: rgb(255 255 255 / 0.1);
+    --hn-color-focus: #fb9559;
+    --hn-color-selection: rgb(251 149 89 / 0.3);
+    --hn-color-guide-halo: rgb(217 96 26 / 0.3);
+    --hn-color-guide-layer-two: #8a6cf0;
+    --hn-color-guide-layer-three: #14a594;
+    --hn-color-guide-layer-a-two: #5f6dff;
+    --hn-color-guide-layer-a-three: #20a88f;
+    --hn-color-guide-layer-b-two: #9b6bff;
+    --hn-color-guide-layer-b-three: #17a596;
+    --hn-color-guide-layer-c-two: #8a6cf0;
+    --hn-color-guide-layer-c-three: #14a594;
+    --hn-color-success: #46c88a;
+    --hn-color-success-subtle: rgb(70 200 138 / 0.12);
+    --hn-color-success-line: rgb(70 200 138 / 0.3);
+    --hn-color-warning: #e0a544;
+    --hn-color-warning-subtle: rgb(224 165 68 / 0.12);
+    --hn-color-warning-line: rgb(224 165 68 / 0.3);
+    --hn-color-danger: #ff7a8a;
+    --hn-color-danger-subtle: rgb(255 122 138 / 0.12);
+    --hn-color-danger-line: rgb(255 122 138 / 0.3);
+    --hn-color-info: #7b93ff;
+    --hn-color-info-subtle: rgb(123 147 255 / 0.12);
+    --hn-color-info-line: rgb(123 147 255 / 0.3);
+    --hn-color-status-working: #ffb98a;
+    --hn-color-status-working-subtle: rgb(255 185 138 / 0.06);
+    --hn-color-status-working-line: rgb(255 185 138 / 0.3);
+    --hn-color-status-needs-you: #fcd34d;
+    --hn-color-status-needs-you-subtle: rgb(252 211 77 / 0.06);
+    --hn-color-status-needs-you-line: rgb(252 211 77 / 0.3);
+    --hn-color-status-done: #30d158;
+    --hn-color-status-done-subtle: rgb(48 209 88 / 0.06);
+    --hn-color-status-done-line: rgb(48 209 88 / 0.3);
+    --hn-color-status-failed: #ff453a;
+    --hn-color-status-failed-subtle: rgb(255 69 58 / 0.06);
+    --hn-color-status-failed-line: rgb(255 69 58 / 0.3);
+    --hn-color-status-paused: #9f9994;
+    --hn-color-status-paused-subtle: rgb(159 153 148 / 0.06);
+    --hn-color-status-paused-line: rgb(159 153 148 / 0.3);
+    --hn-color-tint-peach: rgb(251 149 89 / 0.14);
+    --hn-color-tint-peach-fg: #ffb98a;
+    --hn-color-tint-ember: rgb(238 118 90 / 0.14);
+    --hn-color-tint-ember-fg: #fca390;
+    --hn-color-tint-apricot: rgb(240 171 77 / 0.14);
+    --hn-color-tint-apricot-fg: #fec678;
+    --hn-color-tint-sand: rgb(209 175 112 / 0.14);
+    --hn-color-tint-sand-fg: #dfcca1;
+    --hn-color-tint-clay: rgb(211 133 104 / 0.14);
+    --hn-color-tint-clay-fg: #e2a58e;
+    --hn-color-tint-sky: rgb(238 118 90 / 0.14);
+    --hn-color-tint-sky-fg: #fca390;
+    --hn-color-tint-lavender: rgb(211 133 104 / 0.14);
+    --hn-color-tint-lavender-fg: #e2a58e;
+    --hn-color-tint-mint: rgb(240 171 77 / 0.14);
+    --hn-color-tint-mint-fg: #fec678;
+    --hn-color-graph-person: #e2a58e;
+    --hn-color-graph-project: #fca390;
+    --hn-color-graph-app: #fec678;
+    --hn-color-graph-site: #df9129;
+    --hn-color-graph-org: #dfcca1;
+    --hn-color-graph-place: #ffb98a;
+    --hn-color-graph-preference: #ffb98a;
+    --hn-color-graph-memory: #fda4af;
+    --hn-color-graph-edge: #514a45;
+    --hn-color-graph-edge-active: #f07a2e;
+    --hn-color-graph-dimmed: #39322d;
+    --hn-color-graph-ring: #f07a2e;
+    --hn-color-graph-grid: rgb(255 255 255 / 0.06);
+    --hn-color-graph-vignette: #0e0b09;
+    --hn-color-graph-node-edge: rgb(255 255 255 / 0);
+    --hn-color-graph-label: #d8d4d1;
+    --hn-color-board-ground: #1a1612;
+    --hn-color-board-paper: #1d1e21;
+    --hn-color-board-grid: #232428;
+    --hn-color-board-strip: #17181a;
+    --hn-color-board-strip-rule: #2a2b30;
+    --hn-color-board-ink: #fbfbfc;
+    --hn-color-board-structure: #fbfbfc;
+    --hn-color-board-accent: #8fc1f7;
+    --hn-color-board-fill-neutral: #644e2f;
+    --hn-color-board-wall: #d1af70;
+    --hn-color-board-glass: #dce9ff;
+    --hn-color-board-liquid-red: #d23a24;
+    --hn-color-board-liquid-green: #46c88a;
+    --hn-color-board-liquid-amber: #f59e0b;
+    --hn-color-board-liquid-clear: #bfd2ff;
+    --hn-color-board-fill-input: #1d3290;
+    --hn-color-board-fill-output: #064e30;
+    --hn-color-board-fill-warn: #5c3605;
+    --hn-color-board-photo-card: #e4e4e8;
+    --hn-color-board-photo-card-ink: #2a2b30;
+    --hn-color-board-photo-tape: #7b93ff;
+    --hn-color-board-stroke-neutral: #fbfbfc;
+    --hn-color-board-stroke-input: #7b93ff;
+    --hn-color-board-stroke-output: #46c88a;
+    --hn-color-board-stroke-warn: #fb9559;
+    --hn-color-board-note: #7c4a03;
+    --hn-color-board-note-fold: #a15c00;
+
+    /* shadow */
+    --hn-shadow-hairline: 0px 1px 2px 0px rgb(0 0 0 / 0.4);
+    --hn-shadow-raised: 0px 1px 2px 0px rgb(0 0 0 / 0.4), 0px 6px 16px -10px rgb(0 0 0 / 0.6);
+    --hn-shadow-floating: 0px 18px 45px -24px rgb(0 0 0 / 0.7);
+    --hn-shadow-notch-float: 0px 14px 40px -24px rgb(0 0 0 / 0.7);
+    --hn-shadow-popover: 0px 24px 60px -28px rgb(0 0 0 / 0.8);
+    --hn-shadow-overlay: 0px 32px 80px -38px rgb(0 0 0 / 0.9);
+    --hn-shadow-accent-glow: 0px 10px 30px -14px rgb(45 82 235 / 0.6);
+    --hn-shadow-inverse-glow: 0px 10px 30px -16px rgb(0 0 0 / 0.6);
+    --hn-shadow-focus-ring: 0px 0px 0px 2px #0e0b09, 0px 0px 0px 4px #fb9559;
+  }
+}
+
+:root {
+  --shell: 1120px;
+  --serif: ui-serif, "New York", "Newsreader", "Iowan Old Style", Georgia, serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+body {
+  margin: 0; background: var(--hn-color-canvas); color: var(--hn-color-fg);
+  font-family: var(--hn-font-family-sans); font-size: 16px; line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--hn-color-selection); }
+:focus-visible { outline: 2px solid var(--hn-color-focus); outline-offset: 3px; border-radius: 10px; }
+.i { flex: none; display: block; }
+.num { font-variant-numeric: tabular-nums; }
+.shell { max-width: var(--shell); margin: 0 auto; padding: 0 24px; }
+
+/* Top bar */
+.bar {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--hn-color-canvas) 78%, transparent);
+  backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px);
+  border-bottom: 1px solid color-mix(in srgb, var(--hn-color-line) 70%, transparent);
+}
+.bar .shell { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { display: inline-flex; color: var(--hn-color-fg); }
+.logo svg { height: 22px; width: auto; display: block; }
+.nav { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; }
+.nav a { padding: 8px 12px; border-radius: 10px; color: var(--hn-color-fg-muted); transition: background .15s, color .15s; }
+.nav a:hover { color: var(--hn-color-fg); background: var(--hn-color-state-hover); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px; height: 48px; padding: 0 20px;
+  border-radius: 14px; font-size: 15px; font-weight: 600; letter-spacing: -.005em; white-space: nowrap;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s, opacity .18s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0) scale(.985); }
+.btn.sm { height: 38px; padding: 0 14px; border-radius: 11px; font-size: 14px; }
+.btn-ink { background: var(--hn-color-surface-inverse); color: var(--hn-color-fg-inverse); box-shadow: var(--hn-shadow-inverse-glow); }
+.btn-ink:hover { opacity: .92; }
+.btn-cream { background: var(--hn-palette-brand-cream); color: var(--hn-palette-brand-ink); box-shadow: 0 12px 30px -14px rgb(0 0 0 / .6); }
+.btn-glass {
+  color: #fff; background: rgb(255 255 255 / .12); border: 1px solid rgb(255 255 255 / .22);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.btn-glass:hover { background: rgb(255 255 255 / .18); }
+.btn-quiet { color: var(--hn-color-fg); background: var(--hn-color-surface); border: 1px solid var(--hn-color-line); box-shadow: var(--hn-shadow-hairline); }
+.btn-quiet:hover { background: var(--hn-color-surface-raised); border-color: var(--hn-color-line-strong); }
+
+/* Hero: the Home banner's wash of blue, lavender and azure on ink */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate; margin-top: 28px; border-radius: var(--hn-radius-frame);
+  color: #fff; background: var(--hn-palette-brand-ink); box-shadow: var(--hn-shadow-floating);
+}
+.hero::before, .hero::after, .hero .glow {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(70px); opacity: .9;
+}
+.hero::before { width: 70%; height: 130%; left: -18%; top: -30%; background: var(--wash-a, var(--hn-palette-blue-600)); }
+.hero::after { width: 60%; height: 120%; right: -14%; top: -40%; background: var(--wash-b, var(--hn-palette-lavender-400)); opacity: .75; }
+.hero .glow { width: 55%; height: 90%; left: 30%; bottom: -55%; background: var(--wash-c, var(--hn-palette-azure-300)); opacity: .55; }
+.hero .grain {
+  position: absolute; inset: 0; z-index: -1; opacity: .12; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero .inner { display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; padding: 72px 64px 64px; }
+.hero.compact .inner { grid-template-columns: 1fr auto; padding: 52px 56px 48px; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: rgb(255 255 255 / .78);
+}
+.eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px rgb(255 255 255 / .12); }
+.display {
+  margin: 18px 0 0; font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 6.2vw, 76px);
+  line-height: .98; letter-spacing: -.028em;
+}
+.hero.compact .display { font-size: clamp(38px, 5vw, 60px); }
+.lede { margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: rgb(255 255 255 / .82); }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.chip {
+  display: inline-flex; align-items: center; height: 28px; padding: 0 11px; border-radius: 999px; font-size: 12.5px;
+  font-weight: 500; color: rgb(255 255 255 / .86); background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .14);
+}
+.device { position: relative; justify-self: center; display: grid; place-items: center; gap: 18px; }
+.device .appicon {
+  width: 168px; height: 168px; border-radius: 38px; display: block;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / .8), 0 0 0 1px rgb(255 255 255 / .12), 0 0 90px -10px rgb(123 147 255 / .6);
+  transform: rotate(-6deg);
+}
+.notch {
+  display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 16px 0 12px; border-radius: 999px;
+  background: #000; color: rgb(255 255 255 / .92); font-size: 13px; font-weight: 500;
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / .9), inset 0 0 0 1px rgb(255 255 255 / .08);
+}
+.notch .wave { display: inline-flex; align-items: center; gap: 2px; height: 14px; }
+.notch .wave i { width: 3px; border-radius: 2px; background: var(--hn-palette-blue-400); animation: wave 1.2s var(--ease) infinite; }
+.notch .wave i:nth-child(1) { height: 6px; } .notch .wave i:nth-child(2) { height: 13px; animation-delay: .15s; }
+.notch .wave i:nth-child(3) { height: 9px; animation-delay: .3s; } .notch .wave i:nth-child(4) { height: 5px; animation-delay: .45s; }
+@keyframes wave { 50% { transform: scaleY(.45); } }
+kbd {
+  display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 6px;
+  font: 600 12px/1 var(--hn-font-family-sans); color: inherit; background: rgb(255 255 255 / .14);
+  border: 1px solid rgb(255 255 255 / .16);
+}
+.crumb { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: rgb(255 255 255 / .7); }
+.crumb a:hover { color: #fff; }
+
+/* Notices */
+.notice {
+  display: flex; gap: 14px; align-items: flex-start; margin-top: 16px; padding: 18px 20px; border-radius: var(--hn-radius-popover);
+  background: var(--hn-color-warning-subtle); border: 1px solid var(--hn-color-warning-line); color: var(--hn-color-fg);
+  font-size: 14.5px; line-height: 1.55;
+}
+.notice .i { color: var(--hn-color-warning); margin-top: 2px; }
+.notice strong { font-weight: 600; }
+
+/* Sections */
+section { margin-top: 88px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--hn-color-fg-subtle); }
+h2 { margin: 8px 0 0; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.05; letter-spacing: -.02em; }
+.head p { margin: 0; max-width: 380px; color: var(--hn-color-fg-muted); font-size: 15px; }
+
+.card {
+  position: relative; background: var(--hn-color-surface); border: 1px solid var(--hn-color-line);
+  border-radius: var(--hn-radius-card); box-shadow: var(--hn-shadow-hairline);
+}
+.channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.channel { display: flex; flex-direction: column; padding: 26px; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s; }
+.channel:hover { transform: translateY(-2px); box-shadow: var(--hn-shadow-raised); border-color: var(--hn-color-line-strong); }
+.channel.recommended { box-shadow: 0 0 0 1px var(--hn-color-app-accent-line), var(--hn-shadow-raised); border-color: transparent; }
+.channel .top { display: flex; align-items: center; gap: 12px; }
+.tile { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; }
+.tint-mint { background: var(--hn-color-tint-mint); color: var(--hn-color-tint-mint-fg); }
+.tint-peach { background: var(--hn-color-tint-peach); color: var(--hn-color-tint-peach-fg); }
+.tint-sky { background: var(--hn-color-tint-sky); color: var(--hn-color-tint-sky-fg); }
+.tint-lavender { background: var(--hn-color-tint-lavender); color: var(--hn-color-tint-lavender-fg); }
+.channel h3 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+.badge {
+  margin-left: auto; display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; color: var(--hn-color-tint-peach-fg); background: var(--hn-color-app-accent-subtle);
+}
+.badge.neutral { color: var(--hn-color-fg-muted); background: var(--hn-color-state-hover); }
+.version { margin-top: 26px; font-family: var(--serif); font-size: 44px; line-height: 1; letter-spacing: -.02em; }
+.version small { font-family: var(--hn-font-family-sans); font-size: 15px; letter-spacing: 0; color: var(--hn-color-fg-subtle); margin-left: 6px; }
+.channel p { margin: 12px 0 0; color: var(--hn-color-fg-muted); font-size: 14.5px; }
+.channel .when { margin-top: 6px; font-size: 13px; color: var(--hn-color-fg-subtle); }
+.channel .actions { display: flex; gap: 8px; margin-top: auto; padding-top: 24px; }
+.channel .actions .btn { flex: 1; }
+.empty .version { color: var(--hn-color-fg-disabled); }
+
+.bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feature { padding: 28px; }
+.feature h3 { margin: 22px 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -.015em; }
+.feature p { margin: 0; color: var(--hn-color-fg-muted); font-size: 14.5px; }
+.feature code, .step code, .build code {
+  font-family: var(--hn-font-family-mono); font-size: 12.5px; padding: 1px 6px; border-radius: 6px;
+  background: var(--hn-color-surface-sunken); border: 1px solid var(--hn-color-line);
+}
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: step; }
+.step { padding: 24px; counter-increment: step; }
+.step .n {
+  display: flex; align-items: center; justify-content: space-between; color: var(--hn-color-fg-subtle);
+  font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+}
+.step .n::before { content: "Step " counter(step); }
+.step h3 { margin: 26px 0 6px; font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+.step p { margin: 0; color: var(--hn-color-fg-muted); font-size: 14px; }
+.step kbd { color: var(--hn-color-fg); background: var(--hn-color-surface-sunken); border-color: var(--hn-color-line); }
+
+.builds { overflow: hidden; }
+.build {
+  display: grid; grid-template-columns: 170px 150px 1fr auto; gap: 20px; align-items: center; padding: 18px 24px;
+  border-top: 1px solid var(--hn-color-line);
+}
+.build:first-child { border-top: 0; }
+.build:hover { background: var(--hn-color-state-hover); }
+.build .v { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.build .d, .build .notes { color: var(--hn-color-fg-muted); font-size: 14px; }
+.build .notes { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.build .notes code { margin-left: 8px; color: var(--hn-color-fg-subtle); }
+
+footer { margin: 96px 0 0; border-top: 1px solid var(--hn-color-line); }
+footer .shell { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; padding: 28px 24px 48px; font-size: 13px; color: var(--hn-color-fg-subtle); }
+footer nav { display: flex; gap: 18px; }
+footer a:hover { color: var(--hn-color-fg); }
+
+.reveal { animation: rise .7s var(--ease) both; }
+.reveal.d1 { animation-delay: .06s; } .reveal.d2 { animation-delay: .12s; } .reveal.d3 { animation-delay: .18s; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .notch .wave i { animation: none; }
+  .btn:hover, .channel:hover { transform: none; }
+}
+
+@media (max-width: 960px) {
+  .hero .inner, .hero.compact .inner { grid-template-columns: 1fr; padding: 48px 32px 44px; }
+  .device { display: none; }
+  .channels, .bento { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .head { flex-direction: column; align-items: flex-start; }
+  .build { grid-template-columns: 1fr auto; gap: 6px 16px; }
+  .build .d { grid-column: 1; grid-row: 2; }
+  .build .notes { grid-column: 1 / -1; grid-row: 3; white-space: normal; }
+  .build .get { grid-column: 2; grid-row: 1 / span 2; }
+}
+@media (max-width: 560px) {
+  .shell { padding: 0 16px; }
+  .hero { margin-top: 16px; border-radius: 28px; }
+  .hero .inner, .hero.compact .inner { padding: 36px 22px 30px; }
+  .nav a.hide-sm { display: none; }
+  .steps { grid-template-columns: 1fr; }
+  .cta .btn { flex: 1 1 100%; }
+  section { margin-top: 64px; }
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="shell">
+    <a class="logo" href="../../index.html" aria-label="Hintora downloads"><svg role="img" aria-label="Hintora" width="334" height="100" viewBox="113 0 334 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M131.75 52.6104L136.941 44.8223C140.57 39.3794 146.679 36.1104 153.221 36.1104C161.805 36.1104 168.273 43.9169 166.678 52.3516L164.015 66.4268C163.358 69.8978 166.02 73.1104 169.553 73.1104C172.274 73.1101 174.606 71.1658 175.096 68.4893L180.75 37.6104H193.25L187.37 69.7764C185.843 78.1321 178.676 84.2787 170.185 84.5146L167.709 84.584C157.821 84.8586 150.085 76.1348 151.539 66.3506L153.376 53.9902C153.836 50.8933 151.437 48.1104 148.306 48.1104C146.423 48.1105 144.692 49.1427 143.797 50.7988L126.951 81.9639C125.903 83.9024 123.877 85.1103 121.673 85.1104H113.25L125.75 16.6104H138.75L131.75 52.6104Z" fill="currentColor"/>
+<path d="M438.75 68.1104C443.168 68.1104 446.75 71.9159 446.75 76.6104C446.75 81.3048 443.168 85.1104 438.75 85.1104C434.332 85.1104 430.75 81.3048 430.75 76.6104C430.75 71.9159 434.332 68.1104 438.75 68.1104Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M296.57 43.4385C306.958 33.0509 322.72 31.9719 331.776 41.0283C340.833 50.0848 339.754 65.8468 329.366 76.2344C318.979 86.6215 303.216 87.7009 294.16 78.6445C285.104 69.5882 286.183 53.826 296.57 43.4385ZM322.176 50.6299C317.743 46.1968 310.027 46.7249 304.942 51.8096C299.858 56.8943 299.33 64.6101 303.763 69.043C308.196 73.4759 315.911 72.9473 320.996 67.8633C326.081 62.7786 326.609 55.063 322.176 50.6299Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M383.306 43.4385C392.629 34.1151 406.282 32.2919 415.53 38.5645L415.75 37.1104H428.25L421.25 83.6104H408.75L409.07 81.4785C399.478 86.6338 388.078 85.828 380.896 78.6455C371.839 69.589 372.918 53.826 383.306 43.4385ZM408.912 50.6299C404.479 46.1969 396.763 46.7252 391.679 51.8096C386.594 56.8942 386.066 64.6099 390.499 69.043C394.932 73.4759 402.648 72.9479 407.732 67.8633C412.817 62.7787 413.345 55.0629 408.912 50.6299Z" fill="currentColor"/>
+<path d="M274.25 37.1104H287.75L286.25 47.1104H272.492L269.107 66.3799C268.431 70.2334 271.659 73.6502 275.545 73.1934C276.013 73.1383 276.473 73.0267 276.914 72.8613L280.25 71.6104L281.25 81.6104C275.2 83.627 272.175 84.6353 269.877 84.627C263.124 84.6024 257.352 79.7612 256.151 73.1162C255.743 70.8548 256.209 67.7002 257.141 61.3916L259.25 47.1104H252.25L253.75 37.1104H261.25L264.25 21.6104H276.75L274.25 37.1104Z" fill="currentColor"/>
+<path d="M232.441 35.793L232.564 35.7959C232.662 35.7977 232.712 35.7979 232.751 35.7988C241.354 36.0096 247.732 43.86 246.178 52.3242C246.171 52.3626 246.161 52.4105 246.144 52.5049V52.5068L240.25 83.6104H227.75L232.601 58.3184C233.716 52.5032 229.259 47.1104 223.338 47.1104C218.907 47.1104 215.074 50.1945 214.125 54.5225L207.75 83.6104H195.25L204.25 37.6104H215.75L214.75 43.1104L215.589 42.3242L215.679 42.2402C220.221 38.0028 226.23 35.6914 232.441 35.793Z" fill="currentColor"/>
+<path d="M359.75 44.1104C362.25 40.777 369.35 34.6104 377.75 36.6104L374.75 48.1104C369.583 47.9437 358.75 49.6104 357.25 62.6104L353.25 83.6104H340.75L348.75 37.1104H360.75L359.75 44.1104Z" fill="currentColor"/>
+<path d="M188.25 15.1104C192.944 15.1104 196.75 18.6921 196.75 23.1104C196.75 27.5286 192.944 31.1104 188.25 31.1104C183.556 31.1104 179.75 27.5286 179.75 23.1104C179.75 18.6921 183.556 15.1104 188.25 15.1104Z" fill="currentColor"/>
+</svg></a>
+    <nav class="nav">
+      <a class="hide-sm" href="../../index.html#channels">Channels</a>
+      <a class="hide-sm" href="../../index.html#updates">Updates</a>
+      <a href="https://hintora.ai">hintora.ai</a>
+    </nav>
+  </div>
+</header>
+<main class="shell">
+
+<div class="hero compact" style="--wash-a: var(--hn-palette-blue-600); --wash-b: var(--hn-palette-lavender-400); --wash-c: var(--hn-palette-azure-300);">
+  <span class="glow"></span><span class="grain"></span>
+  <div class="inner">
+    <div>
+      <div class="crumb reveal"><a href="../../index.html">Downloads</a><span aria-hidden="true">/</span><span>Development</span></div>
+      <h1 class="display reveal d1 num">Hintora 0.4.357</h1>
+      <p class="lede reveal d1">Every change merged to main, published minutes after it lands. Welcome to Hintora.</p>
+      <div class="cta reveal d2">
+        <a class="btn btn-cream" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.357/Hintora-Installer.zip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.37 12.55c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.72-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71s1.71.71 2.88.69c1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.3-.88-2.32-3.55zM14.2 6.07c.61-.74 1.02-1.76.9-2.78-.88.04-1.94.58-2.57 1.32-.56.65-1.06 1.7-.93 2.69.98.08 1.99-.5 2.6-1.23z"/></svg>Download build 357</a>
+        <a class="btn btn-glass" href="../../index.html#channels">All channels <svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+      </div>
+      <div class="chips reveal d3 num">
+        <span class="chip">Published 7 Oct 2026, 23:08 UTC</span>
+        <span class="chip">57.1 MB</span>
+        <span class="chip">macOS 14.0 or later</span>
+      </div>
+    </div>
+    <div class="device" aria-hidden="true"><img class="appicon" src="../../assets/hintora-icon.png" alt="" width="168" height="168"><span class="notch"><span class="wave"><i></i><i></i><i></i><i></i></span>Hold <kbd>⌃</kbd><kbd>⌥</kbd> and ask</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="head">
+    <div><div class="kicker">Install</div><h2>Ready in a minute</h2></div>
+    <p>A copy installed from this page follows the development channel and updates itself.</p>
+  </div>
+  <div class="steps">
+    <article class="card step reveal"><div class="n"><span class="tile tint-sky"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M11 3v2m0 2v2m0 2v2"/></svg></span></div>
+      <h3>Download</h3><p>Open <code>Hintora-Installer.zip</code> from your Downloads.</p></article>
+    <article class="card step reveal d1"><div class="n"><span class="tile tint-lavender"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v7m0 0 3-3m-3 3-3-3"/></svg></span></div>
+      <h3>Install</h3><p>Open <strong>Hintora Installer</strong> and click Install. Hintora moves into Applications and opens.</p></article>
+    <article class="card step reveal d2"><div class="n"><span class="tile tint-mint"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span></div>
+      <h3>Allow</h3><p>Follow the notch to allow Microphone and Screen Recording.</p></article>
+    <article class="card step reveal d3"><div class="n"><span class="tile tint-peach"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="8" height="8" rx="2"/><rect x="13" y="7" width="8" height="8" rx="2"/></svg></span></div>
+      <h3>Ask</h3><p>Hold <kbd>⌃</kbd> <kbd>⌥</kbd>, ask about anything on your screen, and let go.</p></article>
+  </div>
+</section>
+<section>
+  <div class="head">
+    <div><div class="kicker">Builds</div><h2>Every development build</h2></div>
+    <p>Build numbers only go up, across every channel, so a higher number is always newer.</p>
+  </div>
+  <div class="card builds"><div class="build"><div class="v num">0.4.357<span class="badge">Latest</span></div><div class="d num">7 Oct 2026</div><div class="notes">Welcome to Hintora.<code>69ce2c9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.357/Hintora-Installer.zip" aria-label="Download 0.4.357"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.353</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>39ab791</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.353/Hintora-Installer.zip" aria-label="Download 0.4.353"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.1 MB</span></a></div><div class="build"><div class="v num">0.4.351</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2e87e38</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.351/Hintora-Installer.zip" aria-label="Download 0.4.351"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.0 MB</span></a></div><div class="build"><div class="v num">0.4.349</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>17007f9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.349/Hintora-Installer.zip" aria-label="Download 0.4.349"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">57.0 MB</span></a></div><div class="build"><div class="v num">0.4.347</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>43b3222</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.347/Hintora-Installer.zip" aria-label="Download 0.4.347"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.9 MB</span></a></div><div class="build"><div class="v num">0.4.345</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>0fddd53</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.345/Hintora-Installer.zip" aria-label="Download 0.4.345"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.8 MB</span></a></div><div class="build"><div class="v num">0.4.343</div><div class="d num">6 Oct 2026</div><div class="notes">Welcome to Hintora.<code>c2c6ad1</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.343/Hintora-Installer.zip" aria-label="Download 0.4.343"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.8 MB</span></a></div><div class="build"><div class="v num">0.4.341</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2165ea4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.341/Hintora-Installer.zip" aria-label="Download 0.4.341"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.7 MB</span></a></div><div class="build"><div class="v num">0.4.0 (339)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>cc7f1b7</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-339/Hintora-Installer.zip" aria-label="Download 0.4.0 (339)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (337)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>03e0ef4</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-337/Hintora-Installer.zip" aria-label="Download 0.4.0 (337)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (336)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b36a874</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-336/Hintora-Installer.zip" aria-label="Download 0.4.0 (336)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (333)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f2c473e</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-333/Hintora-Installer.zip" aria-label="Download 0.4.0 (333)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (331)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>57a7320</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-331/Hintora-Installer.zip" aria-label="Download 0.4.0 (331)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (330)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>ef3c302</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-330/Hintora-Installer.zip" aria-label="Download 0.4.0 (330)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.2 MB</span></a></div><div class="build"><div class="v num">0.4.0 (328)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>6791de5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-328/Hintora-Installer.zip" aria-label="Download 0.4.0 (328)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">56.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (326)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>2330053</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-326/Hintora-Installer.zip" aria-label="Download 0.4.0 (326)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.9 MB</span></a></div><div class="build"><div class="v num">0.4.0 (323)</div><div class="d num">5 Oct 2026</div><div class="notes">Welcome to Hintora.<code>06372a5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-323/Hintora-Installer.zip" aria-label="Download 0.4.0 (323)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (320)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>6cb71d5</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-320/Hintora-Installer.zip" aria-label="Download 0.4.0 (320)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (316)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>f2a2f3d</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-316/Hintora-Installer.zip" aria-label="Download 0.4.0 (316)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.6 MB</span></a></div><div class="build"><div class="v num">0.4.0 (314)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>de892a8</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-314/Hintora-Installer.zip" aria-label="Download 0.4.0 (314)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (312)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>9430c17</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-312/Hintora-Installer.zip" aria-label="Download 0.4.0 (312)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (310)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b3d6b8c</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-310/Hintora-Installer.zip" aria-label="Download 0.4.0 (310)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.2 MB</span></a></div><div class="build"><div class="v num">0.4.0 (308)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>228abf2</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-308/Hintora-Installer.zip" aria-label="Download 0.4.0 (308)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.1 MB</span></a></div><div class="build"><div class="v num">0.4.0 (306)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>41968f9</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-306/Hintora-Installer.zip" aria-label="Download 0.4.0 (306)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (304)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>7be10ce</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-304/Hintora-Installer.zip" aria-label="Download 0.4.0 (304)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (302)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>6a931dc</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-302/Hintora-Installer.zip" aria-label="Download 0.4.0 (302)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">55.0 MB</span></a></div><div class="build"><div class="v num">0.4.0 (298)</div><div class="d num">4 Oct 2026</div><div class="notes">Welcome to Hintora.<code>a2a44ab</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-298/Hintora-Installer.zip" aria-label="Download 0.4.0 (298)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.5 MB</span></a></div><div class="build"><div class="v num">0.4.0 (296)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>dbaeb34</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-296/Hintora-Installer.zip" aria-label="Download 0.4.0 (296)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.4 MB</span></a></div><div class="build"><div class="v num">0.4.0 (294)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b88f302</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-294/Hintora-Installer.zip" aria-label="Download 0.4.0 (294)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">54.3 MB</span></a></div><div class="build"><div class="v num">0.4.0 (292)</div><div class="d num">3 Oct 2026</div><div class="notes">Welcome to Hintora.<code>b21c983</code></div><a class="btn sm btn-quiet get" href="https://github.com/Hintora/hintora-releases/releases/download/mac-dev-0.4.0-292/Hintora-Installer.zip" aria-label="Download 0.4.0 (292)"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg><span class="num">53.9 MB</span></a></div></div>
+</section>
+</main>
+<footer>
+  <div class="shell">
+    <span>Hintora for Mac · macOS 14 or later · Apple silicon and Intel</span>
+    <nav>
+      <a href="../../mac/prod/appcast.xml">Production feed</a>
+      <a href="../../mac/stage/appcast.xml">Stage feed</a>
+      <a href="../../mac/dev/appcast.xml">Development feed</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
