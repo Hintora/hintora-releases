@@ -4,16 +4,15 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Hintora</title>
         <item>
-            <title>0.5.417</title>
-            <pubDate>Fri, 20 Nov 2026 00:43:01 +0200</pubDate>
-            <sparkle:phasedRolloutInterval>28800</sparkle:phasedRolloutInterval>
-            <sparkle:version>417</sparkle:version>
-            <sparkle:shortVersionString>0.5.417</sparkle:shortVersionString>
+            <title>0.5.420</title>
+            <pubDate>Fri, 20 Nov 2026 22:17:17 +0200</pubDate>
+            <sparkle:version>420</sparkle:version>
+            <sparkle:shortVersionString>0.5.420</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.417/Hintora-417.zip" length="90773909" type="application/octet-stream" sparkle:edSignature="SZ1nituIfZpLgU5k3lAabJG886T3Tr3vbylfHEXAx+5bCMhOhYYj3cAAKOV1Agfx0SlGABhkNhcjrqfA5/wYDA=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.420/Hintora-420.zip" length="90544551" type="application/octet-stream" sparkle:edSignature="onApS5asRleRRxAzyt0KFB4Pwdn90ec6vPWqQR8pbwH6m+o2jM7tYUNLG3sfGvLUdeb70mnZZj0OhzCkDGLJDQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: h9x4unTF0zKqWvo0BOL8WBcu8ti7SgniTtqyQC5JrA0nvLuPCh99XyYXBwY6LXL+JV3rp4t/zB4JCMa96PL+DA==
-length: 1142
+edSignature: fpLq40FBF/EPXchAynbDcHEzaJNRwd6P2JHUfrCgINi8LctNCWNvN6Tl5jDsfrwgdk3Sws38It+9Z3CTrU9jCw==
+length: 1061
 -->
