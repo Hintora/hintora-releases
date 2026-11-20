@@ -6,12 +6,12 @@
     <description>Hintora for Windows updates on the stage channel.</description>
     <language>en</language>
     <item>
-      <title>Hintora 0.5.3</title>
+      <title>Hintora 0.5.4</title>
       <description>Welcome to Hintora.</description>
-      <pubDate>Fri, 20 Nov 2026 00:02:50 +0000</pubDate>
-      <sparkle:version>3</sparkle:version>
-      <sparkle:shortVersionString>0.5.3</sparkle:shortVersionString>
-      <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/windows-stage-0.5.3/Hintora-Setup-0.5.3-win-x64.exe" length="108541224" type="application/octet-stream" sparkle:os="windows" sparkle:version="3" sparkle:shortVersionString="0.5.3" sparkle:installerArguments="/SILENT" sparkle:edSignature="yNPXkdScguyaQ70Sd2ptu7Lz+LxPVl2th3HTtAX7SfZgpVp8evsQohy9bvrbPUx5d+b3N/+s9f8LML82UGfoCg==" />
+      <pubDate>Fri, 20 Nov 2026 01:33:45 +0000</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>0.5.4</sparkle:shortVersionString>
+      <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/windows-stage-0.5.4/Hintora-Setup-0.5.4-win-x64.exe" length="108568880" type="application/octet-stream" sparkle:os="windows" sparkle:version="4" sparkle:shortVersionString="0.5.4" sparkle:installerArguments="/SILENT" sparkle:edSignature="9mfA62i4rUNmlTHq9yeQBoRY8q5s5YA12+6A81ouTmXd4WttH0xk9nyRAYhRLi9QZUoazM4DIQwm8EoTFnZECw==" />
     </item>
   </channel>
 </rss>
