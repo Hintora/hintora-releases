@@ -1,17 +1,18 @@
 {
   "channel": "stage",
-  "version": "0.5.424",
-  "build": "424",
-  "display": "0.5.424",
-  "tag": "mac-stage-0.5.424",
+  "version": "0.5.425",
+  "build": "425",
+  "display": "0.5.425",
+  "tag": "mac-stage-0.5.425",
   "message": "Welcome to Hintora.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.424/Hintora-Installer.zip",
-  "installer_bytes": 93199060,
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.424/Hintora-424.zip",
-  "download_page": "https://hintora.github.io/hintora-releases/mac/stage/",
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.425/Hintora-425.zip",
+  "download_page": "https://ops.hintora.ai/ship/builds",
   "minimum_macos": "14.0",
   "source_commit": "7da95deda77fbe648de19484e59b04f5e9be216a",
-  "published_at": "2026-11-22T10:55:41Z",
+  "published_at": "2026-11-22T15:25:09Z",
   "signing_mode": "developer-id",
-  "notarized": true
+  "notarized": true,
+  "staff_only": true,
+  "bridge": true,
+  "staff_repository": "Hintora/hintora-staff-builds"
 }
