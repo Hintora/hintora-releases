@@ -1,0 +1,19 @@
+{
+  "platform": "windows",
+  "channel": "prod",
+  "version": "0.5.6",
+  "build": "6",
+  "display": "0.5.6",
+  "tag": "windows-prod-0.5.6",
+  "message": "Welcome to Hintora.",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/windows-prod-0.5.6/Hintora-Setup-0.5.6-win-x64.exe",
+  "stable_url": "https://github.com/Hintora/hintora-releases/releases/download/windows-prod-latest/Hintora-Setup.exe",
+  "installer_bytes": 108568872,
+  "installer_sha256": "a4884cd4dbd5fdebab1cfcc75709a219c2841b0cae0bb945dc0f8f3e04ff93a0",
+  "download_page": "https://hintora.github.io/hintora-releases/windows/prod/",
+  "minimum_windows": "10",
+  "source_commit": "8e3c3821f53b5c068dcbfa28b7bdac5aeeda6abe",
+  "published_at": "2026-11-22T14:28:13Z",
+  "signing_mode": "trusted-signing",
+  "signed": true
+}

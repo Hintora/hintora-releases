@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Hintora for Windows · prod</title>
+    <link>https://hintora.github.io/hintora-releases/windows/prod/</link>
+    <description>Hintora for Windows updates on the prod channel.</description>
+    <language>en</language>
+    <item>
+      <title>Hintora 0.5.6</title>
+      <description>Welcome to Hintora.</description>
+      <pubDate>Sun, 22 Nov 2026 14:28:13 +0000</pubDate>
+      <sparkle:version>6</sparkle:version>
+      <sparkle:shortVersionString>0.5.6</sparkle:shortVersionString>
+      <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/windows-prod-0.5.6/Hintora-Setup-0.5.6-win-x64.exe" length="108568872" type="application/octet-stream" sparkle:os="windows" sparkle:version="6" sparkle:shortVersionString="0.5.6" sparkle:installerArguments="/SILENT" sparkle:edSignature="KffpAIooAbkNArdLxGZ82wldREMgVLbJLVDHgU7METBfpTY3eO0KgMvBWBWKulwKna6z0udw2fheFY1hoHnfAw==" />
+    </item>
+  </channel>
+</rss>
