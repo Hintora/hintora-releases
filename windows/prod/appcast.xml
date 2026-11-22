@@ -6,12 +6,12 @@
     <description>Hintora for Windows updates on the prod channel.</description>
     <language>en</language>
     <item>
-      <title>Hintora 0.5.6</title>
+      <title>Hintora 0.5.12</title>
       <description>Welcome to Hintora.</description>
-      <pubDate>Sun, 22 Nov 2026 14:28:13 +0000</pubDate>
-      <sparkle:version>6</sparkle:version>
-      <sparkle:shortVersionString>0.5.6</sparkle:shortVersionString>
-      <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/windows-prod-0.5.6/Hintora-Setup-0.5.6-win-x64.exe" length="108568872" type="application/octet-stream" sparkle:os="windows" sparkle:version="6" sparkle:shortVersionString="0.5.6" sparkle:installerArguments="/SILENT" sparkle:edSignature="KffpAIooAbkNArdLxGZ82wldREMgVLbJLVDHgU7METBfpTY3eO0KgMvBWBWKulwKna6z0udw2fheFY1hoHnfAw==" />
+      <pubDate>Sun, 22 Nov 2026 22:38:03 +0000</pubDate>
+      <sparkle:version>12</sparkle:version>
+      <sparkle:shortVersionString>0.5.12</sparkle:shortVersionString>
+      <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/windows-prod-0.5.12/Hintora-Update-0.5.12-win-x64.exe" length="131138000" type="application/octet-stream" sparkle:os="windows" sparkle:version="12" sparkle:shortVersionString="0.5.12" sparkle:installerArguments="/SILENT" sparkle:edSignature="rsczMG5acBuuvWpiGm0TXtZP5rIZ+Y5dlLRZDmgnZOlRV/paRmOuE6DG+KLX3GrCNnV/6yr6up6s/KIMtRpuBA==" />
     </item>
   </channel>
 </rss>
