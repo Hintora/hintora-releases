@@ -2,17 +2,18 @@
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>Hintora</title>
+        <title>Hintora Stage</title>
         <item>
-            <title>0.5.423</title>
-            <pubDate>Sun, 22 Nov 2026 11:34:48 +0200</pubDate>
-            <sparkle:version>423</sparkle:version>
-            <sparkle:shortVersionString>0.5.423</sparkle:shortVersionString>
+            <title>0.5.424</title>
+            <pubDate>Sun, 22 Nov 2026 12:51:53 +0200</pubDate>
+            <sparkle:channel>stage-channel</sparkle:channel>
+            <sparkle:version>424</sparkle:version>
+            <sparkle:shortVersionString>0.5.424</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.423/Hintora-423.zip" length="90935473" type="application/octet-stream" sparkle:edSignature="gGqpHV3ppTdfy5jl85NuoAUBfamxxBwaH3l9OnT8PBKCsbgIdR+qCv5mg1C9duPDxyrmcz4vpdD33VajNLHYAQ=="></enclosure>
+            <enclosure url="https://github.com/Hintora/hintora-releases/releases/download/mac-stage-0.5.424/Hintora-424.zip" length="90957232" type="application/octet-stream" sparkle:edSignature="j7oJDyIYcJQoUIuR5p7Ly6Y8cZcnLQtmUCOiyjDw6lMPXCff6YB2TMDEad+jySAVMQNNCvcxGBSX0vvKo8XcAw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: N7wWxueP+CKT97OR0vCJvm9m2zxmIGtPncMl7q2jMvnTtNlJFrlWC+yoaR8Uu7UeIMDOoa85ZI9u2eUIffoUCw==
-length: 1062
+edSignature: T8plQNiq/oUIFYdNBMT9KnYOB+bYJxqklJWUxtH8/oLC/hJDcqZ8DVYUud+kKReQKogNmaTQHpLoTQOp/nLKAg==
+length: 1129
 -->
