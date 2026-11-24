@@ -1,18 +1,17 @@
 {
   "channel": "prod",
-  "version": "0.5.428",
-  "build": "428",
-  "display": "0.5.428",
-  "tag": "mac-prod-0.5.428",
+  "version": "0.5.430",
+  "build": "430",
+  "display": "0.5.430",
+  "tag": "mac-prod-0.5.430",
   "message": "Welcome to Hintora.",
-  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.428/Hintora-Installer.zip",
-  "installer_bytes": 89394075,
-  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.428/Hintora-428.zip",
+  "installer_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.430/Hintora-Installer.zip",
+  "installer_bytes": 83048802,
+  "update_url": "https://github.com/Hintora/hintora-releases/releases/download/mac-prod-0.5.430/Hintora-430.zip",
   "download_page": "https://hintora.github.io/hintora-releases/mac/prod/",
   "minimum_macos": "14.0",
-  "source_commit": "9b2b021d0cc9465f11240bc4a0a896412b2c4c29",
-  "published_at": "2026-11-22T22:54:49Z",
+  "source_commit": "02b2503bd8c1ee8e94bbb5d23a67b2fb0a31d00e",
+  "published_at": "2026-11-24T02:10:23Z",
   "signing_mode": "developer-id",
-  "notarized": true,
-  "phased_rollout_seconds": 28800
+  "notarized": true
 }
